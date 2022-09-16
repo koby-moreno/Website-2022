@@ -21,6 +21,7 @@ margin: 0;
 
 .padding-conty {
 	display: flex;
+	position:  relative;
 	flex-direction: column;
 	padding: 60px 60px;
 }
@@ -49,11 +50,29 @@ margin: 0;
 }
 
 .project-section {
-	display: flex;
+	width:  100%;
+	padding: 16px 0px;
+	display:  flex;
 	flex-direction: column;
-	width: 90vw;
-	max-width: 1100px;
-	padding: 80px 0px;
+}
+
+.project-title {
+	padding-left: 0px;
+	width: 1000px;
+	margin-top: 16px;
+	font-size: 20px;
+	line-height: 24px;
+	opacity:  0;
+	transition:  0.3s ease;
+}
+
+.project-subtitle {
+	color:  darkgray;
+	margin-left: 16px;
+}
+
+.bold-text {
+	font-weight: 500;
 }
 
 #project-intro {
@@ -76,6 +95,7 @@ padding: 0px;
 	font-family: Roboto Mono;
 	font-weight: 500;
 }
+
 
 .project-detail {
 	padding: 1px 0px;
@@ -746,6 +766,8 @@ display: flex;
 	border-radius: 36px;
 	overflow-x: none;
 	overflow-y: none;
+	opacity: 1;
+	transition: opacity 0.3s ease;
 }
 
 .right {

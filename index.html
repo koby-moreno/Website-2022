@@ -41,33 +41,36 @@
   <div class="conty">
 
     <div class="padding-conty">
-
-     <div class="containerr">
-      <div class="box">
+      <div class="project-section">
+       <div class="containerr">
+        <div class="box">
+        </div>
+        <div class="button contbtn slidebtn">
+          <i class="material-icons">play_arrow</i>
+        </div>
+        <div class="button contbtn goto">
+          <i class="material-icons">arrow_outward</i>
+        </div>
       </div>
-      <div class="box">
-      </div>
-      <div class="box">
-      </div>
-      <div class="button contbtn slidebtn">
-        <i class="material-icons">play_arrow</i>
-      </div>
-      <div class="button contbtn">
-        <i class="material-icons">arrow_outward</i>
+            <div class="project-title"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
       </div>
     </div>
 
-    <div class="containerr right">
-      <div class="img-container">
+    <div class="project-section">
+      <div class="containerr right">
+        <div class="img-container">
           <div class="img-scroll" id="rotateOne">
             <img src="../images/dormdesign2.png">
           </div>
           <div class="img-scroll" id="rotateTwo">
             <img src="../images/dormdesign1.png">
           </div>
+        </div>
+        <div class="button contbtn goto">
+          <i class="material-icons">arrow_outward</i>
+        </div>
       </div>
-      <div class="button contbtn">
-        <i class="material-icons">arrow_outward</i>
+      <div class="project-title right"><span class="bold-text">Lookout</span><span class="project-subtitle">On Campus Covid Monitoring</span>
       </div>
     </div>
 
@@ -135,6 +138,31 @@
     document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.4 *wH));
     document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
   }
+
+let goToBtns =document.querySelectorAll(".goto");
+let projectTitles = document.querySelectorAll(".project-title");
+let containers = document.querySelectorAll(".containerr")
+
+goToBtns.forEach(function(button,i){
+  let title = projectTitles[i];
+  button.onmouseenter = function(){
+    title.style.opacity = 1;
+    containers.forEach(function(container,j){
+      if (i !== j){
+        container.style.opacity = 0.25;
+      }
+    });
+  }
+    button.onmouseleave = function(){
+    title.style.opacity = 0;
+    containers.forEach(function(container,j){
+      if (i !== j){
+        container.style.opacity = 1;
+      }
+    });
+  }
+})
+
 
 });
 
