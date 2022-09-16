@@ -1,6 +1,6 @@
 body{
 
-
+margin: 0;
 	font-family: Roboto;
 	background-color: rgb(245,245,245);
 }
@@ -735,7 +735,7 @@ strong{
 }
 
 .containerr {
-	width: 900px;
+	width: 1000px;
 	height: 600px;
 display: flex;
 	justify-content: center;
@@ -876,9 +876,8 @@ color: black;
 	font-weight: 400;
 	font-size: 32px;
 	line-height: 48px;
-/*	scale: 2;
-	padding-left: 200px;*/
-
+	scale: 1.35;
+transform-origin: left;
 	opacity: 1;
 	width: 800px;
 	z-index: 3;

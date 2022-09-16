@@ -110,6 +110,7 @@ document.querySelector(".header-desc").style.opacity = 0;
 document.querySelector(".header").style.position = "fixed";
 document.querySelector(".header").style.left = "60px";
 document.querySelector(".header").style.top = "32px";
+document.querySelector(".header").style.scale = 1;
 document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
      }
      else {
@@ -120,6 +121,7 @@ document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
       document.querySelector(".header").style.position = "relative";
       document.querySelector(".header").style.left = "0px";
 document.querySelector(".header").style.top = "0px";
+document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.4 *wH));
 document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
      }
 
