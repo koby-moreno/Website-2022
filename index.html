@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Welcome ⋆｡*ﾟ✲*</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link href="../css/stl.css" rel="stylesheet" type="text/css">
+  <link href="../css/project.css" rel="stylesheet" type="text/css">
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <div id="rectangle"></div> -->
+
+
+</head>
+
+
+<body>
+
+  <div class="conty">
+    <div class="padding-conty top-cont">
+      <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+    </div>
+  </div>
+  <div class="conty">
+
+    <div class="padding-conty">
+     <div class="containerr">
+          <div class="box">
+          </div>
+          <div class="box">
+          </div>
+          <div class="box">
+          </div>
+          <div class="button contbtn slidebtn">
+            <i class="material-icons">play_arrow</i>
+          </div>
+          <div class="button contbtn">
+            <i class="material-icons">arrow_outward</i>
+          </div>
+      </div>
+      <div class="containerr right">
+          <div class="button contbtn">
+            <i class="material-icons">arrow_outward</i>
+          </div>
+      </div>
+    </div>
+
+
+
+    <div class="grouping">
+     <div class="toggle">
+      <div class="button togglebtn">
+        <i class="material-icons">grid_view</i>
+      </div>
+      <div class="button togglebtn">
+        <i class="material-icons">reorder</i>
+      </div>
+    </div>
+
+
+
+    <div class="toggle">
+      <div class="button togglebtn textbtn">
+        <span>Work</span>
+      </div>
+      <div class="button togglebtn textbtn">
+        <span>About</span>
+      </div>
+      <div class="button togglebtn textbtn">
+        <span>Contact</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+
+<script type="module" src="../project_navigation.js"></script>
+<script type="text/javascript">
+
+let fill = 255;
+let fillval = 0;
+
+$(window).scroll(function() {
+     let wH = $(window).height(),
+     wS = $(this).scrollTop();
+     console.log(wS);
+     console.log(wH);
+     if (wS > 0.4 * wH){
+      document.querySelector(".grouping").style.top = "32px";
+document.querySelector(".header-desc").style.opacity = 0;
+document.querySelector(".header").style.position = "fixed";
+document.querySelector(".header").style.left = "60px";
+document.querySelector(".header").style.top = "32px";
+document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
+     }
+     else {
+      fillval = 10 * (wS / (0.4 *wH))
+      fill = 245 + fillval;
+       document.querySelector(".grouping").style.top = "-64px";
+      document.querySelector(".header-desc").style.opacity = 1 -(wS / (0.4 * wH));
+      document.querySelector(".header").style.position = "relative";
+      document.querySelector(".header").style.left = "0px";
+document.querySelector(".header").style.top = "0px";
+document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
+     }
+
+});
+
+</script>
+
+</html>
