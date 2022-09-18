@@ -19,7 +19,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  <link href="../css/stl.css" rel="stylesheet" type="text/css">
   <link href="css/project.css" rel="stylesheet" type="text/css">
 
 
@@ -44,9 +43,13 @@
       <div class="project-section">
        <div class="containerr">
         <div class="box">
+             <video  id="video" loop>
+      <source src="images/projects.mov">
+   </video>
         </div>
-        <div class="button contbtn slidebtn">
-          <i class="material-icons">play_arrow</i>
+        <div class="button contbtn slidebtn" id="play">
+          <i class="material-icons" id="play-btn">play_arrow</i>
+          <i class="material-icons" id="pause-btn">pause</i>
         </div>
         <div class="button contbtn goto">
           <i class="material-icons">arrow_outward</i>
@@ -73,6 +76,7 @@
       <div class="project-title right"><span class="bold-text">Lookout</span><span class="project-subtitle">On Campus Covid Monitoring</span>
       </div>
     </div>
+
 
   </div>
 
@@ -107,7 +111,7 @@
 
 </body>
 
-<script type="module" src="../project_navigation.js"></script>
+
 <script type="text/javascript">
 
   let fill = 255;
@@ -162,6 +166,34 @@ goToBtns.forEach(function(button,i){
     });
   }
 })
+
+
+let playButton = document.getElementById("play");
+let playIcon = document.getElementById("play-btn");
+let pauseIcon = document.getElementById("pause-btn");
+let play = false;
+// Event listener for the play/pause button
+playButton.addEventListener("click", function() {
+ console.log(play)
+  if (play == true) {
+    console.log("playing")
+    // Play the video
+    video.pause();
+
+    // Update the button text to 'Pause'
+            playIcon.style.display = "block";
+    pauseIcon.style.display ="none";
+    play = false;
+  } else {
+    // Pause the video
+    video.play();
+
+    // Update the button text to 'Play'
+    playIcon.style.display = "none";
+    pauseIcon.style.display ="block";
+    play = true;
+  }
+});
 
 
 });
