@@ -69,6 +69,7 @@ margin: 0;
 .project-subtitle {
 	color:  darkgray;
 	margin-left: 16px;
+	font-size: 18px;
 }
 
 .bold-text {
@@ -770,6 +771,11 @@ display: flex;
 	transition: opacity 0.3s ease;
 }
 
+.togglebtn.active {
+	color:  black;
+	background-color: #f5f5f5;
+}
+
 .right {
 	align-self: flex-end;
 }
@@ -931,7 +937,7 @@ color: black;
 
 
 .togglebtn:hover{
-	background-color: #f5f5f5;
+	/*background-color: #f5f5f5;*/
 }
 
 .contbtn:hover{
