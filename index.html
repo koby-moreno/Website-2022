@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <link href="css/project.css" rel="stylesheet" type="text/css">
 
@@ -43,9 +44,9 @@
       <div class="project-section">
        <div class="containerr">
         <div class="box">
-             <video  id="video" loop>
-      <source src="images/projects.mov">
-   </video>
+         <video  id="video" loop>
+          <source src="images/projects.mov">
+          </video>
         </div>
         <div class="button contbtn slidebtn" id="play">
           <i class="material-icons" id="play-btn">play_arrow</i>
@@ -55,7 +56,7 @@
           <i class="material-icons">arrow_outward</i>
         </div>
       </div>
-            <div class="project-title"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
+      <div class="project-title"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
       </div>
     </div>
 
@@ -77,17 +78,82 @@
       </div>
     </div>
 
+    <div class="rows">
+    <div class="row-item">
+      <div class="row-icon">
+        <span class="material-symbols-outlined">
+          folder_open
+        </span>
+        <i class="material-icons">arrow_outward</i>
+      </div>
+      <div class="row-title">Projects Portal</div>
+      <div class="row-org">Foursquare</div>
+      <div class="row-client">...</div>
+      <div class="row-scope">User Research, Hi-Fi Designs</div>
+      <div class="row-duration">3 mo</div>
+      <div class="row-year">2022</div>
+    </div>
 
+    <div class="row-item">
+      <div class="row-icon">
+        <span class="material-symbols-outlined">
+          coronavirus
+        </span>
+        <i class="material-icons">arrow_outward</i>
+      </div>
+      <div class="row-title">Lookout</div>
+      <div class="row-org">Foursquare</div>
+      <div class="row-client">Colorado Mesa University</div>
+      <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+      <div class="row-duration">3 mo</div>
+      <div class="row-year">2022</div>
+    </div>
+
+    <div class="row-item">
+      <div class="row-icon">
+        <span class="material-symbols-outlined">
+          local_hospital
+        </span>
+        <i class="material-icons">arrow_outward</i>
+      </div>
+      <div class="row-title">Mayo 20270</div>
+      <div class="row-org">Foursquare</div>
+      <div class="row-client">Colorado Mesa University</div>
+      <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+      <div class="row-duration">3 mo</div>
+      <div class="row-year">2022</div>
+    </div>
+
+    <div class="row-item">
+      <div class="row-icon">
+        <span class="material-symbols-outlined">
+          account_tree
+        </span>
+        <i class="material-icons">arrow_outward</i>
+      </div>
+      <div class="row-title">Banyan</div>
+      <div class="row-org">Foursquare</div>
+      <div class="row-client">Colorado Mesa University</div>
+      <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+      <div class="row-duration">3 mo</div>
+      <div class="row-year">2022</div>
+    </div>
   </div>
 
 
 
+
+  </div>
+
+  <div class="footer">
+  </div>
+
   <div class="grouping">
     <div class="toggle">
-      <div class="button togglebtn active">
+      <div class="button togglebtn active" id="grid-btn">
         <i class="material-icons">grid_view</i>
       </div>
-      <div class="button togglebtn">
+      <div class="button togglebtn" id="list-btn">
         <i class="material-icons">reorder</i>
       </div>
     </div>
@@ -143,45 +209,92 @@
     document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
   }
 
-let goToBtns =document.querySelectorAll(".goto");
-let projectTitles = document.querySelectorAll(".project-title");
-let containers = document.querySelectorAll(".containerr")
+  let goToBtns =document.querySelectorAll(".goto");
+  let projectTitles = document.querySelectorAll(".project-title");
+  let containers = document.querySelectorAll(".containerr")
 
-goToBtns.forEach(function(button,i){
-  let title = projectTitles[i];
-  button.onmouseenter = function(){
-    title.style.opacity = 1;
-    containers.forEach(function(container,j){
-      if (i !== j){
-        container.style.opacity = 0.25;
-      }
-    });
-  }
+  goToBtns.forEach(function(button,i){
+    let title = projectTitles[i];
+    button.onmouseenter = function(){
+      title.style.opacity = 1;
+      containers.forEach(function(container,j){
+        if (i !== j){
+          container.style.opacity = 0.25;
+        }
+      });
+    }
     button.onmouseleave = function(){
-    title.style.opacity = 0;
-    containers.forEach(function(container,j){
-      if (i !== j){
-        container.style.opacity = 1;
-      }
-    });
-  }
-})
+      title.style.opacity = 0;
+      containers.forEach(function(container,j){
+        if (i !== j){
+          container.style.opacity = 1;
+        }
+      });
+    }
+  })
 
+  let rowItems = document.querySelectorAll(".row-item");
+  rowItems.forEach(function(rowItem,i){
+    rowItem.onmouseenter = function(){
+      rowItems.forEach(function(r,j){
+        let icon = r.querySelector("span");
+        let arrow = r.querySelector("i");
+        if (i !== j){
+          r.style.opacity = 0.25;
+        }
+        else {
+          icon.style.display = "none";
+          arrow.style.display = "block";
+        }
+      });
+    }
+    rowItem.onmouseleave = function(){
+      rowItems.forEach(function(r,j){
+        let icon = r.querySelector("span");
+        let arrow = r.querySelector("i");
+        r.style.opacity = 1;
+        icon.style.display = "block";
+        arrow.style.display = "none";
+      });
+    }
+  })
 
-let playButton = document.getElementById("play");
-let playIcon = document.getElementById("play-btn");
-let pauseIcon = document.getElementById("pause-btn");
-let play = false;
+  let gridBtn = document.getElementById("grid-btn");
+  let listBtn = document.getElementById("list-btn");
+  let rows = document.querySelector(".rows");
+  let grids = document.querySelectorAll(".project-section")
+
+gridBtn.addEventListener("click", function() {
+  listBtn.classList.remove("active");
+  gridBtn.classList.add("active");
+  rows.style.display = "none";
+    grids.forEach(function(grid){
+    grid.style.display = "flex"
+  });
+});
+listBtn.addEventListener("click", function() {
+  gridBtn.classList.remove("active");
+  listBtn.classList.add("active");
+rows.style.display = "block";
+    grids.forEach(function(grid){
+    grid.style.display = "none"
+  });
+});
+
+  let playButton = document.getElementById("play");
+  let playIcon = document.getElementById("play-btn");
+  let pauseIcon = document.getElementById("pause-btn");
+  let play = false;
 // Event listener for the play/pause button
 playButton.addEventListener("click", function() {
  console.log(play)
-  if (play == true) {
-    console.log("playing")
+ if (play == true) {
+  console.log("playing")
     // Play the video
     video.pause();
 
     // Update the button text to 'Pause'
-            playIcon.style.display = "block";
+    playIcon.style.display = "block";
     pauseIcon.style.display ="none";
     play = false;
   } else {
