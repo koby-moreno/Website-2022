@@ -859,7 +859,7 @@ html::-webkit-scrollbar {
 .img-scroll {
 	flex-shrink: 0;
 	position: relative;
-	width: fit-content;
+	width: contain;
 	height:  500px;
 	margin-right: 24px;
 	background-color: gray;	
@@ -1098,7 +1098,7 @@ html::-webkit-scrollbar {
 }
 
 .img-scroll{
-	height: 400px;
+	height: 500px;
 }
 
 .padding-conty {
