@@ -246,13 +246,15 @@ align-self: start;
 }
 
 img {
-	width: auto;
-	height: auto;
+		width:  inherit;
+		object-fit: cover;
 }
 
 video {
-		width: 100%;
-		height:  auto;
+/*		width: 100%;
+		height:  auto;*/
+		width:  inherit;
+		object-fit: cover;
 }
 
 .footer-nav {
