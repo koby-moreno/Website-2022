@@ -245,9 +245,14 @@ align-self: start;
 	max-width: 550px;
 }
 
-img, video {
-	width: 100%;
+img {
+	width: auto;
 	height: auto;
+}
+
+video {
+		width: 100%;
+		height:  auto;
 }
 
 .footer-nav {
@@ -862,11 +867,11 @@ padding-left:  64px;
 }
 
 #rotateOne {
-	transform: rotate(-6deg) translate(32px,24px);
+	-webkit-transform: rotate(-6deg) translate(32px,24px);
 }
 
 #rotateTwo {
-	transform: rotate(7deg) translate(-16px,48px);
+	-webkit-transform: rotate(7deg) translate(-16px,48px);
 }
 
 
@@ -880,7 +885,7 @@ padding-left:  64px;
 .containerr:hover #rotateOne,
 .containerr:hover #rotateTwo
 {
-transform: rotate(0deg) translate(0px,0px);
+-webkit-transform: rotate(0deg) translate(0px,0px);
 }
 
 .grouping {
