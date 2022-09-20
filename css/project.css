@@ -763,7 +763,7 @@ html::-webkit-scrollbar {
 
 .img-container {
 	height:  100%;
-	width:  100%;
+	width:  inherit;
 	display:  flex;
 	align-items:  center;
 	overflow-x: scroll;
@@ -1093,15 +1093,18 @@ line-height: 40px;
 }
 
 .img-container {
-	padding-left:  24px;
+	padding-left: 0px;
+	align-self:  flex-start;
 }
 
 #rotateOne {
+	margin-left: 24px;
 	-webkit-transform: rotate(-6deg) translate(0px,0px);
 }
 
 #rotateTwo {
 	-webkit-transform: rotate(7deg) translate(-24px,24px);
+	margin-right: 24px;
 }
 
 .grouping {

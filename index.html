@@ -238,11 +238,12 @@
   let projects = document.querySelector(".lookout");
   let projectsHeight = $('.projects').offset().top - $(window).scrollTop()
 
+  let = allProjectHeights = [projectsHeight, lookoutHeight]
+
   $(window).scroll(function() {
    let wS = $(this).scrollTop();
    console.log(wS)
    console.log(lookoutHeight)
-
 
    if (wS + 0.5 * wH > lookoutHeight){
     document.querySelector("#rotateOne").classList.add("revert");
