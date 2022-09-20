@@ -32,7 +32,7 @@ body{
 }
 
 .top-cont{
-	/*padding: 0px 0px;*/
+	padding: 0px 60px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -1105,7 +1105,10 @@ html::-webkit-scrollbar {
 	padding: 40px 40px 40px 40px;
 }
 
-
+.top-cont{
+	padding: 0px 40px;
+	height: 100vh;
+}
 
 }
 
@@ -1123,6 +1126,7 @@ html::-webkit-scrollbar {
 	justify-content: center;
 }
 
+
 .grid-list {
 	display: none;
 }
@@ -1133,6 +1137,10 @@ html::-webkit-scrollbar {
 
 .padding-conty {
 	padding: 40px 24px;
+}
+
+.top-cont{
+	padding: 0px 24px;
 }
 
 	.round {
