@@ -737,7 +737,8 @@ html::-webkit-scrollbar {
 
 .box {
 	width: 700px;
-	height: fit-content;
+	height: auto;
+	flex-grow: 1;
 	/*background-color: gray;*/
 	position: relative;
 	margin: 0px;
@@ -1074,14 +1075,16 @@ width: inherit;
 
 
 .header {
-scale: 1.15;
-width: 86.9%;
+font-size: 24px;
+line-height: 40px;
 }
 
 .containerr{
 	height: 350px;
 	flex-direction: column;
+	justify-content: space-between;
 }
+
 
 .img-scroll {
 	height: 200px;
@@ -1133,6 +1136,22 @@ width: 86.9%;
 		border-radius: 4px;
 	}
 
+#rotateTwo.revert,
+#rotateOne.revert{
+	-webkit-transform: rotate(0deg) translate(0px,0px);
+}
+
+.box{
+		right: -85px;
+	bottom: -75px;
+}
+
+.box.revert{
+	right: 0px;
+	bottom: 0px;
+	scale: 1;
+
+}
 
 	.desktop {
 		display: none;
