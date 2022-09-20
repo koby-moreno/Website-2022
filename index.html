@@ -35,7 +35,7 @@
 
 <body>
 
-  <div class="conty">
+  <div class="conty one">
     <div class="padding-conty top-cont">
       <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
     </div>
@@ -170,7 +170,7 @@
   </div>
 
   <div class="grouping">
-    <div class="toggle">
+    <div class="toggle grid-list">
       <div class="button togglebtn active" id="grid-btn">
         <i class="material-icons">grid_view</i>
       </div>
@@ -181,7 +181,7 @@
 
 
 
-    <div class="toggle">
+    <div class="toggle main-nav">
       <div class="button togglebtn textbtn active">
         <span>Work</span>
       </div>
@@ -203,14 +203,15 @@
 
   let fill = 255;
   let fillval = 0;
+  let headerHeight = document.querySelector(".header").clientHeight;
+     let wH = $(window).innerHeight();
 
   $(window).scroll(function() {
-   let wH = $(window).height(),
-   wS = $(this).scrollTop();
+   let wS = $(this).scrollTop();
    console.log(wS);
    console.log(wH);
-   if (wS > 0.4 * wH){
-    document.querySelector(".grouping").style.top = "32px";
+   if (wS > 0.5 * wH - 0.5 * headerHeight - 32){
+    // document.querySelector(".grouping").style.top = "32px";
     document.querySelector(".header-desc").style.opacity = 0;
     document.querySelector(".header").style.position = "fixed";
     document.querySelector(".header").style.left = "60px";
@@ -219,14 +220,14 @@
     document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
   }
   else {
-    fillval = 10 * (wS / (0.4 *wH))
+    fillval = 10 * (wS / (0.5 * wH - 0.5 * headerHeight - 32))
     fill = 245 + fillval;
-    document.querySelector(".grouping").style.top = "-64px";
-    document.querySelector(".header-desc").style.opacity = 1 -(wS / (0.4 * wH));
+    // document.querySelector(".grouping").style.top = "-64px";
+    document.querySelector(".header-desc").style.opacity = 1 -(wS / (0.5 * wH - 0.5 * headerHeight - 32));
     document.querySelector(".header").style.position = "relative";
     document.querySelector(".header").style.left = "0px";
     document.querySelector(".header").style.top = "0px";
-    document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.4 *wH));
+    document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * wH - 0.5 * headerHeight - 32));
     document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
   }
 

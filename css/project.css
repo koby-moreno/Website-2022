@@ -906,7 +906,6 @@ html::-webkit-scrollbar {
 
 .grouping > *:not(:last-child),
 .row-item > *:not(:last-child) {
-	/*display: block;*/
 	margin-right: 16px; 
 } 
 
@@ -1111,6 +1110,29 @@ html::-webkit-scrollbar {
 
 
 @media only screen and (max-device-width: 600px)  {
+
+.grouping {
+	flex-direction: row;
+	top: auto;
+/*	height: 10px;*/
+	flex-grow: 0;
+	bottom: 32px;
+	right: 16px;
+	left: 16px;
+	justify-content: center;
+}
+
+.grouping.grid-list {
+	display: none;
+}
+
+.conty.one {
+	height: 100vh;
+}
+
+.padding-conty {
+	padding: 40px 24px;
+}
 
 	.round {
 		border-radius: 4px;
