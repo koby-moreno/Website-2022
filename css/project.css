@@ -1063,6 +1063,7 @@ width: inherit;
 	.project-titlee {
 		font-weight: 500;
 		font-size: 18px;
+		line-height: 24px;
 	}
 
 
@@ -1072,6 +1073,8 @@ width: inherit;
 }
 
 	.project-sub {
+		font-size: 14px;
+		line-height: 24px;
 		color: gray;
 	}
 
