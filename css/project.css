@@ -1089,8 +1089,8 @@ line-height: 40px;
 
 
 .img-scroll {
+	margin-right: 0px;
 	height: 200px;
-	margin-right: 16px;
 	transition: 0.5s ease;
 }
 
@@ -1101,6 +1101,7 @@ line-height: 40px;
 
 #rotateOne {
 	padding-left: 24px;
+	padding-right: 16px;
 	-webkit-transform: rotate(-6deg) translate(0px,0px);
 }
 
