@@ -4,6 +4,7 @@ body{
 	font-family: Roboto;
 	background-color: rgb(245,245,245);
 	overflow-x: none;
+	overflow-x: hidden;
 }
 
 .padded-content {
@@ -1122,7 +1123,7 @@ html::-webkit-scrollbar {
 	justify-content: center;
 }
 
-.grouping.grid-list {
+.grid-list {
 	display: none;
 }
 
