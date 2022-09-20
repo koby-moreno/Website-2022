@@ -63,7 +63,7 @@ body{
 
 .project-title {
 	padding-left: 0px;
-	width: inherit;
+	width: 1000px;
 	margin-top: 16px;
 	font-size: 20px;
 	line-height: 24px;
@@ -146,12 +146,7 @@ background-color: #f9f6f2;
 	text-transform: uppercase;
 }
 
-.title {
-	font-family: Grenze;
-	font-size: 36px;
-	line-height: 42px;
-	font-weight: 600;
-}
+
 
 
 
@@ -671,82 +666,7 @@ strong{
 	font-weight: 700;
 }
 
-.guiding {
-	margin: 20px 0px;
-	margin-left: 6px;
-	margin-right: 6px;
-	padding: 4px 0px 8px 0px;
-	/*background-color: #f4f4f4;*/
-}
 
-.patient {
-	background-color: #fcf5f5;
-	/*border: 3px solid #fcdddb;*/
-	border-radius: 12px;
-	/*box-shadow: 6px 6px 6px #fcdddb*/
-}
-
-.patient-color{
-	color: #d86464;
-}
-
-.patient-color-dark {
-	color: #8e4d4d;
-}
-
-.provider {
-	background-color: #ebf6f7;
-	border-radius: 12px;
-}
-
-.provider-color {
-	color: #52a4c1;
-}
-
-.provider-color-dark {
-	color: #406977;
-}
-
-.nurse {
-	background-color: #e7f7f3;
-	border-radius: 12px;
-
-}
-
-.nurse-color {
-	color: #449989;
-}
-
-.nurse-color-dark {
-	color: #527770;
-}
-
-.caregiver{
-	background-color: #fcecde;
-	border-radius: 12px;
-
-}
-
-.caregiver-color {
-	color: #e26e17;
-}
-
-.caregiver-color-dark {
-	color: #8e5017;
-}
-
-.user-cont {
-	margin: 16px 8px;
-}
-
-.user-icon {
-	width: 60px;
-	opacity: 0.5;
-}
-
-.user-list {
-	padding: 0px 10px;
-}
 
 .lookout-overview-container {
 	display: flex;
@@ -1051,7 +971,6 @@ html::-webkit-scrollbar {
 	scale: 1.35;
 	transform-origin: left;
 	opacity: 1;
-	flex-shrink: 2;
 	width: 74%;
 	max-width: 800px;
 	z-index: 2;
@@ -1062,30 +981,22 @@ html::-webkit-scrollbar {
 	scale:1;
 }
 
-.faded {
-	opacity: 0.5;
-	transition: all 0.3s;
-/*	  -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
-  filter: grayscale(100%);*/
-  -webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
-  filter: blur(1px);
-}
-
-.faded:hover {
-	opacity: 1;
-	-webkit-filter: none; /* Safari 6.0 - 9.0 */
-	filter: none;
-}
 
 @media (max-width:1250px) {
 
 
-	.right {
-		align-self: flex-start;
-	}
 
 .containerr{
-	width: inherit;
+	width: 800px;
+	height: 500px;
+}
+
+.project-title {
+width: 800px;
+}
+
+.img-scroll {
+	height: 400px;
 }
 
 
@@ -1093,12 +1004,25 @@ html::-webkit-scrollbar {
 
 @media (max-width:1000px) {
 
+
+		.right {
+		align-self: flex-start;
+	}
+
+.containerr{
+	width: inherit;
+}
+
+.project-title {
+width: inherit;
+}
+
 .box {
 	width: 95%;
 }
 
 .img-scroll{
-	height: 500px;
+	height: 400px;
 }
 
 .padding-conty {
@@ -1114,6 +1038,68 @@ html::-webkit-scrollbar {
 
 
 @media only screen and (max-device-width: 600px)  {
+
+.desktop {
+	display: none;
+}
+
+.mobile {
+	display: block;
+}
+
+	.title{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 24px 0px 12px 0px;
+		width:  calc(100% - 48px);
+		border-bottom: solid lightgray 1px;
+	}
+
+	.project-titlee {
+		font-weight: 500;
+		font-size: 18px;
+	}
+
+
+.material-icons{
+	font-size: 32px;
+	color:  lightgray;
+}
+
+	.project-sub {
+		color: gray;
+	}
+
+
+.header {
+scale: 1.15;
+width: 86.9%;
+}
+
+.containerr{
+	height: 350px;
+	flex-direction: column;
+}
+
+.img-scroll {
+	height: 200px;
+	margin-right: 16px;
+	transition: 0.5s ease;
+}
+
+.img-container {
+	padding-left:  24px;
+}
+
+#rotateOne {
+	-webkit-transform: rotate(-6deg) translate(0px,0px);
+}
+
+#rotateTwo {
+	-webkit-transform: rotate(7deg) translate(-24px,24px);
+}
 
 .grouping {
 	flex-direction: row;
@@ -1147,9 +1133,6 @@ html::-webkit-scrollbar {
 		border-radius: 4px;
 	}
 
-	.mobile {
-		display: block;
-	}
 
 	.desktop {
 		display: none;
@@ -1244,13 +1227,6 @@ html::-webkit-scrollbar {
 
 .guiding {
 	margin: 20px 0px;
-}
-
-.title {
-	font-family: Grenze;
-	font-size: 32px;
-	line-height: 38px;
-	font-weight: 600;
 }
 
 
