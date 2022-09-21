@@ -37,7 +37,7 @@
 
   <div class="conty one">
     <div class="padding-conty top-cont">
-      <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+      <div class="header"><span>KoBB Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
     </div>
   </div>
   <div class="conty">
@@ -235,10 +235,9 @@
   let fillval = 0;
   let headerHeight = document.querySelector(".header").clientHeight;
   let wH = $(window).innerHeight();
-  document.querySelector(".top-cont").style.height = wH;
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
 var iW = (iOS) ? screen.width : window.innerWidth, iH = (iOS) ? screen.height : window.innerHeight;
-  iH = $(window).innerHeight();
+  document.querySelector(".top-cont").style.height = iH;
   let lookout = document.querySelector(".lookout");
   let lookoutHeight = $('.lookout').offset().top - $(window).scrollTop()
   let projects = document.querySelector(".lookout");
