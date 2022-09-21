@@ -8,7 +8,7 @@
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <title>Welcome ⋆｡*ﾟ✲*</title>
@@ -37,7 +37,7 @@
 
   <div class="conty one">
     <div class="padding-conty top-cont">
-      <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+      <div class="header"><span>Korby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
     </div>
   </div>
   <div class="conty">
@@ -236,6 +236,7 @@
   let wH = $(window).innerHeight();
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
 var iW = (iOS) ? screen.width : window.innerWidth, iH = (iOS) ? screen.height : window.innerHeight;
+  iH = $(window).innerHeight();
   let lookout = document.querySelector(".lookout");
   let lookoutHeight = $('.lookout').offset().top - $(window).scrollTop()
   let projects = document.querySelector(".lookout");
