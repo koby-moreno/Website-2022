@@ -981,6 +981,14 @@ img{
 	width: 74%;
 	max-width: 800px;
 	z-index: 2;
+	position:  relative;
+}
+
+.header-placement {
+	left: 60px;
+	scale: 1;
+	top: 32px;
+	position: fixed;
 }
 
 
@@ -1133,6 +1141,11 @@ line-height: 40px;
 .nav-placement {
 	bottom: 32px;
 }
+
+.header-placement {
+	left: 24px;
+}
+
 
 
 .grid-list {
