@@ -887,8 +887,8 @@ img{
 
 .footer {
 	height: 100px;
-	background-color: #f5f5f5;
-}
+	/*background-color: #f5f5f5;
+*/}
 
 .rows{
 	padding: 60px 0px;
