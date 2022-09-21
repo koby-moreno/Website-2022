@@ -828,6 +828,10 @@ img{
 	z-index: 3;
 }
 
+.nav-placement {
+	top: 32px;
+}
+
 .grouping > *:not(:last-child),
 .row-item > *:not(:last-child) {
 	margin-right: 16px; 
@@ -1050,6 +1054,8 @@ width: inherit;
 	display: block;
 }
 
+
+
 	.title{
 		display: flex;
 		flex-direction: row;
@@ -1118,10 +1124,14 @@ line-height: 40px;
 	top: auto;
 /*	height: 10px;*/
 	flex-grow: 0;
-	bottom: 32px;
+	bottom: -48px;
 	right: 16px;
 	left: 16px;
 	justify-content: center;
+}
+
+.nav-placement {
+	bottom: 32px;
 }
 
 
