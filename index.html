@@ -65,10 +65,13 @@
         </div>
 
         <div class="box">
-         <video  class="desktop "id="video" loop>
+         <video loop muted playsInLine class="desktop "id="video">
           <source src="images/projects.mov">
           </video>
-          <img class="mobile" src="images/projects.png">
+                   <video  autoplay loop muted playsInLine class="mobile">
+          <source src="images/projects.mov">
+          </video>
+          <!-- <img class="mobile" src="images/projects.png"> -->
         </div>
         <div class="button contbtn slidebtn desktop" id="play">
           <i class="material-icons" id="play-btn">play_arrow</i>
@@ -285,19 +288,23 @@ function getMultipleRandom(arr, num) {
 }
 
 
-setInterval(() => {
-if (functionRun === true){
-let selected = getMultipleRandom(parcels,100);
-parcels.forEach(function(parcel,i){
-  parcel.style.opacity = 0.07;
-});
-selected.forEach(function(parcel,i){
-parcel.style.opacity = 0.4;
-});
-}
-console.log(functionRun)
+// setInterval(() => {
+// if (functionRun === true){
+// svgg.style.display = "block"
+// let selected = getMultipleRandom(parcels,100);
+// parcels.forEach(function(parcel,i){
+//   parcel.style.opacity = 0.07;
+// });
+// selected.forEach(function(parcel,i){
+// parcel.style.opacity = 0.4;
+// });
+// }
+// else {
+//   svgg.style.display = "none"
+// }
+// console.log(functionRun)
 
-}, "3000")
+// }, "3000")
 
     // let parcelGroup = svg.getElementById("red");
     // let parcels = parcelGroup.querySelectorAll("polygon");
