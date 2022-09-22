@@ -38,6 +38,11 @@
   <div class="conty one">
     <div class="padding-conty top-cont">
       <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+<!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
+<div class="top-svg">
+<object type="image/svg+xml" data="images/file.svg" id="svg-bg"></object>
+</div>
+
     </div>
   </div>
   <div class="conty">
@@ -230,6 +235,76 @@
 
 
 <script type="text/javascript">
+
+    // $('[data-svg]').each(function() { var thesvg = $(this).data('svg'); $(this).load(thesvg); });
+
+
+  $(window).on('load', function(){
+
+    //alert("Document loaded, including graphics and embedded documents (like SVG)");
+
+    // console.log(document.querySelector(".top-svg"));
+  let svg = document.getElementById("svg-bg");
+  let svgDoc = svg.contentDocument;
+  let svgg = svgDoc.querySelector("svg");
+  console.log(svgg);
+
+  let parcelGroup = svgg.querySelector("g");
+  let parcels = parcelGroup.querySelectorAll("path");
+  console.log(parcels)
+
+  const randomElement = parcels[Math.floor(Math.random() * parcels.length)];
+
+  console.log(randomElement);
+
+
+  parcels.forEach(function(parcel,i){
+    if(i % 3 == 0) {
+    parcel.style.fill = "lightgray";
+    parcel.style.opacity = 0.07;
+  }
+  else if (i % 3 == 1) {
+    parcel.style.fill = "#ef6348";
+    parcel.style.opacity = 0.07;
+  }
+  else {
+    parcel.style.fill = "#306c99";
+    parcel.style.opacity = 0.07;
+  }
+  parcel.style.stroke= "#f3f3f3"
+  parcel.style.transition = "opacity 2s ease"
+  })
+
+function getMultipleRandom(arr, num) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+
+  return shuffled.slice(0, num);
+}
+
+
+setInterval(() => {
+let selected = getMultipleRandom(parcels,100);
+parcels.forEach(function(parcel,i){
+  parcel.style.opacity = 0.07;
+});
+selected.forEach(function(parcel,i){
+parcel.style.opacity = 0.4;
+});
+
+}, "3000")
+
+    // let parcelGroup = svg.getElementById("red");
+    // let parcels = parcelGroup.querySelectorAll("polygon");
+    // console.log(parcels);
+    //get the inner DOM of alpha.svg
+    // var svgDoc = a.contentDocument;
+
+    //get the inner element by id
+    // var delta = svgDoc.getElementById("delta");
+    // delta.addEventListener("mousedown", function(){ alert('hello world!')}, false);
+});
+
+
 console.log($(window).height());
   let fill = 255;
   let fillval = 0;

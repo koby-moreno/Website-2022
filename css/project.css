@@ -984,6 +984,46 @@ img{
 	position:  relative;
 }
 
+.top-svg {
+	position: absolute;
+	align-self: center;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#gray {
+	opacity: 1;
+}
+#gray > polygon,
+#gray > rect {
+	fill: #e9e9e9;
+	opacity: 1;
+  stroke: #f3f3f3;
+  stroke-width: 1.5px;
+}
+
+.blue{
+	fill: red;
+}
+
+#red > polygon,
+#red > rect {
+	fill: none;
+	stroke: #f3f3f3;
+	stroke-width: 1.5px;
+	opacity: 0.1;
+	transition: fill 0.5s ease;
+}
+
+#red > polygon:hover ,
+#red > rect:hover {
+	fill: blue;
+}
+
+
 .header-placement {
 	left: 60px;
 	scale: 1;
