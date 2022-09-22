@@ -987,9 +987,10 @@ img{
 .top-svg {
 	position: absolute;
 	align-self: center;
-	overflow: hidden;
 	height: 100%;
 	display: flex;
+	overflow-x:  hidden;
+	overflow-y:  hidden;
 	justify-content: center;
 	align-items: center;
 }
@@ -1005,7 +1006,7 @@ img{
   stroke-width: 1.5px;
 }
 
-.blue{
+.blue {
 	fill: red;
 }
 
