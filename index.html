@@ -238,6 +238,9 @@
 
     // $('[data-svg]').each(function() { var thesvg = $(this).data('svg'); $(this).load(thesvg); });
 
+let functionRun = true;
+let svgg;
+
 
   $(window).on('load', function(){
 
@@ -246,7 +249,7 @@
     // console.log(document.querySelector(".top-svg"));
   let svg = document.getElementById("svg-bg");
   let svgDoc = svg.contentDocument;
-  let svgg = svgDoc.querySelector("svg");
+  svgg = svgDoc.querySelector("svg");
   console.log(svgg);
 
   let parcelGroup = svgg.querySelector("g");
@@ -283,6 +286,7 @@ function getMultipleRandom(arr, num) {
 
 
 setInterval(() => {
+if (functionRun === true){
 let selected = getMultipleRandom(parcels,100);
 parcels.forEach(function(parcel,i){
   parcel.style.opacity = 0.07;
@@ -290,6 +294,8 @@ parcels.forEach(function(parcel,i){
 selected.forEach(function(parcel,i){
 parcel.style.opacity = 0.4;
 });
+}
+console.log(functionRun)
 
 }, "3000")
 
@@ -345,6 +351,7 @@ iH = $(window).innerHeight()
   }
 
   if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
+    functionRun = false;
      document.querySelector(".grouping").classList.add("nav-placement");
     document.querySelector(".header-desc").style.opacity = 0;
     document.querySelector(".header").classList.add("header-placement")
@@ -352,11 +359,13 @@ iH = $(window).innerHeight()
     document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
   }
   else {
+    functionRun = true;
     fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 32))
     fill = 245 + fillval;
     // document.querySelector(".grouping").style.top = "-64px";
     document.querySelector(".grouping").classList.remove("nav-placement");
     document.querySelector(".header-desc").style.opacity = 1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32));
+    svgg.style.opacity = 1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32));
     document.querySelector(".header").classList.remove("header-placement")
 
     document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
