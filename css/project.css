@@ -5,6 +5,11 @@ body{
 	background-color: rgb(245,245,245);
 	overflow-x: none;
 	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.prevent-scroll {
+	overflow-y: hidden;
 }
 
 .padded-content {
@@ -29,6 +34,14 @@ body{
 	position:  relative;
 	flex-direction: column;
 	padding: 60px 60px 60px 60px;
+}
+
+.bottom-cont {
+		opacity: 1;
+	transition: opacity 0.5s ease;
+}
+.bottom-cont.opacity{
+	opacity:  0.25;
 }
 
 .top-cont{
@@ -817,6 +830,9 @@ img{
 	scale: 1;
 
 }
+i.gray {
+	color: gray;
+}
 
 .containerr:hover #rotateOne,
 .containerr:hover #rotateTwo
@@ -838,8 +854,8 @@ img{
 	top: 32px;
 }
 
-.grouping > *:not(:last-child),
-.row-item > *:not(:last-child) {
+.grouping > *:not(:last-child)/*,
+.row-item > *:not(:last-child)*/ {
 	margin-right: 16px; 
 } 
 
@@ -890,7 +906,7 @@ img{
 		transition: height 0.5s ease;
 	bottom: 0px;
 	box-shadow: 0px 0px 6px -1px lightgray;
-				background-color: rgba(255,255,255, 0.75);
+				background-color: rgba(255,255,255, 0.25);
 				-webkit-backdrop-filter: blur(24px);
 	backdrop-filter: blur(24px);
 }
@@ -985,6 +1001,11 @@ img{
 }
 .row-icon i{
 	display: none;
+}
+
+.row-icon > .gray {
+	display: block;
+	color: gray;
 }
 
 

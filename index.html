@@ -52,7 +52,7 @@
   </div>
   <div class="conty">
 
-    <div class="padding-conty">
+    <div class="padding-conty bottom-cont">
       <div class="project-section projects">
        <div class="containerr">
         <div class="title mobile">
@@ -102,7 +102,7 @@
               </div>
             </div>
             <div class="cont-icon">
-              <i class="material-icons">arrow_outward</i>
+              <i class="material-icons gray">arrow_outward</i>
             </div>
           </div>
 
@@ -138,13 +138,18 @@
             <i class="material-icons">arrow_outward</i>
           </div>
           <div class="row-details">
-          <div class="row-title">Projects Portal</div>
-          <div class="row-org">Foursquare</div>
-          <div class="row-client"></div>
-          <div class="row-scope">User Research, Hi-Fi Designs</div>
-          <div class="row-duration">3 mo</div>
-          <div class="row-year">2022</div>
-        </div>
+            <div class="row-title">Projects Portal</div>
+            <div class="row-org">Foursquare</div>
+            <div class="row-client"></div>
+            <div class="row-scope">User Research, Hi-Fi Designs</div>
+            <div class="row-duration">3 mo</div>
+            <div class="row-year">2022</div>
+          </div>
+          <div class="row-icon mobile">
+            <span class="material-symbols-outlined gray">
+              navigate_next
+            </span>
+          </div>
         </div>
 
         <div class="row-item">
@@ -155,13 +160,18 @@
             <i class="material-icons">arrow_outward</i>
           </div>
           <div class="row-details">
-          <div class="row-title">Lookout</div>
-          <div class="row-org">Fathom</div>
-          <div class="row-client">Colorado Mesa University</div>
-          <div class="row-scope">Hi-Fi Design, Front-End Development</div>
-          <div class="row-duration">3 mo</div>
-          <div class="row-year">2022</div>
-        </div>
+            <div class="row-title">Lookout</div>
+            <div class="row-org">Fathom</div>
+            <div class="row-client">Colorado Mesa University</div>
+            <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+            <div class="row-duration">3 mo</div>
+            <div class="row-year">2022</div>
+          </div>
+          <div class="row-icon mobile">
+            <span class="material-symbols-outlined gray">
+              navigate_next
+            </span>
+          </div>
         </div>
 
         <div class="row-item">
@@ -169,16 +179,21 @@
             <span class="material-symbols-outlined">
               local_hospital
             </span>
-            <i class="material-icons">arrow_outward</i>
+            <i class="material-icons arrow">arrow_outward</i>
           </div>
           <div class="row-details">
-          <div class="row-title">Mayo 20270</div>
-          <div class="row-org">Fathom</div>
-          <div class="row-client">Mayo Clinic</div>
-          <div class="row-scope">Hi-Fi Design, Front-End Development</div>
-          <div class="row-duration">3 mo</div>
-          <div class="row-year">2022</div>
-        </div>
+            <div class="row-title">Mayo 20270</div>
+            <div class="row-org">Fathom</div>
+            <div class="row-client">Mayo Clinic</div>
+            <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+            <div class="row-duration">3 mo</div>
+            <div class="row-year">2022</div>
+          </div>
+          <div class="row-icon mobile">
+            <span class="material-symbols-outlined gray">
+              navigate_next
+            </span>
+          </div>
         </div>
 
         <div class="row-item">
@@ -189,13 +204,18 @@
             <i class="material-icons">arrow_outward</i>
           </div>
           <div class="row-details">
-          <div class="row-title">Banyan</div>
-          <div class="row-org">Fathom</div>
-          <div class="row-client">The Broad Institute</div>
-          <div class="row-scope">Hi-Fi Design, Front-End Development</div>
-          <div class="row-duration">3 mo</div>
-          <div class="row-year">2022</div>
-        </div>
+            <div class="row-title">Banyan</div>
+            <div class="row-org">Fathom</div>
+            <div class="row-client">The Broad Institute</div>
+            <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+            <div class="row-duration">3 mo</div>
+            <div class="row-year">2022</div>
+          </div>
+                    <div class="row-icon mobile">
+            <span class="material-symbols-outlined gray">
+              navigate_next
+            </span>
+          </div>
         </div>
 
         <div class="row-item">
@@ -206,13 +226,18 @@
             <i class="material-icons">arrow_outward</i>
           </div>
           <div class="row-details">
-          <div class="row-title">Operation Outbreak</div>
-          <div class="row-org">Fathom</div>
-          <div class="row-client">UMass Amherst</div>
-          <div class="row-scope">Hi-Fi Design, Front-End Development</div>
-          <div class="row-duration">3 mo</div>
-          <div class="row-year">2022</div>
-        </div>
+            <div class="row-title">Operation Outbreak</div>
+            <div class="row-org">Fathom</div>
+            <div class="row-client">UMass Amherst</div>
+            <div class="row-scope">Hi-Fi Design, Front-End Development</div>
+            <div class="row-duration">3 mo</div>
+            <div class="row-year">2022</div>
+          </div>
+                    <div class="row-icon mobile">
+            <span class="material-symbols-outlined gray">
+              navigate_next
+            </span>
+          </div>
         </div>
       </div>
 
@@ -333,7 +358,7 @@
 
 console.log($(window).height());
 
-  let rows = document.querySelector(".rows");
+let rows = document.querySelector(".rows");
 let fill = 255;
 let fillval = 0;
 let headerHeight = document.querySelector(".header").clientHeight;
@@ -374,6 +399,7 @@ iH = $(window).innerHeight()
 
   if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
     functionRun = false;
+
     document.querySelector(".grouping").classList.add("nav-placement");
          // svgg.style.opacity = 0;
          document.querySelector(".header-desc").style.opacity = 0;
@@ -452,6 +478,7 @@ iH = $(window).innerHeight()
   let grids = document.querySelectorAll(".project-section")
 
   gridBtn.addEventListener("click", function() {
+    document.querySelector(".bottom-cont").classList.remove("opacity");
     listBtn.classList.remove("active");
     gridBtn.classList.add("active");
     rows.style.height = "1px";
@@ -460,6 +487,7 @@ iH = $(window).innerHeight()
     // });
   });
   listBtn.addEventListener("click", function() {
+    document.querySelector(".bottom-cont").classList.add("opacity");
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
     rows.style.height = "600px";
@@ -524,13 +552,15 @@ playButton.addEventListener("click", function() {
 
 let listToggle = document.getElementById("list-toggle");
 function toggleClick() {
-    console.log("click");
-      rows.classList.toggle("open");
-    listToggle.classList.toggle("active");
+  console.log("click");
+  rows.classList.toggle("open");
+  listToggle.classList.toggle("active");
+  document.querySelector("body").classList.toggle("prevent-scroll");
+  document.querySelector(".bottom-cont").classList.toggle("opacity")
 }
 listToggle.addEventListener("click", function() {
-toggleClick();
-  });
+  toggleClick();
+});
 
 </script>
 
