@@ -457,11 +457,33 @@ iH = $(window).innerHeight()
   });
 
 let listToggle = document.getElementById("list-toggle");
-listToggle.addEventListener("click", function() {
-  console.log("click")
-    rows.classList.toggle("open");
+// listToggle.addEventListener("click", function() {
+//   console.log("click")
+//     rows.classList.toggle("open");
+//     listToggle.classList.toggle("active");
+//   });
+
+
+function clickFunc(e){
+  if(e.touches){
+    e.preventDefault(); //Try to comment it out: double triggers on short tap
+    listToggle.removeEventListener("touchend", clickFunc);
+    listToggle.addEventListener("click", clickFunc);
+    console.log('tapped!');
+  }else{
+    console.log('clicked!');
+  }
+      rows.classList.toggle("open");
     listToggle.classList.toggle("active");
-  });
+}
+function touchFunc(){
+  listToggle.removeEventListener("click", clickFunc);
+  listToggle.addEventListener("touchend", clickFunc);
+}
+window.onload=function(){
+  listToggle.addEventListener("click", clickFunc);
+  listToggle.addEventListener("touchstart", touchFunc);
+}
 
 
   let playButton = document.getElementById("play");
