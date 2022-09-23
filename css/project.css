@@ -3,7 +3,6 @@ body{
 	margin: 0;
 	font-family: Roboto;
 	background-color: rgb(245,245,245);
-	overflow-x: none;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -12,12 +11,15 @@ body{
 	overflow-y: hidden;
 }
 
+
 .padded-content {
 	width: 100%;
 	max-width: 1440px;
 	padding: calc(100% - 1500px + 60px);
 	display: block;
 }
+
+
 
 
 .conty {
