@@ -526,9 +526,7 @@ width: auto;
 }
 
 
-.mobile {
-	display: none;
-}
+
 
 .desktop {
 	display:block;
@@ -703,12 +701,18 @@ strong{
 	transition: opacity 0.3s ease;
 }
 
+
+
 .togglebtn.active {
 	color:  black;
-	/*background-color: #f3f3f3;*/
-	background-color: rgba(240,240,240, 0.75);;
-	backdrop-filter: blur(8px);
+	background-color: #f3f3f3;
+/*	background-color: rgba(240,240,240, 0.75);;
+	backdrop-filter: blur(8px);*/
 }
+
+/*.togglebtn.active > i {
+	color: black;
+}*/
 
 .right {
 	align-self: flex-end;
@@ -842,7 +846,6 @@ img{
 .button {
 	height: 48px;
 	width: 48px;
-	/*background-color: white;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -866,11 +869,15 @@ img{
 	height: 40px;
 	width: 40px;
 	position: relative;
+		font-size: 32px;
 }
+
 
 .textbtn {
 	width: fit-content;
 	padding: 0px 20px;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .toggle {
@@ -903,9 +910,9 @@ img{
 	position: fixed;
 	width: 100vw;
 	left: 0px;
-	height: fit-content;
+	height: 0px;
 	bottom: 0px;
-				background-color: rgba(255,255,255, 0.7);
+				background-color: rgba(255,255,255, 0.75);
 	backdrop-filter: blur(32px);
 	-webkit-backdrop-filter: blur(32px);
 	box-shadow: 0px 0px 6px -1px lightgray;;
@@ -915,6 +922,14 @@ img{
 	/*display: none;*/
 }
 
+.open{
+	height: 600px;
+}
+
+.row-padding {
+	padding: 60px 60px;
+}
+
 .row-item {
 	border-bottom: 1px solid lightgray;
 	padding: 16px;
@@ -922,12 +937,12 @@ img{
 	display:  flex;
 	flex-direction: row;
 	align-items: center;
-	border-radius: 16px;
+	border-radius: 0px;
 	transition: opacity 0s ease;
 }
 
 .row-item:hover {
-	box-shadow: 0px 1px 6px -3px black;
+	/*box-shadow: 0px 1px 6px -3px black;*/
 	cursor: pointer;
 /*border-radius: 16px;*/
 }
@@ -1071,6 +1086,10 @@ img{
 	scale:1;
 }
 
+.mobile {
+	display: none;
+}
+
 
 @media (max-width:1250px) {
 
@@ -1119,6 +1138,16 @@ width: inherit;
 	padding: 40px 40px 40px 40px;
 }
 
+.row-padding {
+	padding: 40;
+}
+
+.row-scope,
+.row-client,
+.row-duration {
+	display: none;
+}
+
 .top-cont{
 	padding: 0px 40px;
 }
@@ -1165,10 +1194,7 @@ width: inherit;
 	}
 
 
-.material-icons{
-	font-size: 32px;
-	color:  lightgray;
-}
+
 
 	.project-sub {
 		font-size: 14px;
@@ -1232,9 +1258,7 @@ line-height: 40px;
 
 
 
-.grid-list {
-	display: none;
-}
+
 
 .conty.one {
 	height: 100vh;
@@ -1243,6 +1267,11 @@ line-height: 40px;
 .padding-conty {
 	padding: 40px 24px;
 }
+
+.row-padding {
+	padding: 24px 24px;
+}
+
 
 .top-cont{
 	padding: 0px 24px;
@@ -1364,6 +1393,13 @@ line-height: 40px;
 	margin: 20px 0px;
 }
 
+.button:hover {
+	color: gray;
+}
+
+.button:hover.active {
+	color: black;
+}
 
 
 .subtitle {

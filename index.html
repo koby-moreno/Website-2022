@@ -128,6 +128,7 @@
 
 
       <div class="rows">
+        <div class="row-padding">
         <div class="row-item">
           <div class="row-icon">
             <span class="material-symbols-outlined">
@@ -202,7 +203,7 @@
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
         </div>
-
+</div>
 
 
       </div>
@@ -214,12 +215,19 @@
     </div>
 
     <div class="grouping">
-      <div class="toggle grid-list">
+      <div class="toggle grid-list desktop">
         <div class="button togglebtn active" id="grid-btn">
           <i class="material-icons">grid_view</i>
         </div>
         <div class="button togglebtn" id="list-btn">
           <i class="material-icons">reorder</i>
+        </div>
+      </div>
+
+            <div class="toggle mobile">
+        <div class="button togglebtn" id="list-toggle">
+          <i class="material-icons">reorder</i>
+          <!-- <i class="material-icons">close</i> -->
         </div>
       </div>
 
@@ -442,11 +450,19 @@ iH = $(window).innerHeight()
   listBtn.addEventListener("click", function() {
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
-    rows.style.height = "500px";
+    rows.style.height = "600px";
     // grids.forEach(function(grid){
     //   grid.style.display = "none"
     // });
   });
+
+let listToggle = document.getElementById("list-toggle");
+listToggle.addEventListener("click", function() {
+  console.log("click")
+    rows.classList.toggle("open");
+    listToggle.classList.toggle("active");
+  });
+
 
   let playButton = document.getElementById("play");
   let playIcon = document.getElementById("play-btn");
