@@ -108,10 +108,10 @@
 
           <div class="img-container">
             <div class="img-scroll" id="rotateOne">
-              <img src="images/dormdesign2.png">
+              <img src="images/dormdesign1_light.png">
             </div>
             <div class="img-scroll" id="rotateTwo">
-              <img src="images/dormdesign1.png">
+              <img src="images/dormdesign2_light.png">
             </div>
           </div>
           <div class="button contbtn goto desktop">
@@ -452,7 +452,7 @@ iH = $(window).innerHeight()
         let icon = r.querySelector("span");
         let arrow = r.querySelector("i");
         if (i !== j){
-          r.style.opacity = 0.25;
+          r.style.opacity = 0.35;
           // r.style.filter = "blur(4px)"
         }
         else {
@@ -479,6 +479,7 @@ iH = $(window).innerHeight()
 
   gridBtn.addEventListener("click", function() {
     document.querySelector(".bottom-cont").classList.remove("opacity");
+    document.querySelector("body").classList.remove("prevent-scroll");
     listBtn.classList.remove("active");
     gridBtn.classList.add("active");
     rows.style.height = "1px";
@@ -488,6 +489,7 @@ iH = $(window).innerHeight()
   });
   listBtn.addEventListener("click", function() {
     document.querySelector(".bottom-cont").classList.add("opacity");
+    document.querySelector("body").classList.add("prevent-scroll");
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
     rows.style.height = "600px";

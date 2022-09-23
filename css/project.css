@@ -902,19 +902,22 @@ i.gray {
 	position: fixed;
 	width: 100vw;
 	left: 0px;
-	height: 1px;
-		transition: height 0.5s ease;
+	height: auto;
+		transition: 0.5s ease;
+		top: calc(100vh - 1px);
 	bottom: 0px;
 	box-shadow: 0px 0px 6px -1px lightgray;
-				background-color: rgba(255,255,255, 0.25);
+				background-color: rgba(255,255,255, 0.35);
 				-webkit-backdrop-filter: blur(24px);
 	backdrop-filter: blur(24px);
+	border: 1px solid #e5e5e5;
 }
 
 .row-details {
 	display:  flex;
 	flex-direction: row;
 	width:  100%;
+	line-height: 24px;
 }
 
 .toggle {
@@ -929,6 +932,7 @@ i.gray {
 	border-radius: 28px;
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid #e5e5e5;
 }
 
 .button:hover {
@@ -943,7 +947,8 @@ i.gray {
 
 
 .open{
-	height: 600px;
+	top: 114px;
+	bottom: 0px;
 }
 
 .row-padding {
@@ -952,13 +957,14 @@ i.gray {
 
 .row-item {
 	border-bottom: 1px solid lightgray;
-	padding: 16px;
+	padding: 16px 8px;
 	font-size: 16px;
 	display:  flex;
 	flex-direction: row;
 	align-items: center;
 	border-radius: 0px;
 	transition: opacity 0s ease;
+	mix-blend-mode: multiply;
 }
 
 .row-item:hover {
@@ -1299,6 +1305,7 @@ line-height: 40px;
 
 .row-details {
 	flex-direction: column;
+	padding-left: 8px;
 }
 
 
