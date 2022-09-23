@@ -34,6 +34,7 @@
 
 
 <body>
+  <div onclick="void(0);">
 
   <div class="top-svg">
     <!-- <img src="images/backdrop.png"> -->
@@ -41,7 +42,7 @@
 
   <div class="conty one">
     <div class="padding-conty top-cont">
-      <div class="header"><span>Koby <3</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+      <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
       <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
@@ -247,7 +248,7 @@
 
     </div>
   </div>
-
+</div>
 </body>
 
 
@@ -457,33 +458,33 @@ iH = $(window).innerHeight()
   });
 
 let listToggle = document.getElementById("list-toggle");
-// listToggle.addEventListener("click", function() {
-//   console.log("click")
-//     rows.classList.toggle("open");
-//     listToggle.classList.toggle("active");
-//   });
-
-
-function clickFunc(e){
-  if(e.touches){
-    e.preventDefault(); //Try to comment it out: double triggers on short tap
-    listToggle.removeEventListener("touchend", clickFunc);
-    listToggle.addEventListener("click", clickFunc);
-    console.log('tapped!');
-  }else{
-    console.log('clicked!');
-  }
-      rows.classList.toggle("open");
+listToggle.addEventListener("click", function() {
+  console.log("click")
+    rows.classList.toggle("open");
     listToggle.classList.toggle("active");
-}
-function touchFunc(){
-  listToggle.removeEventListener("click", clickFunc);
-  listToggle.addEventListener("touchend", clickFunc);
-}
-window.onload=function(){
-  listToggle.addEventListener("click", clickFunc);
-  listToggle.addEventListener("touchstart", touchFunc);
-}
+  });
+
+
+// function clickFunc(e){
+//   if(e.touches){
+//     e.preventDefault(); //Try to comment it out: double triggers on short tap
+//     listToggle.removeEventListener("touchend", clickFunc);
+//     listToggle.addEventListener("click", clickFunc);
+//     console.log('tapped!');
+//   }else{
+//     console.log('clicked!');
+//   }
+//       rows.classList.toggle("open");
+//     listToggle.classList.toggle("active");
+// }
+// function touchFunc(){
+//   listToggle.removeEventListener("click", clickFunc);
+//   listToggle.addEventListener("touchend", clickFunc);
+// }
+// window.onload=function(){
+//   listToggle.addEventListener("click", clickFunc);
+//   listToggle.addEventListener("touchstart", touchFunc);
+// }
 
 
   let playButton = document.getElementById("play");
