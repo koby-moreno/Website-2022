@@ -42,6 +42,7 @@ body{
 }
 .bottom-cont.opacity{
 	opacity:  0.25;
+	pointer-events: none;
 }
 
 .top-cont{
