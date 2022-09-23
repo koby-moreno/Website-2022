@@ -42,7 +42,7 @@
 
     <div class="conty one">
       <div class="padding-conty top-cont">
-        <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+        <div class="header"><span>Kobyyy Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
         <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
@@ -359,20 +359,22 @@
 console.log($(window).height());
 
 
+
+let rows = document.querySelector(".rows");
+
 function preventDefault(e){
     e.preventDefault();
 }
 
 function disableScroll(){
     document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    rows.removeEventListener('touchmove', preventDefault);
 }
 function enableScroll(){
     document.body.removeEventListener('touchmove', preventDefault);
 }
 
 let opened = false;
-
-let rows = document.querySelector(".rows");
 let fill = 255;
 let fillval = 0;
 let headerHeight = document.querySelector(".header").clientHeight;
@@ -571,11 +573,11 @@ let listToggle = document.getElementById("list-toggle");
 function toggleClick() {
 
   if (opened === false){
-    opened === true;
+    opened = true;
     disableScroll();
   }
   if (opened === true){
-    opened === false;
+    opened = false;
     enableScroll();
   }
   console.log("click");
