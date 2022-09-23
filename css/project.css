@@ -895,6 +895,12 @@ img{
 	backdrop-filter: blur(24px);
 }
 
+.row-details {
+	display:  flex;
+	flex-direction: row;
+	width:  100%;
+}
+
 .toggle {
 	display:flex;
 	flex-direction: row;
@@ -1268,6 +1274,10 @@ line-height: 40px;
 
 .row-padding {
 	padding: 24px 24px;
+}
+
+.row-details {
+	flex-direction: column;
 }
 
 

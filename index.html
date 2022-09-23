@@ -36,14 +36,14 @@
 <body>
   <div onclick="void(0);">
 
-  <div class="top-svg">
-    <!-- <img src="images/backdrop.png"> -->
-  </div>
+    <div class="top-svg">
+      <!-- <img src="images/backdrop.png"> -->
+    </div>
 
-  <div class="conty one">
-    <div class="padding-conty top-cont">
-      <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
-      <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
+    <div class="conty one">
+      <div class="padding-conty top-cont">
+        <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
+        <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
       </div>  -->
@@ -128,8 +128,8 @@
     </div>
 
 
-      <div class="rows">
-        <div class="row-padding">
+    <div class="rows">
+      <div class="row-padding">
         <div class="row-item">
           <div class="row-icon">
             <span class="material-symbols-outlined">
@@ -137,12 +137,14 @@
             </span>
             <i class="material-icons">arrow_outward</i>
           </div>
+          <div class="row-details">
           <div class="row-title">Projects Portal</div>
           <div class="row-org">Foursquare</div>
           <div class="row-client"></div>
           <div class="row-scope">User Research, Hi-Fi Designs</div>
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
+        </div>
         </div>
 
         <div class="row-item">
@@ -152,12 +154,14 @@
             </span>
             <i class="material-icons">arrow_outward</i>
           </div>
+          <div class="row-details">
           <div class="row-title">Lookout</div>
           <div class="row-org">Fathom</div>
           <div class="row-client">Colorado Mesa University</div>
           <div class="row-scope">Hi-Fi Design, Front-End Development</div>
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
+        </div>
         </div>
 
         <div class="row-item">
@@ -167,12 +171,14 @@
             </span>
             <i class="material-icons">arrow_outward</i>
           </div>
+          <div class="row-details">
           <div class="row-title">Mayo 20270</div>
           <div class="row-org">Fathom</div>
           <div class="row-client">Mayo Clinic</div>
           <div class="row-scope">Hi-Fi Design, Front-End Development</div>
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
+        </div>
         </div>
 
         <div class="row-item">
@@ -182,12 +188,14 @@
             </span>
             <i class="material-icons">arrow_outward</i>
           </div>
+          <div class="row-details">
           <div class="row-title">Banyan</div>
           <div class="row-org">Fathom</div>
           <div class="row-client">The Broad Institute</div>
           <div class="row-scope">Hi-Fi Design, Front-End Development</div>
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
+        </div>
         </div>
 
         <div class="row-item">
@@ -197,6 +205,7 @@
             </span>
             <i class="material-icons">arrow_outward</i>
           </div>
+          <div class="row-details">
           <div class="row-title">Operation Outbreak</div>
           <div class="row-org">Fathom</div>
           <div class="row-client">UMass Amherst</div>
@@ -204,10 +213,11 @@
           <div class="row-duration">3 mo</div>
           <div class="row-year">2022</div>
         </div>
-</div>
-
-
+        </div>
       </div>
+
+
+    </div>
 
     <div class="footer">
     </div>
@@ -225,7 +235,7 @@
         </div>
       </div>
 
-            <div class="toggle mobile">
+      <div class="toggle mobile">
         <div class="button togglebtn" id="list-toggle">
           <i class="material-icons">reorder</i>
           <!-- <i class="material-icons">close</i> -->
@@ -322,6 +332,8 @@
 
 
 console.log($(window).height());
+
+  let rows = document.querySelector(".rows");
 let fill = 255;
 let fillval = 0;
 let headerHeight = document.querySelector(".header").clientHeight;
@@ -437,7 +449,6 @@ iH = $(window).innerHeight()
 
   let gridBtn = document.getElementById("grid-btn");
   let listBtn = document.getElementById("list-btn");
-  let rows = document.querySelector(".rows");
   let grids = document.querySelectorAll(".project-section")
 
   gridBtn.addEventListener("click", function() {
@@ -457,12 +468,6 @@ iH = $(window).innerHeight()
     // });
   });
 
-let listToggle = document.getElementById("list-toggle");
-listToggle.addEventListener("click", function() {
-  console.log("click")
-    rows.classList.toggle("open");
-    listToggle.classList.toggle("active");
-  });
 
 
 // function clickFunc(e){
@@ -487,10 +492,10 @@ listToggle.addEventListener("click", function() {
 // }
 
 
-  let playButton = document.getElementById("play");
-  let playIcon = document.getElementById("play-btn");
-  let pauseIcon = document.getElementById("pause-btn");
-  let play = false;
+let playButton = document.getElementById("play");
+let playIcon = document.getElementById("play-btn");
+let pauseIcon = document.getElementById("pause-btn");
+let play = false;
 // Event listener for the play/pause button
 playButton.addEventListener("click", function() {
  console.log(play)
@@ -516,6 +521,16 @@ playButton.addEventListener("click", function() {
 
 
 });
+
+let listToggle = document.getElementById("list-toggle");
+function toggleClick() {
+    console.log("click");
+      rows.classList.toggle("open");
+    listToggle.classList.toggle("active");
+}
+listToggle.addEventListener("click", function() {
+toggleClick();
+  });
 
 </script>
 
