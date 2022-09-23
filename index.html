@@ -482,7 +482,8 @@ iH = $(window).innerHeight()
     document.querySelector("body").classList.remove("prevent-scroll");
     listBtn.classList.remove("active");
     gridBtn.classList.add("active");
-    rows.style.height = "1px";
+    rows.classList.remove("open");
+    // rows.style.height = `${iH - 64}px`;
     // grids.forEach(function(grid){
     //   grid.style.display = "flex"
     // });
@@ -492,7 +493,7 @@ iH = $(window).innerHeight()
     document.querySelector("body").classList.add("prevent-scroll");
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
-    rows.style.height = "600px";
+    rows.classList.add("open");
     // grids.forEach(function(grid){
     //   grid.style.display = "none"
     // });

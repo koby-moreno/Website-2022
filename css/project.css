@@ -902,10 +902,10 @@ i.gray {
 	position: fixed;
 	width: 100vw;
 	left: 0px;
-	height: auto;
+	bottom: -40px;
+	top:100vh;
+			height: auto;
 		transition: 0.5s ease;
-		top: calc(100vh - 1px);
-	bottom: 0px;
 	box-shadow: 0px 0px 6px -1px lightgray;
 				background-color: rgba(255,255,255, 0.35);
 				-webkit-backdrop-filter: blur(24px);
@@ -933,6 +933,7 @@ i.gray {
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 	border: 1px solid #e5e5e5;
+	overflow-y: scroll;
 }
 
 .button:hover {
@@ -947,8 +948,9 @@ i.gray {
 
 
 .open{
-	top: 114px;
 	bottom: 0px;
+	top: 114px;
+	height: auto;
 }
 
 .row-padding {
