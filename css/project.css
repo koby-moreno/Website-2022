@@ -903,7 +903,7 @@ i.gray {
 	width: 100vw;
 	left: 0px;
 	bottom: -40px;
-	top:100vh;
+	top:99vh;
 			height: auto;
 		transition: 0.5s ease;
 	box-shadow: 0px 0px 6px -1px lightgray;
@@ -911,6 +911,7 @@ i.gray {
 				-webkit-backdrop-filter: blur(24px);
 	backdrop-filter: blur(24px);
 	border: 1px solid #e5e5e5;
+	overflow-y: scroll;
 }
 
 .row-details {
@@ -933,7 +934,6 @@ i.gray {
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 	border: 1px solid #e5e5e5;
-	overflow-y: scroll;
 }
 
 .button:hover {
@@ -1207,6 +1207,10 @@ width: inherit;
 .mobile {
 	display: block;
 }
+
+/*.rows {
+	top:95vh;
+}*/
 
 
 
