@@ -903,7 +903,7 @@ i.gray {
 	width: 100vw;
 	left: 0px;
 	bottom: -40px;
-	top:99vh;
+	top:calc(100vh - 1px);
 			height: auto;
 		transition: 0.5s ease;
 	box-shadow: 0px 0px 6px -1px lightgray;
