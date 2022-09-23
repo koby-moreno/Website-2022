@@ -1224,7 +1224,7 @@ width: inherit;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		padding: 24px 0px 12px 0px;
 		width:  calc(100% - 48px);
 		border-bottom: solid lightgray 1px;
@@ -1312,7 +1312,7 @@ line-height: 40px;
 }
 
 .row-padding {
-	padding: 24px 24px;
+	padding: 24px 24px 60px 24px;
 }
 
 .row-details {
