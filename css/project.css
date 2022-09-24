@@ -802,19 +802,19 @@ html::-webkit-scrollbar {
 #lookout-img-one{
 	width: 67%;
 	position: absolute;
-	transition: 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 #lookout-img-two{
 	width: 60%;
 	position: absolute;
-	transition: 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 #lookout-img-three{
 	width: 60%;
 	position: absolute;
-	transition: 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 /*.boxy:hover #lookout-img-one,*/
@@ -1144,7 +1144,7 @@ i.gray {
 	overflow-y:  hidden;
 	justify-content: center;
 	align-items: center;
-	opacity: 0.07;
+	opacity: 0.25;
 }
 
 #gray {
@@ -1301,6 +1301,20 @@ height: auto;
 		font-size: 18px;
 		line-height: 24px;
 	}
+
+	#lookout-img-one.revert {
+scale: 0.8;
+}
+
+/*.boxy:hover #lookout-img-two,*/
+#lookout-img-two.revert {
+scale: 0.95;
+}
+
+/*.boxy:hover #lookout-img-three,*/
+#lookout-img-three.revert {
+scale: 0.85;
+}
 
 
 
