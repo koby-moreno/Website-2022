@@ -81,13 +81,13 @@ body{
 }
 
 .project-title {
-	padding-left: 0px;
-	width: 1000px;
-	margin-top: 16px;
+	width:  0px;
 	font-size: 20px;
 	line-height: 24px;
-	opacity:  0;
+	display: inline-block;
 	transition:  0.3s ease;
+white-space: nowrap;
+	overflow: hidden;
 }
 
 .project-subtitle {
@@ -927,8 +927,8 @@ i.gray {
 } 
 
 .button {
-	height: 48px;
-	width: 48px;
+	/*height: 48px;*/
+	width: fit-content;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -942,9 +942,12 @@ i.gray {
 
 .contbtn {
 	position: absolute;
-	box-shadow:0px 0px 0px 1px lightgray inset;
+	box-shadow:0px 0px 0px 2px lightgray inset;
+	background-color: white;
+	padding: 12px;
 	left: 12px;
 	bottom: 12px;
+	trasition: 0.3s ease;
 }
 
 
@@ -1200,9 +1203,9 @@ i.gray {
 	height: 500px;
 }
 
-.project-title {
+/*.project-title {
 width: 800px;
-}
+}*/
 
 .img-scroll {
 	height: 400px;
@@ -1222,9 +1225,9 @@ width: 800px;
 	width: inherit;
 }
 
-.project-title {
+/*.project-title {
 width: inherit;
-}
+}*/
 
 .box {
 	width: 95%;

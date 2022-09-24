@@ -84,10 +84,11 @@
           </div>
           <div class="button contbtn goto desktop">
             <i class="material-icons">arrow_outward</i>
+                          <div class="project-title">Projects Portal</div>
           </div>
         </div>
-        <div class="project-title desktop"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
-        </div>
+<!--         <div class="project-title desktop"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
+        </div> -->
       </div>
 
       <div class="project-section lookout">
@@ -131,9 +132,8 @@
           </div> -->
           <div class="button contbtn goto desktop">
             <i class="material-icons">arrow_outward</i>
+            <div class="project-title">Lookout</div>
           </div>
-        </div>
-        <div class="project-title right desktop"><span class="bold-text">Lookout</span><span class="project-subtitle">On Campus Covid Monitoring</span>
         </div>
       </div>
 
@@ -373,6 +373,13 @@
 
 console.log($(window).height());
 
+function displayTextWidth(text, font) {
+  let canvas = displayTextWidth.canvas || (displayTextWidth.canvas = document.createElement("canvas"));
+  let context = canvas.getContext("2d");
+  context.font = font;
+  let metrics = context.measureText(text);
+  return metrics.width;
+}
 
 
 let rows = document.querySelector(".rows");
@@ -459,9 +466,16 @@ iH = $(window).innerHeight()
   let containers = document.querySelectorAll(".containerr")
 
   goToBtns.forEach(function(button,i){
+
     let title = projectTitles[i];
+    let titleText = title.innerHTML;
+    console.log(titleText);
+
     button.onmouseenter = function(){
-      title.style.opacity = 1;
+
+      let titleWidth = displayTextWidth(`${titleText}`, "20px Roboto");
+      title.style.width = `${titleWidth + 12}px`;
+      title.style["padding-left"] = "12px"
       containers.forEach(function(container,j){
         if (i !== j){
           container.style.opacity = 0.25;
@@ -469,7 +483,8 @@ iH = $(window).innerHeight()
       });
     }
     button.onmouseleave = function(){
-      title.style.opacity = 0;
+      title.style.width = "0px";
+      title.style["padding-left"] = "0px"
       containers.forEach(function(container,j){
         if (i !== j){
           container.style.opacity = 1;
