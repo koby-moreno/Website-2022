@@ -106,14 +106,29 @@
             </div>
           </div>
 
-          <div class="img-container">
+          <div class="boxy">
+                                            <div id="lookout-img-three">
+            <img src="images/casemapmock_150.png">
+          </div>
+          <div id="lookout-img-two">
+              <img src="images/lookout_computer_150.png">
+          </div>
+                      <div id="lookout-img-one">
+            <img src="images/dormsmap_300.png">
+          </div>
+          </div>
+
+<!--           <div class="img-container">
             <div class="img-scroll" id="rotateOne">
-              <img src="images/dormdesign1_light.png">
+              <img src="images/dormsmap_300.png">
             </div>
             <div class="img-scroll" id="rotateTwo">
-              <img src="images/dormdesign2_light.png">
+              <img src="images/lookout_computer_150.png">
             </div>
-          </div>
+            <div class="img-scroll" id="rotateThree">
+              <img src="images/casemapmock_150.png">
+            </div>
+          </div> -->
           <div class="button contbtn goto desktop">
             <i class="material-icons">arrow_outward</i>
           </div>
@@ -363,15 +378,15 @@ console.log($(window).height());
 let rows = document.querySelector(".rows");
 
 function preventDefault(e){
-    e.preventDefault();
+  e.preventDefault();
 }
 
 function disableScroll(){
-    document.body.addEventListener('touchmove', preventDefault, { passive: false });
-    rows.removeEventListener('touchmove', preventDefault);
+  document.body.addEventListener('touchmove', preventDefault, { passive: false });
+  rows.removeEventListener('touchmove', preventDefault);
 }
 function enableScroll(){
-    document.body.removeEventListener('touchmove', preventDefault);
+  document.body.removeEventListener('touchmove', preventDefault);
 }
 
 let opened = false;
@@ -396,12 +411,14 @@ iH = $(window).innerHeight()
 
 
    if (wS + 0.5 * iH > lookoutHeight){
-    document.querySelector("#rotateOne").classList.add("revert");
-    document.querySelector("#rotateTwo").classList.add("revert");
+    document.querySelector("#lookout-img-one").classList.add("revert");
+    document.querySelector("#lookout-img-two").classList.add("revert");
+            document.querySelector("#lookout-img-three").classList.add("revert");
   }
   else {
-    document.querySelector("#rotateOne").classList.remove("revert");
-    document.querySelector("#rotateTwo").classList.remove("revert");
+    document.querySelector("#lookout-img-one").classList.remove("revert");
+    document.querySelector("#lookout-img-two").classList.remove("revert");
+        document.querySelector("#lookout-img-three").classList.remove("revert");
   }
 
 
