@@ -24,7 +24,7 @@
 
   <link href="css/project.css" rel="stylesheet" type="text/css">
 
-
+  <link rel="stylesheet" href="https://use.typekit.net/ivi8fsp.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- <div id="rectangle"></div> -->
@@ -34,16 +34,11 @@
 
 
 <body>
-  <div onclick="void(0);">
 
-<!--     <div class="top-svg">
-      <img src="images/backdrop.png">
-    </div> -->
-
-    <div class="conty one">
-      <div class="padding-conty top-cont">
-        <div class="header"><span>Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, working on spatial and data visualization platforms</span></div>
-        <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
+  <div class="conty one">
+    <div class="padding-conty top-cont">
+      <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools that:</span></div>
+      <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
       </div>  -->
@@ -52,9 +47,9 @@
   </div>
   <div class="conty">
 
-    <div class="padding-conty bottom-cont">
+    <div class="padding-conty bottom-cont" id="bottom-cont">
       <div class="project-section projects">
-       <div class="containerr">
+       <div class="containerr right">
         <div class="title mobile">
           <div>
             <div class="project-titlee">
@@ -84,40 +79,40 @@
           </div>
           <div class="button contbtn goto desktop">
             <i class="material-icons">arrow_outward</i>
-                          <div class="project-title">Projects Portal</div>
+            <div class="project-title">Projects Portal</div>
           </div>
         </div>
 <!--         <div class="project-title desktop"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
-        </div> -->
+</div> -->
+</div>
+
+<div class="project-section lookout">
+  <div class="containerr right">
+    <div class="title mobile">
+      <div>
+        <div class="project-titlee">
+          Lookout
+        </div>
+        <div class="project-sub">
+          Informing Community Health Action
+        </div>
       </div>
+      <div class="cont-icon">
+        <i class="material-icons gray">arrow_outward</i>
+      </div>
+    </div>
 
-      <div class="project-section lookout">
-        <div class="containerr right">
-          <div class="title mobile">
-            <div>
-              <div class="project-titlee">
-                Lookout
-              </div>
-              <div class="project-sub">
-                Informing Community Health Action
-              </div>
-            </div>
-            <div class="cont-icon">
-              <i class="material-icons gray">arrow_outward</i>
-            </div>
-          </div>
-
-          <div class="boxy">
-                                            <div id="lookout-img-three">
-            <img src="images/casemapmock_150.png">
-          </div>
-          <div id="lookout-img-two">
-              <img src="images/lookout_computer_150.png">
-          </div>
-                      <div id="lookout-img-one">
-            <img src="images/dormsmap_300.png">
-          </div>
-          </div>
+    <div class="boxy">
+      <div id="lookout-img-three">
+        <img src="images/casemapmock_150.png">
+      </div>
+      <div id="lookout-img-two">
+        <img src="images/lookout_computer_150.png">
+      </div>
+      <div id="lookout-img-one">
+        <img src="images/dormsmap_300.png">
+      </div>
+    </div>
 
 <!--           <div class="img-container">
             <div class="img-scroll" id="rotateOne">
@@ -138,10 +133,30 @@
       </div>
 
     </div>
-
+    <div class="padding-conty">
+      <div class="footer">
+        <span class="material-symbols-outlined small-icon">
+          construction
+        </span>
+        <span>Built by Koby Moreno</span>
+                <span class="material-symbols-outlined small-icon">
+          construction
+        </span>
+      </div>
+    </div>
 
   </div>
 
+  <div class="fixed-text">
+    <div class="floating-one">
+      <div><span class="title">Projects Portal</span></div>
+      <div>Organize all your maps, data and shit</div>
+    </div>
+    <div class="floating-two">
+      <div><span class="title">Lookout</span></div>
+      <div>Manage community outbreaks but don't be weird bout it</div>
+    </div>
+  </div>
 
   <div class="rows">
     <div class="row-padding">
@@ -259,44 +274,44 @@
 
   </div>
 
-  <div class="footer">
+<!--   <div class="footer">
+</div> -->
+
+<div class="gradient">
+</div>
+
+
+<div class="grouping">
+  <div class="toggle grid-list desktop">
+    <div class="button togglebtn active" id="grid-btn">
+      <i class="material-icons">grid_view</i>
+    </div>
+    <div class="button togglebtn" id="list-btn">
+      <i class="material-icons">reorder</i>
+    </div>
   </div>
 
-  <div class="gradient">
+  <div class="toggle mobile">
+    <div class="button togglebtn" id="list-toggle">
+      <i class="material-icons">reorder</i>
+      <!-- <i class="material-icons">close</i> -->
+    </div>
   </div>
 
-  <div class="grouping">
-    <div class="toggle grid-list desktop">
-      <div class="button togglebtn active" id="grid-btn">
-        <i class="material-icons">grid_view</i>
-      </div>
-      <div class="button togglebtn" id="list-btn">
-        <i class="material-icons">reorder</i>
-      </div>
+
+
+  <div class="toggle main-nav">
+    <div class="button togglebtn textbtn active">
+      <span>Work</span>
     </div>
-
-    <div class="toggle mobile">
-      <div class="button togglebtn" id="list-toggle">
-        <i class="material-icons">reorder</i>
-        <!-- <i class="material-icons">close</i> -->
-      </div>
+    <div class="button togglebtn textbtn" onclick="location.href='about.html';">
+      <span>About</span>
     </div>
-
-
-
-    <div class="toggle main-nav">
-      <div class="button togglebtn textbtn active">
-        <span>Work</span>
-      </div>
-      <div class="button togglebtn textbtn">
-        <span>About</span>
-      </div>
-      <div class="button togglebtn textbtn">
-        <span>Contact</span>
-      </div>
+    <div class="button togglebtn textbtn">
+      <span>Contact</span>
     </div>
-
   </div>
+
 </div>
 </div>
 </body>
@@ -304,163 +319,147 @@
 
 <script type="text/javascript">
 
-    // $('[data-svg]').each(function() { var thesvg = $(this).data('svg'); $(this).load(thesvg); });
-
-    let functionRun = true;
-    let svgg;
 
 
-//   $(window).on('load', function(){
 
-//     //alert("Document loaded, including graphics and embedded documents (like SVG)");
-
-//     // console.log(document.querySelector(".top-svg"));
-//   let svg = document.getElementById("svg-bg");
-//   let svgDoc = svg.contentDocument;
-//   svgg = svgDoc.querySelector("svg");
-//   console.log(svgg);
-
-//   let parcelGroup = svgg.querySelector("g");
-//   // let parcels = parcelGroup.querySelectorAll("path");
-//   let parcels = svgg.querySelectorAll("path");
-//   console.log(parcels)
-
-//   const randomElement = parcels[Math.floor(Math.random() * parcels.length)];
-
-//   console.log(randomElement);
+  console.log($(window).height());
 
 
-//   parcels.forEach(function(parcel,i){
-//     if(i % 3 == 0) {
-//     parcel.style.fill = "lightgray";
-//     parcel.style.opacity = 0.07;
-//   }
-//   else if (i % 3 == 1) {
-//     parcel.style.fill = "#ef6348";
-//     parcel.style.opacity = 0.07;
-//   }
-//   else {
-//     parcel.style.fill = "#306c99";
-//     parcel.style.opacity = 0.07;
-//   }
-//   parcel.style.stroke= "#f3f3f3"
-//   parcel.style.transition = "opacity 2s ease"
-//   })
+  let heading = document.querySelector(".header")
+  let grouping = document.querySelector(".grouping")
+  let marginWidth;
+  let homepage = true;
 
-// function getMultipleRandom(arr, num) {
-//   const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  let iH;
+  let headerHeight;
 
-//   return shuffled.slice(0, num);
-// }
+  function calculatePaddings(){
+    let contentWidth = document.querySelector(".conty").clientWidth;
+    let windowWidth = $(window).innerWidth();
+    var p = document.querySelector(".padding-conty");
+    var pStyle = p.currentStyle || window.getComputedStyle(p);
+    let marginStyle = parseFloat(pStyle["padding-left"], 10);
+    marginWidth = (windowWidth - contentWidth) / 2 + marginStyle;
+  }
 
+  function resizePaddings() {
+    grouping.style.right = `${marginWidth}px`;
+    if (homepage === true){
+      heading.style.left = `0px`;
+    }
+    else {
+      heading.style.left = `${marginWidth}px`;
+    }
+  }
 
-// setInterval(() => {
-// if (functionRun === true){
-// let selected = getMultipleRandom(parcels,30);
-// parcels.forEach(function(parcel,i){
-//   parcel.style.opacity = 0.07;
-// });
-// selected.forEach(function(parcel,i){
-// parcel.style.opacity = 0.4;
-// });
-// }
-// console.log(functionRun)
+  function calculateHeights() {
+    iH = document.querySelector(".top-cont").clientHeight;
+    headerHeight = document.querySelector(".header").clientHeight;
+  }
 
-// }, "3000")
+  calculatePaddings();
+  resizePaddings();
+  calculateHeights();
 
-// });
-
-
-console.log($(window).height());
-
-function displayTextWidth(text, font) {
-  let canvas = displayTextWidth.canvas || (displayTextWidth.canvas = document.createElement("canvas"));
-  let context = canvas.getContext("2d");
-  context.font = font;
-  let metrics = context.measureText(text);
-  return metrics.width;
-}
+  window.addEventListener('resize', function () {
+    calculatePaddings();
+    resizePaddings();
+    calculateHeights();
+  });
 
 
-let rows = document.querySelector(".rows");
 
-function preventDefault(e){
-  e.preventDefault();
-}
+  function displayTextWidth(text, font) {
+    let canvas = displayTextWidth.canvas || (displayTextWidth.canvas = document.createElement("canvas"));
+    let context = canvas.getContext("2d");
+    context.font = font;
+    let metrics = context.measureText(text);
+    return metrics.width;
+  }
 
-function disableScroll(){
-  document.body.addEventListener('touchmove', preventDefault, { passive: false });
-  rows.removeEventListener('touchmove', preventDefault);
-}
-function enableScroll(){
-  document.body.removeEventListener('touchmove', preventDefault);
-}
+  setTimeout( function() {
+    document.querySelector(".grouping").style.transition = "top 0.5s ease"
+    document.querySelector(".box").style.transition = "0.7s ease"
+  }, 500);
 
-let opened = false;
-let fill = 255;
-let fillval = 0;
-let headerHeight = document.querySelector(".header").clientHeight;
-let wH = $(window).innerHeight();
-var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
-var iW = (iOS) ? screen.width : window.innerWidth, iH = (iOS) ? screen.height : window.innerHeight;
-iH = $(window).innerHeight()
+
+  let rows = document.querySelector(".rows");
+
+  function preventDefault(e){
+    e.preventDefault();
+  }
+
+  function disableScroll(){
+    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+    rows.removeEventListener('touchmove', preventDefault);
+  }
+  function enableScroll(){
+    document.body.removeEventListener('touchmove', preventDefault);
+  }
+
+  let opened = false;
+  let fill = 255;
+  let fillval = 0;
+// var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
+// var iW = (iOS) ? screen.width : window.innerWidth, iH = (iOS) ? screen.height : window.innerHeight;
+// iH = $(window).innerHeight()
   // document.querySelector(".top-cont").style.height = $(window).innerHeight();
-  iH = document.querySelector(".top-cont").clientHeight;
   let lookout = document.querySelector(".lookout");
   let lookoutHeight = $('.lookout').offset().top - $(window).scrollTop()
   let projects = document.querySelector(".lookout");
   let projectsHeight = $('.projects').offset().top - $(window).scrollTop()
 
-  let = allProjectHeights = [projectsHeight, lookoutHeight]
+
 
   $(window).scroll(function() {
-   let wS = $(this).scrollTop();
+
+    let wS = $(this).scrollTop();
+
+    if (wS + 0.5 * iH > lookoutHeight){
+      document.querySelector("#lookout-img-one").classList.add("revert");
+      document.querySelector("#lookout-img-two").classList.add("revert");
+      document.querySelector("#lookout-img-three").classList.add("revert");
+      document.querySelector(".floating-one").classList.add("hide-top");
+      document.querySelector(".floating-two").classList.add("show");
+    }
+    else {
+      document.querySelector(".floating-one").classList.remove("hide-top");
+      document.querySelector("#lookout-img-one").classList.remove("revert");
+      document.querySelector("#lookout-img-two").classList.remove("revert");
+      document.querySelector("#lookout-img-three").classList.remove("revert");
+      document.querySelector(".floating-two").classList.remove("show");
+    }
 
 
-   if (wS + 0.5 * iH > lookoutHeight){
-    document.querySelector("#lookout-img-one").classList.add("revert");
-    document.querySelector("#lookout-img-two").classList.add("revert");
-            document.querySelector("#lookout-img-three").classList.add("revert");
-  }
-  else {
-    document.querySelector("#lookout-img-one").classList.remove("revert");
-    document.querySelector("#lookout-img-two").classList.remove("revert");
-        document.querySelector("#lookout-img-three").classList.remove("revert");
-  }
 
+    if (wS + 0.5 * iH > projectsHeight){
+      document.querySelector(".box").classList.add("revert");
+      document.querySelector(".floating-one").classList.add("show");
+    }
+    else {
+      document.querySelector(".box").classList.remove("revert");
+      document.querySelector(".floating-one").classList.remove("show");
+    }
 
-
-  if (wS + 0.5 * iH > projectsHeight){
-    document.querySelector(".box").classList.add("revert");
-  }
-  else {
-    document.querySelector(".box").classList.remove("revert");
-  }
-
-  if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
-    functionRun = false;
-
-    document.querySelector(".grouping").classList.add("nav-placement");
-         // svgg.style.opacity = 0;
-         document.querySelector(".header-desc").style.opacity = 0;
-         document.querySelector(".header").classList.add("header-placement")
-         document.querySelector(".header").style.scale = 1;
-         document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
-       }
-       else {
-        functionRun = true;
-        fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 32))
-        fill = 245 + fillval;
-    // document.querySelector(".grouping").style.top = "-64px";
-    document.querySelector(".grouping").classList.remove("nav-placement");
-    document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
-    // svgg.style.opacity = Math.round(( 1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
-    document.querySelector(".header").classList.remove("header-placement")
-
-    document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
-    document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
-  }
-
+    if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
+      homepage = false;
+      heading.style.left = `${marginWidth}px`;
+      heading.classList.add("header-placement")
+      grouping.classList.add("nav-placement");
+      document.querySelector(".header-desc").style.opacity = 0;
+      document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
+    }
+    else {
+      homepage = true;
+      heading.style.left = `0px`;
+      grouping.classList.remove("nav-placement");
+      heading.classList.remove("header-placement")
+      fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 32))
+      fill = 245 + fillval;
+      document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
+      document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
+      document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
+    }
   });
 
   let goToBtns =document.querySelectorAll(".goto");
@@ -533,67 +532,33 @@ iH = $(window).innerHeight()
     listBtn.classList.remove("active");
     gridBtn.classList.add("active");
     rows.classList.remove("open");
-    // rows.style.height = `${iH - 64}px`;
-    // grids.forEach(function(grid){
-    //   grid.style.display = "flex"
-    // });
+    document.querySelector(".grouping").classList.remove("prevent-scroll");
   });
   listBtn.addEventListener("click", function() {
     document.querySelector(".bottom-cont").classList.add("opacity");
     document.querySelector("body").classList.add("prevent-scroll");
+    document.querySelector(".grouping").classList.add("prevent-scroll");
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
     rows.classList.add("open");
-    // grids.forEach(function(grid){
-    //   grid.style.display = "none"
-    // });
   });
 
 
 
-// function clickFunc(e){
-//   if(e.touches){
-//     e.preventDefault(); //Try to comment it out: double triggers on short tap
-//     listToggle.removeEventListener("touchend", clickFunc);
-//     listToggle.addEventListener("click", clickFunc);
-//     console.log('tapped!');
-//   }else{
-//     console.log('clicked!');
-//   }
-//       rows.classList.toggle("open");
-//     listToggle.classList.toggle("active");
-// }
-// function touchFunc(){
-//   listToggle.removeEventListener("click", clickFunc);
-//   listToggle.addEventListener("touchend", clickFunc);
-// }
-// window.onload=function(){
-//   listToggle.addEventListener("click", clickFunc);
-//   listToggle.addEventListener("touchstart", touchFunc);
-// }
 
+  let playButton = document.getElementById("play");
+  let playIcon = document.getElementById("play-btn");
+  let pauseIcon = document.getElementById("pause-btn");
+  let play = false;
 
-let playButton = document.getElementById("play");
-let playIcon = document.getElementById("play-btn");
-let pauseIcon = document.getElementById("pause-btn");
-let play = false;
-// Event listener for the play/pause button
-playButton.addEventListener("click", function() {
- console.log(play)
- if (play == true) {
-  console.log("playing")
-    // Play the video
+  playButton.addEventListener("click", function() {
+   if (play == true) {
     video.pause();
-
-    // Update the button text to 'Pause'
     playIcon.style.display = "block";
     pauseIcon.style.display ="none";
     play = false;
   } else {
-    // Pause the video
     video.play();
-
-    // Update the button text to 'Play'
     playIcon.style.display = "none";
     pauseIcon.style.display ="block";
     play = true;
@@ -601,30 +566,29 @@ playButton.addEventListener("click", function() {
 });
 
 
-let listToggle = document.getElementById("list-toggle");
-function toggleClick() {
+  let listToggle = document.getElementById("list-toggle");
+  function toggleClick() {
 
-  if (opened === false){
-    opened = true;
-    disableScroll();
+    if (opened === false){
+      opened = true;
+      disableScroll();
+    }
+    if (opened === true){
+      opened = false;
+      enableScroll();
+    }
+    rows.classList.toggle("open");
+    listToggle.classList.toggle("active");
+    document.querySelector("body").classList.toggle("prevent-scroll");
+    document.querySelector(".bottom-cont").classList.toggle("opacity")
+    let contys = document.querySelectorAll(".conty");
+    contys.forEach(function(conty,i){
+      conty.classList.toggle("opacity");
+    });
   }
-  if (opened === true){
-    opened = false;
-    enableScroll();
-  }
-  console.log("click");
-  rows.classList.toggle("open");
-  listToggle.classList.toggle("active");
-  document.querySelector("body").classList.toggle("prevent-scroll");
-  document.querySelector(".bottom-cont").classList.toggle("opacity")
-  let contys = document.querySelectorAll(".conty");
-  contys.forEach(function(conty,i){
-    conty.classList.toggle("opacity");
+  listToggle.addEventListener("click", function() {
+    toggleClick();
   });
-}
-listToggle.addEventListener("click", function() {
-  toggleClick();
-});
 
 </script>
 
