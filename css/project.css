@@ -994,12 +994,14 @@ i.gray {
 
 .title {
 	font-size: 18px;
-	line-height: 32px;
+	line-height: 24px;
 	font-weight: 500;
+	display: inline-block;
 	/*color: gray;*/
 	/*text-transform: uppercase;*/
 	margin-bottom: 4px;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1.5px solid lightgray;
+	transition: 0.3s ease;
 }
 
 .floating-one, .floating-two {
@@ -1007,6 +1009,17 @@ i.gray {
 	top: 150px;
 	opacity: 0;
 	transition: 0.7s ease;
+}
+
+.floating-one:hover,
+.floating-two:hover {
+	cursor: pointer;
+}
+
+
+.floating-one:hover > .title,
+.floating-two:hover > .title{
+	border-bottom: 1.5px solid blue;
 }
 
 .show {
@@ -1092,8 +1105,21 @@ i.gray {
 	padding: 60px 60px;
 }
 
+.row-titles {
+	color: gray;
+	font-size: 14px;
+	border-bottom: 1.25px dashed;
+	border-color: gray;
+	padding: 8px 8px 8px 24px;
+}
+
+/*.row-icon > i {
+	color: blue;
+}*/
+
 .row-item {
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1.25px solid;
+	border-color: lightgray;
 	padding: 16px 8px;
 	font-size: 16px;
 	display:  flex;
@@ -1113,8 +1139,8 @@ i.gray {
 
 .row-title{
 	flex-grow:  1;
-	font-weight:  500;
-	font-size:  18px;
+/*	font-weight:  500;
+	font-size:  18px;*/
 }
 
 .row-org{
@@ -1175,7 +1201,7 @@ i.gray {
 
 .header{
 	font-family: Roboto;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 32px;
 	line-height: 48px;
 	scale: 1.35;
@@ -1357,7 +1383,7 @@ width: inherit;
 height: auto;
 }
 
-	.title{
+	.titlee{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;

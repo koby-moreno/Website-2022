@@ -50,7 +50,7 @@
     <div class="padding-conty bottom-cont" id="bottom-cont">
       <div class="project-section projects">
        <div class="containerr right">
-        <div class="title mobile">
+        <div class="titlee mobile">
           <div>
             <div class="project-titlee">
               Lookout
@@ -88,7 +88,7 @@
 
 <div class="project-section lookout">
   <div class="containerr right">
-    <div class="title mobile">
+    <div class="titlee mobile">
       <div>
         <div class="project-titlee">
           Lookout
@@ -149,17 +149,34 @@
 
   <div class="fixed-text">
     <div class="floating-one">
-      <div><span class="title">Projects Portal</span></div>
+      <div class="title">Projects Portal</div>
       <div>Organize all your maps, data and shit</div>
     </div>
     <div class="floating-two">
-      <div><span class="title">Lookout</span></div>
+      <div class="title">Lookout</div>
       <div>Manage community outbreaks but don't be weird bout it</div>
     </div>
   </div>
 
   <div class="rows">
     <div class="row-padding">
+
+            <div class="row-titles desktop">
+        <div class="row-details">
+          <div class="row-title">Project Name</div>
+          <div class="row-org">Company</div>
+          <div class="row-client">Client</div>
+          <div class="row-scope">Scope</div>
+          <div class="row-duration">Duration</div>
+          <div class="row-year">Year</div>
+        </div>
+        <div class="row-icon mobile">
+          <span class="material-symbols-outlined gray">
+            navigate_next
+          </span>
+        </div>
+      </div>
+
       <div class="row-item">
         <div class="row-icon">
           <span class="material-symbols-outlined">
@@ -269,8 +286,8 @@
           </span>
         </div>
       </div>
-    </div>
 
+    </div>
 
   </div>
 
@@ -405,15 +422,14 @@
 // iH = $(window).innerHeight()
   // document.querySelector(".top-cont").style.height = $(window).innerHeight();
   let lookout = document.querySelector(".lookout");
-  let lookoutHeight = $('.lookout').offset().top - $(window).scrollTop()
+  let lookoutHeight = $('.lookout').offset().top;
   let projects = document.querySelector(".lookout");
-  let projectsHeight = $('.projects').offset().top - $(window).scrollTop()
+  let projectsHeight = $('.projects').offset().top;
 
+let wS = $(this).scrollTop();
+console.log(lookoutHeight);
 
-
-  $(window).scroll(function() {
-
-    let wS = $(this).scrollTop();
+function scrollanimations(){
 
     if (wS + 0.5 * iH > lookoutHeight){
       document.querySelector("#lookout-img-one").classList.add("revert");
@@ -460,6 +476,13 @@
       document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
       document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
     }
+}
+
+scrollanimations();
+
+  $(window).scroll(function() {
+    wS = $(this).scrollTop();
+    scrollanimations();
   });
 
   let goToBtns =document.querySelectorAll(".goto");
@@ -507,6 +530,7 @@
         else {
           icon.style.display = "none";
           arrow.style.display = "block";
+          r.style["border-color"] = "blue";
         }
       });
     }
@@ -515,6 +539,7 @@
         let icon = r.querySelector("span");
         let arrow = r.querySelector("i");
         r.style.opacity = 1;
+        r.style["border-color"] = "lightgray";
         // r.style.filter = "none"
         icon.style.display = "block";
         arrow.style.display = "none";
