@@ -65,7 +65,7 @@
         </div>
 
         <div class="box">
-         <video loop muted playsinline class="desktop "id="video">
+         <video loop muted playsinline class="desktop" id="video">
           <source src="images/projects.mov">
           </video>
           <video  autoplay loop muted playsinline class="mobile">
@@ -82,8 +82,39 @@
             <div class="project-title">Projects Portal</div>
           </div>
         </div>
-<!--         <div class="project-title desktop"><span class="bold-text">Projects Portal</span><span class="project-subtitle">Organizing and Sharing Maps</span>
-</div> -->
+</div>
+
+      <div class="project-section cupcake">
+       <div class="containerr white right">
+        <div class="titlee mobile">
+          <div>
+            <div class="project-titlee">
+              Lookout
+            </div>
+            <div class="project-sub">
+              Informing Community Health Action
+            </div>
+          </div>
+          <div class="cont-icon">
+            <i class="material-icons gray">arrow_outward</i>
+          </div>
+        </div>
+
+        <div class="cupcake-box">
+         <video loop muted playsinline class="desktop" id="cupcake-vid">
+          <source src="images/cupcake.mov">
+          </video>
+          <video  autoplay loop muted playsinline class="mobile">
+            <source src="images/cupcake.mov">
+            </video>
+            <!-- <img class="mobile" src="images/projects.png"> -->
+          </div>
+
+          <div class="button contbtn goto desktop">
+            <i class="material-icons">arrow_outward</i>
+            <div class="project-title">Cupcake</div>
+          </div>
+        </div>
 </div>
 
 <div class="project-section lookout">
@@ -425,6 +456,7 @@
   let lookoutHeight = $('.lookout').offset().top;
   let projects = document.querySelector(".lookout");
   let projectsHeight = $('.projects').offset().top;
+  let cupcakeHeight = $('.cupcake').offset().top;
 
 let wS = $(this).scrollTop();
 console.log(lookoutHeight);
@@ -445,6 +477,17 @@ function scrollanimations(){
       document.querySelector("#lookout-img-three").classList.remove("revert");
       document.querySelector(".floating-two").classList.remove("show");
     }
+
+        if (wS + 0.5 * iH > cupcakeHeight){
+      document.querySelector(".cupcake-box").classList.add("showw");
+document.getElementById("cupcake-vid").play()
+    }
+    else {
+      document.querySelector(".cupcake-box").classList.remove("showw");
+      document.getElementById("cupcake-vid").pause()
+
+    }
+
 
 
 

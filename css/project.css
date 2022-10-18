@@ -728,6 +728,12 @@ strong{
 	transition: opacity 0.3s ease;
 }
 
+/*.white {
+	background-color: white;
+	box-shadow:0px 0px 0px 1px lightgray inset;
+
+}*/
+
 
 
 .togglebtn.active {
@@ -796,6 +802,28 @@ html::-webkit-scrollbar {
 	bottom: 0px;
 	scale: 1;
 }
+
+.cupcake-box {
+	width: 700px;
+	height: auto;
+	flex-grow: 1;
+	/*background-color: gray;*/
+	position: relative;
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	bottom: -100px;
+	transition: 0.7s ease;
+	overflow: auto;
+}
+
+.cupcake-box.showw{
+	bottom: 0px;
+}
+
+
 
 .boxy {
 	width: 100%;
