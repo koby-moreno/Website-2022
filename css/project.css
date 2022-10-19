@@ -1411,6 +1411,10 @@ width: inherit;
 height: auto;
 }
 
+.cupcake-box{
+	width: 95%;
+}
+
 	.titlee{
 		display: flex;
 		flex-direction: row;
