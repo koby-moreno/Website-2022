@@ -53,7 +53,7 @@
         <div class="titlee mobile">
           <div>
             <div class="project-titlee">
-              Lookout
+              Projects Portal
             </div>
             <div class="project-sub">
               Informing Community Health Action
@@ -89,7 +89,7 @@
         <div class="titlee mobile">
           <div>
             <div class="project-titlee">
-              Lookout
+              Cupcake Design System
             </div>
             <div class="project-sub">
               Informing Community Health Action
@@ -101,12 +101,12 @@
         </div>
 
         <div class="cupcake-box">
-         <video loop muted playsinline class="desktop" id="cupcake-vid">
+         <video muted playsinline id="cupcake-vid">
           <source src="images/cupcake.mov">
           </video>
-          <video  autoplay loop muted playsinline class="mobile">
+<!--           <video  autoplay loop muted playsinline class="mobile">
             <source src="images/cupcake.mov">
-            </video>
+            </video> -->
             <!-- <img class="mobile" src="images/projects.png"> -->
           </div>
 
@@ -184,6 +184,10 @@
       <div>Organize all your maps, data and shit</div>
     </div>
     <div class="floating-two">
+      <div class="title">Cupcake Design System</div>
+      <div>Oh hey yeah we gotta change things up</div>
+    </div>
+    <div class="floating-three">
       <div class="title">Lookout</div>
       <div>Manage community outbreaks but don't be weird bout it</div>
     </div>
@@ -377,6 +381,7 @@
   let grouping = document.querySelector(".grouping")
   let marginWidth;
   let homepage = true;
+  let playvid = false;
 
   let iH;
   let headerHeight;
@@ -467,25 +472,35 @@ function scrollanimations(){
       document.querySelector("#lookout-img-one").classList.add("revert");
       document.querySelector("#lookout-img-two").classList.add("revert");
       document.querySelector("#lookout-img-three").classList.add("revert");
-      document.querySelector(".floating-one").classList.add("hide-top");
-      document.querySelector(".floating-two").classList.add("show");
+      
+      document.querySelector(".floating-three").classList.add("show");
+      document.querySelector(".floating-two").classList.add("hide-top");
     }
     else {
-      document.querySelector(".floating-one").classList.remove("hide-top");
       document.querySelector("#lookout-img-one").classList.remove("revert");
+      document.querySelector(".floating-two").classList.remove("hide-top");
       document.querySelector("#lookout-img-two").classList.remove("revert");
       document.querySelector("#lookout-img-three").classList.remove("revert");
-      document.querySelector(".floating-two").classList.remove("show");
+      document.querySelector(".floating-three").classList.remove("show");
     }
 
         if (wS + 0.5 * iH > cupcakeHeight){
       document.querySelector(".cupcake-box").classList.add("showw");
+      if (playvid === false){
 document.getElementById("cupcake-vid").play()
+playvid = true;
+}
+document.querySelector(".floating-one").classList.add("hide-top");
+document.querySelector(".floating-two").classList.add("show");
     }
     else {
+      playvid = false;
       document.querySelector(".cupcake-box").classList.remove("showw");
       document.getElementById("cupcake-vid").pause()
-
+      document.getElementById("cupcake-vid").currentTime = 0;
+// document.getElementById("cupcake-vid").load();
+      document.querySelector(".floating-one").classList.remove("hide-top");
+      document.querySelector(".floating-two").classList.remove("show");
     }
 
 
