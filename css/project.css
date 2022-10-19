@@ -804,7 +804,7 @@ html::-webkit-scrollbar {
 }
 
 .cupcake-box {
-	width: 700px;
+	width: 675px;
 	height: auto;
 	flex-grow: 1;
 	/*background-color: gray;*/
@@ -1503,6 +1503,7 @@ line-height: 40px;
 	right: 16px;
 	left: 16px;
 	justify-content: center;
+	transition: 0.5s ease;
 }
 
 .nav-placement {
