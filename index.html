@@ -11,7 +11,7 @@
   <!--   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>Welcome ⋆｡*ﾟ✲*</title>
+  <title>Koby Moreno</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
 
   <div class="conty one">
     <div class="padding-conty top-cont">
-      <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools that:</span></div>
+      <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools</span></div>
       <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
@@ -68,7 +68,7 @@
          <video loop muted playsinline class="desktop" id="video">
           <source src="images/projects.mov">
           </video>
-          <video  autoplay loop muted playsinline class="mobile">
+          <video loop muted playsinline class="mobile">
             <source src="images/projects.mov">
             </video>
             <!-- <img class="mobile" src="images/projects.png"> -->
@@ -359,9 +359,9 @@
     <div class="button togglebtn textbtn" onclick="location.href='about.html';">
       <span>About</span>
     </div>
-    <div class="button togglebtn textbtn">
+<!--     <div class="button togglebtn textbtn">
       <span>Contact</span>
-    </div>
+    </div> -->
   </div>
 
 </div>
@@ -382,6 +382,7 @@
   let marginWidth;
   let homepage = true;
   let playvid = false;
+  let play = true;
 
   let iH;
   let headerHeight;
@@ -431,7 +432,7 @@
   }
 
   setTimeout( function() {
-    document.querySelector(".grouping").style.transition = "top 0.5s ease"
+    grouping.style.transition = "top 0.5s ease"
     document.querySelector(".box").style.transition = "0.7s ease"
   }, 500);
 
@@ -509,10 +510,14 @@ document.querySelector(".floating-two").classList.add("show");
     if (wS + 0.5 * iH > projectsHeight){
       document.querySelector(".box").classList.add("revert");
       document.querySelector(".floating-one").classList.add("show");
+      if (play === true){
+      document.getElementById("video").play()
+    }
     }
     else {
       document.querySelector(".box").classList.remove("revert");
       document.querySelector(".floating-one").classList.remove("show");
+      document.getElementById("video").pause()
     }
 
     if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
@@ -521,6 +526,7 @@ document.querySelector(".floating-two").classList.add("show");
       heading.classList.add("header-placement")
       grouping.classList.add("nav-placement");
       document.querySelector(".header-desc").style.opacity = 0;
+      document.querySelector(".header-desc").style.display = 'hidden';
       document.body.style.backgroundColor = `rgb(${255},${255},${255})`;
     }
     else {
@@ -530,6 +536,7 @@ document.querySelector(".floating-two").classList.add("show");
       heading.classList.remove("header-placement")
       fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 32))
       fill = 245 + fillval;
+      document.querySelector(".header-desc").style.display = 'inline';
       document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
       document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
       document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
@@ -632,7 +639,6 @@ scrollanimations();
   let playButton = document.getElementById("play");
   let playIcon = document.getElementById("play-btn");
   let pauseIcon = document.getElementById("pause-btn");
-  let play = false;
 
   playButton.addEventListener("click", function() {
    if (play == true) {

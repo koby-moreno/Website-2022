@@ -842,18 +842,21 @@ html::-webkit-scrollbar {
 #lookout-img-one{
 	width: 67%;
 	position: absolute;
+	scale:  1;
 	transition: all 0.7s ease;
 }
 
 #lookout-img-two{
 	width: 60%;
 	position: absolute;
+	scale:  1;
 	transition: all 0.7s ease;
 }
 
 #lookout-img-three{
 	width: 60%;
 	position: absolute;
+	scale:  1;
 	transition: all 0.7s ease;
 }
 
@@ -880,11 +883,11 @@ scale: 0.75;
 
 
 #play-btn{
-	display: block;
+	display: none;
 }
 
 #pause-btn{
-	display: none;
+	display: block;
 }
 
 .img-container {
@@ -1241,6 +1244,7 @@ i.gray {
 	max-width: 800px;
 	z-index: 2;
 	position:  relative;
+	pointer-events: none;
 }
 
 .serif {
@@ -1503,7 +1507,7 @@ line-height: 40px;
 	right: 16px;
 	left: 16px;
 	justify-content: center;
-	transition: 0.5s ease;
+	/*transition: 0.5s ease;*/
 }
 
 .nav-placement {
