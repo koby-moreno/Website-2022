@@ -45,7 +45,7 @@
 
     </div>
   </div>
-  <div class="conty">
+  <div class="conty" id="work-cont">
 
     <div class="padding-conty bottom-cont" id="bottom-cont">
       <div class="project-section projects">
@@ -388,10 +388,10 @@
 
 
   <div class="toggle main-nav">
-    <div class="button togglebtn textbtn active">
+    <div class="button togglebtn textbtn active" id="work-btn">
       <span>Work</span>
     </div>
-    <div class="button togglebtn textbtn" onclick="location.href='about.html';">
+    <div class="button togglebtn textbtn" id="about-btn">
       <span>About</span>
     </div>
 <!--     <div class="button togglebtn textbtn">
@@ -423,6 +423,9 @@
   let iH;
   let headerHeight;
 
+  let bioContY;
+  let workContY;
+
   function calculatePaddings(){
     let contentWidth = document.querySelector(".conty").clientWidth;
     let windowWidth = $(window).innerWidth();
@@ -446,6 +449,8 @@
   function calculateHeights() {
     iH = document.querySelector(".top-cont").clientHeight;
     headerHeight = document.querySelector(".header").clientHeight;
+    workContY = window.pageYOffset + document.querySelector("#work-cont").getBoundingClientRect().top;
+    bioContY = window.pageYOffset + document.querySelector("#bio-cont").getBoundingClientRect().top
   }
 
   calculatePaddings();
@@ -486,6 +491,21 @@
   }
   function enableScroll(){
     document.body.removeEventListener('touchmove', preventDefault);
+  }
+
+  function doScrolling(elementY, duration) { 
+    var startingY = window.pageYOffset;
+    var diff = elementY - startingY;
+    var start;
+    window.requestAnimationFrame(function step(timestamp) {
+      if (!start) start = timestamp;
+      var time = timestamp - start;
+      var percent = Math.min(time / duration, 1);
+      window.scrollTo(0, startingY + diff * percent);
+      if (time < duration) {
+        window.requestAnimationFrame(step);
+      }
+    })
   }
 
   let opened = false;
@@ -565,7 +585,7 @@
 
     if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
       if (wS + 0.5 * iH < bioHeight){
-              document.querySelector(".grid-list").classList.add("toggleShow")
+        document.querySelector(".grid-list").classList.add("toggleShow")
       }
       homepage = false;
       heading.style.left = `${marginWidth}px`;
@@ -588,7 +608,7 @@
       document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
       document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
       document.body.style.backgroundColor = `rgb(${fill},${fill},${fill})`;
-            document.querySelector(".grid-list").classList.remove("toggleShow")
+      document.querySelector(".grid-list").classList.remove("toggleShow")
       document.querySelector(".main-nav").classList.remove("toggleShow")
     }
   }
@@ -730,6 +750,20 @@
   listToggle.addEventListener("click", function() {
     toggleClick();
   });
+
+
+let aboutBtn = document.querySelector("#about-btn")
+aboutBtn.addEventListener("click", function() {
+  doScrolling(bioContY, 500);
+  aboutBtn.classList.add("active");
+  workBtn.classList.remove("active");
+});
+let workBtn = document.querySelector("#work-btn")
+workBtn.addEventListener("click", function() {
+  doScrolling(workContY, 500);
+  workBtn.classList.add("active");
+  aboutBtn.classList.remove("active");
+});
 
 </script>
 
