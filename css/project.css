@@ -11,9 +11,9 @@ body{
 }
 
 
-.prevent-scroll {
-	overflow-y: hidden;
+.prevent-scroll-body {
 	padding-right: 10px;
+	overflow: hidden;
 }
 
 
@@ -136,9 +136,11 @@ body{
 	width:  0px;
 	font-size: 20px;
 	line-height: 24px;
+	left: 12px;
 	display: inline-block;
-	transition:  0.3s ease;
+	transition:  width 0.3s ease;
 	white-space: nowrap;
+	padding-left: 0px;
 	overflow: hidden;
 }
 
@@ -998,19 +1000,22 @@ i.gray {
 .grouping {
 	display: flex;
 	flex-direction: row;
+	align-tems: bottom;
 	position: fixed;
-	top: -64px;
-	transition: top 0s ease;
+	bottom: calc(100vh - 94px);
+	top: 40px;
+	transition: bottom 0.5s ease;
 	right: 60px;
 	z-index: 3;
 }
 
-.grouping.prevent-scroll {
-	padding-right: 10px;
-}
+
+/*.prevent-scroll {
+	right: 70px; 
+}*/
 
 .nav-placement {
-	top: 32px;
+	bottom: calc(100vh - 94px);
 }
 
 .grouping > *:not(:last-child)/*,
@@ -1049,6 +1054,24 @@ i.gray {
 	position: relative;
 	font-size: 32px;
 }
+
+
+
+.main-nav {
+	right: 0px;
+	bottom: 100px;
+	transition: bottom 0.5s ease;
+}
+.grid-list {
+	right: 170px;
+	bottom: 100px;
+	transition: bottom 0.5s ease;
+}
+
+.toggleShow {
+	bottom: 4px;
+}
+
 
 
 .textbtn {
@@ -1135,7 +1158,7 @@ i.gray {
 	line-height: 24px;
 }
 
-.toggle {
+/*.toggle {
 	display:flex;
 	flex-direction: row;
 	padding: 4px;
@@ -1148,6 +1171,27 @@ i.gray {
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 	border: 1px solid #e5e5e5;
+}*/
+
+.toggle {
+	display:flex;
+	position: absolute;
+	flex-direction: row;
+	padding: 4px;
+	box-shadow:0px 0px 0px 1px lightgray inset;
+	box-shadow: 0px 0px 6px -1px lightgray;
+	background-color: rgba(255,255,255, 0.85);
+	color: gray;
+	width: fit-content;	
+	border-radius: 28px;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid #e5e5e5;
+}
+
+
+.toggle.grid {
+	margin-bottom: 200px;
 }
 
 .button:hover {
