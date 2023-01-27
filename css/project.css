@@ -72,7 +72,8 @@ body{
 }
 
 .bio-text-cont {
-	padding-left: 36px;
+	padding-right: 36px;
+	padding-left: 0px;
 	font-size: 24px;
 	line-height: 36px;
 	font-weight: 300;
@@ -1467,7 +1468,7 @@ font-style: normal;
 	}
 
 	.bio-text-cont {
-		padding-left: 36px;
+		padding-right: 36px;
 		font-size: 24px;
 		line-height: 36px;
 		font-weight: 300;

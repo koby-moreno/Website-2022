@@ -171,14 +171,7 @@
       <div class="padding-conty align-center top-cont">
 
         <div class="bio-container">
-          <div class="bio-photo-cont desktop-hide">
-            <!-- <img class="bio-photo" src="images/headshot.jpeg"> -->
-            <div class="button contbtn desktop">
-              <i class="material-icons">waving_hand</i>
-              <div class="project-title"><span class="social link">Email</span><span class="social link">LinkedIn</span></div>
-            </div>
 
-          </div>
           <div class="bio-text-cont">
             <div class="text-title">Hey, I'm Koby!</div>
             <div>I create digital experiences that allow us to better understand and navigate our physical world. As a Product Designer at <span class="link">Foursquare</span>, I work on our mapping and data visualization platforms.</div>
@@ -186,6 +179,14 @@
             <div>
               I've lived a former life as an architect, urban designer, GIS specialist, and software engineer. 
             I recevied my Masters from the Harvard Graduate School of Design nd a BS in Architecture from Washington University's Sam Fox School of Design. Graduate School of Design nd a BS in Architecture from Washington University's Sam Fox School of Design.</div>
+          </div>
+          <div class="bio-photo-cont desktop-hide">
+            <!-- <img class="bio-photo" src="images/headshot.jpeg"> -->
+            <div class="button contbtn desktop" id="say-hello">
+              <i class="material-icons">waving_hand</i>
+              <div class="project-title"><span class="social link">Email</span><span class="social link">LinkedIn</span></div>
+            </div>
+
           </div>
 
 
@@ -415,6 +416,8 @@
   let heading = document.querySelector(".header")
   let grouping = document.querySelector(".grouping")
   let fixedTest = document.querySelector(".fixed-text")
+  let aboutBtn = document.querySelector("#about-btn")
+  let workBtn = document.querySelector("#work-btn")
   let marginWidth;
   let homepage = true;
   let playvid = false;
@@ -528,11 +531,16 @@
       document.querySelector(".floating-three").classList.remove("show");
       document.querySelector(".floating-three").classList.add("hide-top");
       document.querySelector(".grid-list").classList.remove("toggleShow")
+      aboutBtn.classList.add("active");
+      workBtn.classList.remove("active");
+
     }
     else {
       document.querySelector(".floating-three").classList.add("show");
       document.querySelector(".floating-three").classList.remove("hide-top");
       document.querySelector(".grid-list").classList.add("toggleShow")
+      aboutBtn.classList.remove("active");
+      workBtn.classList.add("active");
     }
 
     if (wS + 0.5 * iH > lookoutHeight){
@@ -752,18 +760,38 @@
   });
 
 
-let aboutBtn = document.querySelector("#about-btn")
-aboutBtn.addEventListener("click", function() {
-  doScrolling(bioContY, 500);
-  aboutBtn.classList.add("active");
-  workBtn.classList.remove("active");
-});
-let workBtn = document.querySelector("#work-btn")
-workBtn.addEventListener("click", function() {
-  doScrolling(workContY, 500);
-  workBtn.classList.add("active");
-  aboutBtn.classList.remove("active");
-});
+
+  let sayHelloBtn =document.querySelector("#say-hello");
+  let social = document.querySelectorAll(".social");
+  let projectTitless = sayHelloBtn.querySelector(".project-title");
+
+  let socialTextOne = social[0].innerHTML;
+  let socialTextTwo = social[1].innerHTML;
+
+  sayHelloBtn.onmouseenter = function(){
+
+    let titleWidthOne = displayTextWidth(`${socialTextOne}`, "16px Roboto");
+    let titleWidthTwo = displayTextWidth(`${socialTextTwo}`, "16px Roboto");
+    projectTitless.style.width = `${titleWidthOne + titleWidthTwo + 36}px`;
+    projectTitless.style["padding-left"] = "0px"
+  }
+  sayHelloBtn.onmouseleave = function(){
+    projectTitless.style.width = "0px";
+    projectTitless.style["padding-left"] = "0px"
+  }
+
+  
+  aboutBtn.addEventListener("click", function() {
+    doScrolling(bioContY, 500);
+    aboutBtn.classList.add("active");
+    workBtn.classList.remove("active");
+  });
+
+  workBtn.addEventListener("click", function() {
+    doScrolling(workContY, 500);
+    workBtn.classList.add("active");
+    aboutBtn.classList.remove("active");
+  });
 
 </script>
 
