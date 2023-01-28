@@ -36,7 +36,14 @@
 <body>
 
   <div class="conty one">
+                <div class="landing-image-cont full-height">
+      <!-- <img class="object-fit" src="images/bg-image-01.jpg"> -->
+      <video autoplay loop muted playsinline class="desktop object-fit">
+          <source src="images/bg-video.mp4">
+          </video>
+    </div>
     <div class="padding-conty top-cont">
+
       <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools</span></div>
       <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
@@ -181,7 +188,7 @@
             I recevied my Masters from the Harvard Graduate School of Design nd a BS in Architecture from Washington University's Sam Fox School of Design. Graduate School of Design nd a BS in Architecture from Washington University's Sam Fox School of Design.</div>
           </div>
           <div class="bio-photo-cont desktop-hide">
-            <!-- <img class="bio-photo" src="images/headshot.jpeg"> -->
+            <img class="bio-photo object-fit" src="images/bio-photo.jpeg">
             <div class="button contbtn desktop" id="say-hello">
               <i class="material-icons">waving_hand</i>
               <div class="project-title"><span class="social link">Email</span><span class="social link">LinkedIn</span></div>
@@ -410,8 +417,8 @@
 
 
 
-  console.log($(window).height());
 
+  let windowHeight;
 
   let heading = document.querySelector(".header")
   let grouping = document.querySelector(".grouping")
@@ -422,6 +429,8 @@
   let homepage = true;
   let playvid = false;
   let play = true;
+
+  let fullHeight = document.querySelectorAll(".full-height");
 
   let iH;
   let headerHeight;
@@ -449,21 +458,30 @@
     }
   }
 
+  function resizeFullHeight() {
+    fullHeight.forEach(function(element,i){
+      element.style.height = `${windowHeight}px`
+    });
+  }
+
   function calculateHeights() {
     iH = document.querySelector(".top-cont").clientHeight;
     headerHeight = document.querySelector(".header").clientHeight;
     workContY = window.pageYOffset + document.querySelector("#work-cont").getBoundingClientRect().top;
     bioContY = window.pageYOffset + document.querySelector("#bio-cont").getBoundingClientRect().top
+    windowHeight = $(window).height();
   }
 
   calculatePaddings();
   resizePaddings();
   calculateHeights();
+  resizeFullHeight();
 
   window.addEventListener('resize', function () {
     calculatePaddings();
     resizePaddings();
     calculateHeights();
+    resizeFullHeight();
   });
 
 
