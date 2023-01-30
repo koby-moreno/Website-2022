@@ -66,14 +66,14 @@ body{
 	display:  flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 
 .bio-container {
 	display: flex;
 	flex-direction: row;
-
-	/*max-width: 1000px;*/
 	align-items: center;
+	/*justify-content: space-between;*/
 }
 
 .bio-photo-cont {
@@ -88,15 +88,16 @@ body{
 
 
 .bio-text-cont {
-	padding-right: 36px;
+	padding-right: 60px;
 	padding-left: 0px;
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 20px;
+	line-height: 32px;
 	font-weight: 300;
+	max-width: 650px;
 }
 
 .bio-text-cont > div {
-	margin-bottom: 12px;
+	margin-bottom: 16px;
 }
 
 .text-title{
