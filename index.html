@@ -36,16 +36,16 @@
 <body>
 
   <div class="conty one">
-                <div class="landing-image-cont full-height">
+    <div class="landing-image-cont full-height">
       <!-- <img class="object-fit" src="images/bg-image-01.jpg"> -->
       <video autoplay loop muted playsinline class="object-fit">
-          <source src="images/bg-video-3.mp4">
-          </video>
-    </div>
-    <div class="padding-conty top-cont">
+        <source src="images/bg-video-3.mp4">
+        </video>
+      </div>
+      <div class="padding-conty top-cont">
 
-      <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools</span></div>
-      <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
+        <div class="header"><span class="serif">Koby Moreno</span><span class="header-desc"> is a product designer based in NYC, creating spatial and data visualization tools</span></div>
+        <!--       <div class="top-svg" id="svg-bg" data-svg="images/file.svg"></div> -->
 <!--       <div class="top-svg">
         <object type="image/svg+xml" data="images/file2.svg" id="svg-bg"></object>
       </div>  -->
@@ -57,16 +57,16 @@
     <div class="padding-conty bottom-cont" id="bottom-cont">
       <div class="project-section projects">
        <div class="containerr right">
-            <div class="project-header-desktop-small">
-      <div class="title">Projects Portal</div>
-      <div class="description">Enabling users to organize and share spatial data</div>
-      <div class="pill-container">
-        <div class="pill">User Research</div>
-        <div class="pill">UI & UX Design</div>
-        <div class="pill">Requirement Sourcing</div>
-        <div class="pill">System Architecture</div>
-      </div>
-    </div>
+        <div class="project-header-desktop-small">
+          <div class="title">Projects Portal</div>
+          <div class="description">Enabling users to organize and share spatial data</div>
+          <div class="pill-container">
+            <div class="pill">User Research</div>
+            <div class="pill">UI & UX Design</div>
+            <div class="pill">Requirement Sourcing</div>
+            <div class="pill">System Architecture</div>
+          </div>
+        </div>
         <div class="titlee mobile">
           <div>
             <div class="project-titlee">
@@ -103,6 +103,16 @@
 
       <div class="project-section cupcake">
        <div class="containerr white right">
+                <div class="project-header-desktop-small">
+          <div class="title">Foursquare Studio</div>
+          <div class="description">Enabling users to organize and share spatial data</div>
+          <div class="pill-container">
+            <div class="pill">Design System</div>
+            <div class="pill">UI & UX Design</div>
+            <div class="pill">User Research</div>
+            <div class="pill">Rebranding</div>
+          </div>
+        </div>
         <div class="titlee mobile">
           <div>
             <div class="project-titlee">
@@ -231,7 +241,7 @@
 
 
 
-  <div class="fixed-text mobile">
+<!--   <div class="fixed-text mobile">
     <div class="floating-one">
       <div class="title">Projects Portal</div>
       <div>Organize all your maps, data and shit</div>
@@ -250,7 +260,7 @@
       <div class="title">Lookout</div>
       <div>Manage community outbreaks but don't be weird bout it</div>
     </div>
-  </div>
+  </div> -->
 
   <div class="rows">
     <div class="row-padding">
@@ -438,7 +448,7 @@
 
   let heading = document.querySelector(".header")
   let grouping = document.querySelector(".grouping")
-  let fixedTest = document.querySelector(".fixed-text")
+  // let fixedTest = document.querySelector(".fixed-text")
   let aboutBtn = document.querySelector("#about-btn")
   let workBtn = document.querySelector("#work-btn")
   let marginWidth;
@@ -465,7 +475,7 @@
 
   function resizePaddings() {
     grouping.style.right = `${marginWidth}px`;
-    fixedTest.style.left = `${marginWidth}px`;
+    // fixedTest.style.left = `${marginWidth}px`;
     if (homepage === true){
       heading.style.left = `0px`;
     }
@@ -562,16 +572,16 @@
 
     if (wS + 0.5 * iH > bioHeight){
       console.log(bioHeight)
-      document.querySelector(".floating-three").classList.remove("show");
-      document.querySelector(".floating-three").classList.add("hide-top");
+      // document.querySelector(".floating-three").classList.remove("show");
+      // document.querySelector(".floating-three").classList.add("hide-top");
       document.querySelector(".grid-list").classList.remove("toggleShow")
       aboutBtn.classList.add("active");
       workBtn.classList.remove("active");
 
     }
     else {
-      document.querySelector(".floating-three").classList.add("show");
-      document.querySelector(".floating-three").classList.remove("hide-top");
+      // document.querySelector(".floating-three").classList.add("show");
+      // document.querySelector(".floating-three").classList.remove("hide-top");
       document.querySelector(".grid-list").classList.add("toggleShow")
       aboutBtn.classList.remove("active");
       workBtn.classList.add("active");
@@ -582,15 +592,15 @@
       document.querySelector("#lookout-img-two").classList.add("revert");
       document.querySelector("#lookout-img-three").classList.add("revert");
       
-      document.querySelector(".floating-three").classList.add("show");
-      document.querySelector(".floating-two").classList.add("hide-top");
+      // document.querySelector(".floating-three").classList.add("show");
+      // document.querySelector(".floating-two").classList.add("hide-top");
     }
     else {
       document.querySelector("#lookout-img-one").classList.remove("revert");
-      document.querySelector(".floating-two").classList.remove("hide-top");
+      // document.querySelector(".floating-two").classList.remove("hide-top");
       document.querySelector("#lookout-img-two").classList.remove("revert");
       document.querySelector("#lookout-img-three").classList.remove("revert");
-      document.querySelector(".floating-three").classList.remove("show");
+      // document.querySelector(".floating-three").classList.remove("show");
     }
 
     if (wS + 0.5 * iH > cupcakeHeight){
@@ -599,29 +609,29 @@
         document.getElementById("cupcake-vid").play()
         playvid = true;
       }
-      document.querySelector(".floating-one").classList.add("hide-top");
-      document.querySelector(".floating-two").classList.add("show");
+      // document.querySelector(".floating-one").classList.add("hide-top");
+      // document.querySelector(".floating-two").classList.add("show");
     }
     else {
       playvid = false;
       document.querySelector(".cupcake-box").classList.remove("showw");
       document.getElementById("cupcake-vid").pause()
       document.getElementById("cupcake-vid").currentTime = 0;
-      document.querySelector(".floating-one").classList.remove("hide-top");
-      document.querySelector(".floating-two").classList.remove("show");
+      // document.querySelector(".floating-one").classList.remove("hide-top");
+      // document.querySelector(".floating-two").classList.remove("show");
     }
 
 
     if (wS + 0.5 * iH > projectsHeight){
       document.querySelector(".box").classList.add("revert");
-      document.querySelector(".floating-one").classList.add("show");
+      // document.querySelector(".floating-one").classList.add("show");
       if (play === true){
         document.getElementById("video").play()
       }
     }
     else {
       document.querySelector(".box").classList.remove("revert");
-      document.querySelector(".floating-one").classList.remove("show");
+      // document.querySelector(".floating-one").classList.remove("show");
       document.getElementById("video").pause()
     }
 

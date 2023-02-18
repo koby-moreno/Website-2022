@@ -29,12 +29,18 @@ body{
 	position:  relative;
 	width: 33%;
 	/*top: 32px;*/
-	left:  32px;
+	left:  48px;
 	z-index: 1;
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: 300;
+	margin-right: 24px;
 }
+
+.project-header-desktop-small:hover {
+cursor: pointer;
+}
+
 
 .project-header-desktop-small:hover .title {
 	border-bottom: 1.5px solid blue;
