@@ -8,6 +8,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	color: #1a1a1a;
 }
 
 
@@ -47,8 +48,9 @@ cursor: pointer;
 }
 
 .project-header-desktop-small > .title {
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 500;
 }
 
 .project-header-desktop-small > .description {
@@ -944,7 +946,8 @@ html::-webkit-scrollbar {
 
 
 .boxy {
-	width: 100%;
+/*	width: 100%;
+	max-width: 800px;*/
 	height: 100%;
 	flex-grow: 1;
 	/*background-color: gray;*/
@@ -1165,13 +1168,13 @@ i.gray {
 .title {
 	font-size: 20px;
 	line-height: 24px;
-	font-weight: 500;
+	font-weight: 400;
 	display: inline-block;
 	/*color: gray;*/
 	/*text-transform: uppercase;*/
 	margin-bottom: 4px;
 	border-bottom: 1.5px solid lightgray;
-	transition: 0.3s ease;
+	transition: border-bottom 0.3s ease;
 }
 
 .floating-one, .floating-two, .floating-three {
@@ -1527,12 +1530,22 @@ font-style: normal;
 
 .project-header-desktop-small {
 	position:  absolute;
-	width: 100%;
+	width: calc(100% - 64px);
 	top: 32px;
 	left:  32px;
 	z-index: 1;
 	font-weight: 300;
 	
+}
+
+.project-header-desktop-small > .title{
+font-size: 28px;
+line-height: 36px;
+	
+}
+
+.pill-container{
+	padding-top: 4px;
 }
 
 
@@ -1555,7 +1568,7 @@ font-style: normal;
 	}
 
 	.box.revert {
-		bottom: -50px;
+		bottom: -75px;
 	}
 
 	.bio-text-cont {
