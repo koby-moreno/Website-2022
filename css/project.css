@@ -934,7 +934,7 @@ html::-webkit-scrollbar {
 	justify-content: center;
 	align-items: center;
 	flex-shrink: 0;
-	bottom: -100px;
+	bottom: -150px;
 	transition: 0.7s ease;
 	overflow: auto;
 }
@@ -1520,11 +1520,6 @@ font-style: normal;
 	}
 }
 
-@media (max-width:1300px) {
-	.fixed-text{
-		opacity: 0;
-	}
-}
 
 @media (max-width:1250px) {
 
@@ -1546,6 +1541,15 @@ line-height: 36px;
 
 .pill-container{
 	padding-top: 4px;
+}
+
+.cupcake-box.showw{
+	bottom: -75px;
+}
+
+.boxy {
+	bottom: -65px;
+	scale: 95%;
 }
 
 
@@ -1636,8 +1640,9 @@ width: 800px;
 width: inherit;
 }*/
 
-.box {
-	width: 95%;
+.box,
+.cupcake-box {
+	width: 85%;
 }
 
 .img-scroll{
