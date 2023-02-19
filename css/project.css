@@ -1411,6 +1411,7 @@ i.gray {
 }
 .link:hover{
 	border-bottom: 1.5px solid blue;
+	cursor: pointer;
 }
 
 .social:hover {

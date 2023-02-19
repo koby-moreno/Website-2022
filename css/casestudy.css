@@ -1,0 +1,65 @@
+
+body {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.proj-title {
+	font-size: 48px;
+	line-height: 64px;
+	font-weight: 400;
+}
+
+.header-text {
+	font-weight: 500;
+	display: inline-block;
+}
+
+.body-text {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.proj-desc-long {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 32px;
+	padding: 8px 0px;
+	
+}
+
+.metadata-cont {
+	padding: 8px 0px;
+}
+
+.metadata-cont-cont {
+	min-width: 200px;
+	padding-left: 32px;
+}
+
+#project-cont {
+	width: 100%;
+	max-width: 1000px;
+}
+
+.material-symbols-outlined {
+	font-size: 16px;
+	padding: 8px;
+}
+
+.bonus {
+	padding: 8px 0px;
+}
+
+/*.conty {
+	align-items: center;
+}
+*/
+
+.flex {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+}
