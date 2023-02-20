@@ -38,8 +38,8 @@
 
   <div class="conty">
 
-    <div class="padding-conty align-center">
-      <div class="project-cont">
+    <div class="flex column align-center">
+      <div class="project-cont dos padding-conty">
         <div class="proj-title">Lookout</div>
         <div class="flex">
           <div class="flex column">
@@ -79,26 +79,54 @@
         </div>
       </div>
 
-      <div class="project-cont">
+      <div class="project-cont padding-conty flex column">
+
+        <div class="case-section">
+          <div class="header-text">Product Overview</div>
+          <div class="body-text">Lookout is the primary dashboard component for Sentinel -- a larger effort for communities to better monitor and act on infectious disease outbreaks.  Colorado Mesa University is Sentinel's first test site. Students use Scout to report symptoms and check into events while administrators use Lookout to access this data, which in turn informs real-time policies and safety measures on campus.  While Lookout consists of many views, my focus was on the design and development of spatial visualizations.</div>
+          <div class="img-container flex column center">
+            <img class="img" src="images/LookoutIntro.png">
+          </div>
+        </div>
+        <div class="case-section">
+          <div class="text-section">
+            <div class="header-text">Creating the Case Map</div>
+            <div class="body-text">We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. I used Google's geocoding API to convert addresses to coordinates and D3's embedded geographic functionality to draw the basemap.  For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.</div>
+          </div>
+          <div class="img-section">
+            <div class="img-container flex column center">
+              <img class="img img-medium" src="images/casemap_wireframe.png">
+              <div class="img-desc img-medium">This is what the image is</div>
+            </div>
+            <div class="img-container flex column center">
+              <video muted playsinline autoplay loop class="img" ><source src="images/casevibrance.mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="img-desc">This is what the image is</div>
+            </div>
+            <div class="img-container flex column center">
+              <img class="img img-small" src="images/lookout_zoomin-01.png">
+              <div class="img-desc img-small">This is what the image is</div>
+            </div>
+          </div>
+        </div>
 
         <div class="case-section">
           <div class="header-text">Title Here</div>
           <div class="body-text">I've lived former lives as an architect, urban designer, GIS specialist, and front-end engineer and have collaborated on a range of projects including climate resilience planning at AECOM, infectious disease control at The Broad Institute, and in-hospital technologies at Mayo Clinic.
           I recevied my Masters from Harvard University's Graduate School of Design and a BS in Architecture from Washington University in St. Louis.</div>
           <div class="img-container flex column center">
-            <img class="img img-medium" src="images/dormsmap_300.png">
+            <img class="img" src="images/dorms_wireframe.png">
           </div>
-        </div>
-        <div class="case-section">
-          <div class="header-text">Title Here</div>
-          <div class="body-text">I've lived former lives as an architect, urban designer, GIS specialist, and front-end engineer and have collaborated on a range of projects including climate resilience planning at AECOM, infectious disease control at The Broad Institute, and in-hospital technologies at Mayo Clinic.
-          I recevied my Masters from Harvard University's Graduate School of Design and a BS in Architecture from Washington University in St. Louis.</div>
-          <div class="img-container flex column center">
-            <img class="img img-medium" src="images/dormsmap_300.png">
-          </div>
+          
         </div>
 
-
+        <div class="scroll-guide flex column align-center">
+          <div class="body-text">Scroll to read</div>
+          <div><span class="material-symbols-outlined big-icon">
+south
+</span></div>
+        </div>
       </div>
 
     </div>
