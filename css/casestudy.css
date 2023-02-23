@@ -111,7 +111,7 @@ body {
 }
 
 .big-icon {
-	font-size: 40px;
+	font-size: 32px;
 }
 
 .bonus {
@@ -123,6 +123,10 @@ body {
 }
 */
 
+.grouping {
+	width:  100px;
+}
+
 .flex {
 	display: flex;
 }
@@ -130,3 +134,17 @@ body {
 .column {
 	flex-direction: column;
 }
+
+@media (max-width:1000px) {
+
+.project-cont {
+	width: calc(100% - 80px);
+}
+}
+
+@media only screen and (max-device-width: 600px)  {
+
+.project-cont {
+	width: calc(100% - 48px);
+}
+	}

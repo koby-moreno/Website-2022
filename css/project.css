@@ -1274,15 +1274,14 @@ i.gray {
 }
 
 .footer {
-	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: gray;
 	font-weight: 300;
-	/*background-color: #f5f5f5;
-*/}
+	background-color: #f5f5f5;
+}
 
 	.small-icon {
 		font-size: 16px;
