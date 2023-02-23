@@ -6,14 +6,20 @@ body {
 }
 
 .project-cont {
-	background-color: white;
 	border: 0px solid lightgray;
 	border-radius: 64px;
+}
+
+.white-bg {
+	background-color: white;
 }
 
 .dos {
 	background-color: #f5f5f5;
 	padding: 120px 60px;
+	display:  flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .proj-title {
@@ -127,12 +133,20 @@ body {
 	width:  100px;
 }
 
+.bottom-nav {
+	padding: 40px 0px;
+}
+
 .flex {
 	display: flex;
 }
 
 .column {
 	flex-direction: column;
+}
+
+.space-between {
+	justify-content: space-between;
 }
 
 @media (max-width:1000px) {
@@ -143,6 +157,22 @@ body {
 }
 
 @media only screen and (max-device-width: 600px)  {
+
+/*.dos {
+	padding: 48px 0px;
+}*/
+
+.proj-desc-long {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	
+}
+
+
+.desktop {
+	display: none;
+}
 
 .project-cont {
 	width: calc(100% - 48px);
