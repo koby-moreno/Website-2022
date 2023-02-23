@@ -20,7 +20,7 @@ let marginWidth;
   }
 
   function resizeFullHeight() {
-    projectCont.style.height = `${windowHeight - 240 - 64}px`
+    projectCont.style.height = `${windowHeight - 120 - 64}px`
   }
 
   function calculateHeights() {
