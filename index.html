@@ -485,7 +485,15 @@
   }
 
   function resizePaddings() {
-    grouping.style.right = `${marginWidth}px`;
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    let windowWidth = $(window).innerWidth();
+let groupingRight = windowWidth/2 - 168/2;
+grouping.style.right = `${groupingRight}px`;
+}
+else {
+  grouping.style.right = `${marginWidth}px`;
+}
+    
     // fixedTest.style.left = `${marginWidth}px`;
     if (homepage === true){
       heading.style.left = `0px`;
@@ -846,11 +854,6 @@
     aboutBtn.classList.remove("active");
   });
 
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    let windowWidth = $(window).innerWidth();
-let groupingRight = windowWidth/2 - 168/2;
-grouping.style.right = `${groupingRight}px`;
-}
 
 </script>
 
