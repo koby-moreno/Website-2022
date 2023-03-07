@@ -43,9 +43,6 @@ cursor: pointer;
 }
 
 
-.project-header-desktop-small:hover .title {
-	border-bottom: 1.5px solid blue;
-}
 
 .project-header-desktop-small > .title {
 	font-size: 32px;
@@ -808,6 +805,11 @@ strong{
 	font-weight: 700;
 }
 
+#list-toggle {
+	align-items: center;
+	justify-content: center;
+}
+
 
 
 .lookout-overview-container {
@@ -1146,7 +1148,9 @@ i.gray {
 	bottom: 4px;
 }
 
-
+.padding: {
+	padding: 8px;
+}
 
 .textbtn {
 	width: fit-content;
@@ -1504,7 +1508,7 @@ font-style: normal;
 	scale:1;
 }
 
-.mobile {
+.mobile, .mobile-flex {
 	display: none;
 }
 
@@ -1724,6 +1728,10 @@ width: inherit;
 		display: block;
 	}
 
+		.mobile-flex {
+		display: flex;
+	}
+
 /*.rows {
 	top:95vh;
 }*/
@@ -1851,8 +1859,8 @@ width: inherit;
 /*	height: 10px;*/
 flex-grow: 0;
 bottom: -50px;
-right: 16px;
-left: 16px;
+/*right: 16px;
+left: 16px;*/
 justify-content: center;
 /*transition: 0.5s ease;*/
 }
@@ -2007,6 +2015,20 @@ justify-content: center;
 
 .button:hover.active {
 	color: black;
+}
+
+.main-nav {
+	right: 0px;
+	bottom: -100px;
+	transition: bottom 0.5s ease;
+}
+
+.grid-list {
+	bottom: -100px;
+}
+
+.toggleShow {
+	bottom: 4px;
 }
 
 

@@ -58,20 +58,20 @@
       <div class="project-section projects">
        <div class="containerr right">
         <div class="project-header-desktop-small">
-           <div class="title">
-            <div class="link">Projects Portal</div>
-            <div class="cont-icon mobile">
-              <i class="material-icons gray">arrow_outward</i>
-            </div>
-          </div>
-          <div class="description">Enabling users to organize and share spatial data</div>
-          <div class="pill-container">
-            <div class="pill">User Research</div>
-            <div class="pill">UI & UX Design</div>
-            <div class="pill">Requirement Sourcing</div>
-            <div class="pill">System Architecture</div>
+         <div class="title">
+          <div class="link">Projects Portal</div>
+          <div class="cont-icon mobile">
+            <i class="material-icons gray">arrow_outward</i>
           </div>
         </div>
+        <div class="description">Enabling users to organize and share spatial data</div>
+        <div class="pill-container">
+          <div class="pill">User Research</div>
+          <div class="pill">UI & UX Design</div>
+          <div class="pill">Requirement Sourcing</div>
+          <div class="pill">System Architecture</div>
+        </div>
+      </div>
 <!--         <div class="titlee mobile">
           <div>
             <div class="project-titlee">
@@ -144,20 +144,20 @@
 
       <div class="project-section lookout">
         <div class="containerr right">
-          <div class="project-header-desktop-small">
-             <div class="title">
+          <div class="project-header-desktop-small" onclick="location.href='lookout.html';">
+           <div class="title">
             <div class="link">Lookout</div>
             <div class="cont-icon mobile">
               <i class="material-icons gray">arrow_outward</i>
             </div>
           </div>
-            <div class="description">Informing community-based health action on college campuses</div>
-            <div class="pill-container">
-              <div class="pill">UI & UX Design</div>
-              <div class="pill">Front-End Development</div>
-              <div class="pill">Rapid Prototyping</div>
-            </div>
+          <div class="description">Informing community-based health action on college campuses</div>
+          <div class="pill-container">
+            <div class="pill">UI & UX Design</div>
+            <div class="pill">Front-End Development</div>
+            <div class="pill">Rapid Prototyping</div>
           </div>
+        </div>
 <!--           <div class="titlee mobile">
             <div>
               <div class="project-titlee">
@@ -414,22 +414,21 @@
 </div>
 
 
+
 <div class="grouping">
-  <div class="toggle grid-list desktop">
-    <div class="button togglebtn active" id="grid-btn">
+  <div class="toggle grid-list">
+    <div class="button togglebtn active desktop" id="grid-btn">
       <i class="material-icons">grid_view</i>
     </div>
-    <div class="button togglebtn" id="list-btn">
+    <div class="button togglebtn desktop" id="list-btn">
+      <i class="material-icons">reorder</i>
+    </div>
+        <div class="mobile-flex button togglebtn" id="list-toggle">
       <i class="material-icons">reorder</i>
     </div>
   </div>
 
-  <div class="toggle mobile">
-    <div class="button togglebtn" id="list-toggle">
-      <i class="material-icons">reorder</i>
-      <!-- <i class="material-icons">close</i> -->
-    </div>
-  </div>
+
 
 
 
@@ -846,6 +845,12 @@
     workBtn.classList.add("active");
     aboutBtn.classList.remove("active");
   });
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    let windowWidth = $(window).innerWidth();
+let groupingRight = windowWidth/2 - 168/2;
+grouping.style.right = `${groupingRight}px`;
+}
 
 </script>
 
