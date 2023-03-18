@@ -51,7 +51,7 @@ document.querySelectorAll(".bgoneimg")[i].style.width = `${bgOneWidth[i]}px`;
 	// bgOneWidth = document.querySelector("#bgone").offsetWidth;
 	// document.querySelector("#bgoneimg").style.height = `${bgOneHeight}px`;
 	// document.querySelector("#bgoneimg").style.width = `${bgOneWidth}px`;
-	}, 500);
+	}, 1);
 
 
 

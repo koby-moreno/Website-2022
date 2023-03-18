@@ -18,7 +18,14 @@ body {
 	background-color: white;
 }
 
+.light-mode {
+	color: #f5f5f5;
+}
 
+.no-min {
+	border-radius: 64px;
+	overflow: hidden;
+}
 
 .dark-bg {
 	background-color: #171717;
@@ -32,6 +39,7 @@ body {
 	display:  flex;
 	flex-direction: column;
 	justify-content: center;
+		/*filter: blur(4px);*/
 }
 
 .no-min {
