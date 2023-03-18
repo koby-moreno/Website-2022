@@ -69,6 +69,22 @@ window.addEventListener('resize', function () {
 	resizeFullHeight();
 });
 
+  let wS = $(this).scrollTop();
+
+  function scrollanimations(){
+  	console.log(wS);
+  	document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
+  }
+
+    scrollanimations();
+
+  $(window).scroll(function() {
+    wS = $(this).scrollTop();
+    scrollanimations();
+    console.log(wS)
+  });
+
+
 aboutBtn.addEventListener("click", function() {
 	window.location = "index.html#bio-cont"
 });

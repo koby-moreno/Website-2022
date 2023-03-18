@@ -53,31 +53,43 @@
     </div>
   </div>
 
-  
-  <div class="conty" id="work-cont">
 
-      <div class="bg-img" id="bgoneimg">
-    <img class="object-fit" src="images/projects-bg.png">
-  </div>
+
+
+  <div class="conty" id="work-cont">
 
     <div class="padding-conty bottom-cont" id="bottom-cont">
       <div class="project-section projects">
-        <div class="containerr right">
-          <div class="project-header-desktop-small">
-           <div class="title">
-            <div class="link">Projects Portal</div>
-            <div class="cont-icon mobile">
-              <i class="material-icons gray">arrow_outward</i>
-            </div>
-          </div>
-          <div class="description">Enabling users to organize and share spatial data</div>
-          <div class="pill-container">
-            <div class="pill">User Research</div>
-            <div class="pill">UI & UX Design</div>
-            <div class="pill">Requirement Sourcing</div>
-            <div class="pill">System Architecture</div>
+       <div class="containerr right">
+        <div class="project-header-desktop-small">
+         <div class="title">
+          <div class="link">Projects Portal</div>
+          <div class="cont-icon mobile">
+            <i class="material-icons gray">arrow_outward</i>
           </div>
         </div>
+        <div class="description">Enabling users to organize and share spatial data</div>
+        <div class="pill-container">
+          <div class="pill">User Research</div>
+          <div class="pill">UI & UX Design</div>
+          <div class="pill">Requirement Sourcing</div>
+          <div class="pill">System Architecture</div>
+        </div>
+      </div>
+<!--         <div class="titlee mobile">
+          <div>
+            <div class="project-titlee">
+              Projects Portal
+            </div>
+            <div class="project-sub">
+              Informing Community Health Action
+            </div>
+          </div>
+          <div class="cont-icon">
+            <i class="material-icons gray">arrow_outward</i>
+          </div>
+        </div> -->
+
         <div class="box">
          <video loop muted playsinline class="desktop" id="video">
           <source src="images/projects.mov">
@@ -97,12 +109,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="conty">
-    <div class="padding-conty bottom-cont">
-
 
       <div class="project-section cupcake">
        <div class="containerr white right">
@@ -201,6 +207,17 @@
       </div>
 
     </div>
+
+
+      <div class="conty no-min bgone" id="bgone">
+    <div class="flex column align-center">
+      <div class="project-cont padding-conty flex column">
+      </div>
+    </div>
+  </div>
+
+
+
 
     <div class="conty" id="bio-cont">
 
@@ -421,7 +438,7 @@
     <div class="button togglebtn desktop" id="list-btn">
       <i class="material-icons">reorder</i>
     </div>
-    <div class="mobile-flex button togglebtn" id="list-toggle">
+        <div class="mobile-flex button togglebtn" id="list-toggle">
       <i class="material-icons">reorder</i>
     </div>
   </div>
@@ -478,24 +495,19 @@
     let windowWidth = $(window).innerWidth();
     var p = document.querySelector(".padding-conty");
     var pStyle = p.currentStyle || window.getComputedStyle(p);
-    let marginStyle = parseFloat(pStyle["padding-left"], 0);
-    if (contentWidth <= 1440){
+    let marginStyle = parseFloat(pStyle["padding-left"], 10);
     marginWidth = (windowWidth - contentWidth) / 2 + marginStyle;
-  }
-  else {
-    marginWidth = (windowWidth - 1440 + 120) / 2 ;
-  }
   }
 
   function resizePaddings() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      let windowWidth = $(window).innerWidth();
-      let groupingRight = windowWidth/2 - 168/2;
-      grouping.style.right = `${groupingRight}px`;
-    }
-    else {
-      grouping.style.right = `${marginWidth}px`;
-    }
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    let windowWidth = $(window).innerWidth();
+let groupingRight = windowWidth/2 - 168/2;
+grouping.style.right = `${groupingRight}px`;
+}
+else {
+  grouping.style.right = `${marginWidth}px`;
+}
     
     // fixedTest.style.left = `${marginWidth}px`;
     if (homepage === true){
