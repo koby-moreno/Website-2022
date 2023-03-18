@@ -6,8 +6,8 @@ let workBtn = document.querySelector("#work-btn")
 let projectCont = document.querySelector(".dos");
 let windowHeight;
 let windowWidth = $(window).innerWidth();
-let bgOneHeight;
-let bgOneWidth;
+let bgOneHeight = [];
+let bgOneWidth = [];
 
 
 function calculatePaddings(){
@@ -40,11 +40,17 @@ function resizeFullHeight() {
 function calculateHeights() {
 	windowHeight = $(window).height();
 	setTimeout(function(){
-			bgOneHeight = document.querySelector("#bgone").offsetHeight;
-	console.log(bgOneHeight)
-	bgOneWidth = document.querySelector("#bgone").offsetWidth;
-	document.querySelector("#bgoneimg").style.height = `${bgOneHeight}px`;
-	document.querySelector("#bgoneimg").style.width = `${bgOneWidth}px`;
+		document.querySelectorAll(".bgone").forEach(function(section,i){
+			bgOneHeight[i] = section.offsetHeight;
+			bgOneWidth[i] = section.offsetWidth;
+			document.querySelectorAll(".bgoneimg")[i].style.height = `${bgOneHeight[i]}px`;
+document.querySelectorAll(".bgoneimg")[i].style.width = `${bgOneWidth[i]}px`;
+		})
+	// 		bgOneHeight = document.querySelector("#bgone").offsetHeight;
+	// console.log(bgOneHeight)
+	// bgOneWidth = document.querySelector("#bgone").offsetWidth;
+	// document.querySelector("#bgoneimg").style.height = `${bgOneHeight}px`;
+	// document.querySelector("#bgoneimg").style.width = `${bgOneWidth}px`;
 	}, 500);
 
 
