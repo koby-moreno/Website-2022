@@ -5,9 +5,9 @@ body {
 	/*background-color: #f5f5f5;*/
 }
 
-#project-overview{
+/*#project-overview{
 	background-color: #f5f5f5;
-}
+}*/
 
 .project-cont {
 	border: 0px solid lightgray;
@@ -27,12 +27,6 @@ body {
 	overflow: hidden;
 }
 
-.dark-bg {
-	background-color: #171717;
-	background-color: #0f1b23;
-	color: white;
-	/*background-color: #f5f5f5;*/
-}
 
 .dos {
 	/*background-color: #f5f5f5;*/
@@ -182,7 +176,6 @@ body {
 
 .conty {
 	max-width: none;
-	justify-content: center;
 }
 
 .white-bg {
