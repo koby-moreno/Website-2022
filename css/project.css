@@ -1840,7 +1840,7 @@ width: inherit;
 }
 
 .padding-conty {
-	width: 100%;
+	width: calc(100% - 48px);
 }
 
 .boxy {
@@ -1986,8 +1986,8 @@ justify-content: center;
 }
 
 .box{
-	right: -85px;
-	bottom: -75px;
+/*	right: -85px;
+	bottom: -75px;*/
 }
 
 
