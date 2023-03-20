@@ -54,7 +54,7 @@
   </div>
 
   
-  <div class="conty purple" id="work-cont">
+  <div class="conty proj-block purple" id="work-cont">
 
     <div class="bg-img" id="bgoneimg">
       <img class="object-fit" src="images/projects-bg.png">
@@ -93,15 +93,15 @@
             <i class="material-icons" id="pause-btn">pause</i>
           </div>
           <div class="button contbtn goto desktop">
-            <i class="material-icons">arrow_outward</i>
-            <div class="project-title"><span class="project-title-text">Projects Portal</span></div>
+            <i class="material-icons arrow">arrow_outward</i>
+            <div class="project-title"><span class="project-title-text">View Project</span></div>
           </div> 
         </div>
       </div>
     </div>
   </div>
 
-  <div class="conty">
+  <div class="conty proj-block">
           <div class="bg-img" id="bgoneimg">
         <img class="object-fit" src="images/cupcake-bg.png">
       </div>
@@ -148,7 +148,7 @@
     </div>
   </div>
 
-  <div class="conty dark-bg">
+  <div class="conty proj-block dark-bg">
           <div class="bg-img">
         <img class="object-fit" src="images/dormsmap_300.png">
       </div>
@@ -754,7 +754,10 @@
   let grids = document.querySelectorAll(".project-section")
 
   gridBtn.addEventListener("click", function() {
-    document.querySelector(".bottom-cont").classList.remove("opacity");
+        let projBlocks = document.querySelectorAll(".proj-block");
+    projBlocks.forEach(function(proj,i){
+      proj.classList.remove("opacity");
+    });
     document.querySelector("body").classList.remove("prevent-scroll-body");
     listBtn.classList.remove("active");
     gridBtn.classList.add("active");
@@ -768,6 +771,10 @@
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
     rows.classList.add("open");
+        let projBlocks = document.querySelectorAll(".proj-block");
+    projBlocks.forEach(function(proj,i){
+      proj.classList.add("opacity");
+    });
   });
 
 
