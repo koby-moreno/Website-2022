@@ -101,7 +101,7 @@
     </div>
   </div>
 
-  <div class="conty proj-block">
+  <div class="conty proj-block purple">
           <div class="bg-img" id="bgoneimg">
         <img class="object-fit" src="images/cupcake-bg.png">
       </div>
@@ -114,7 +114,7 @@
        <div class="containerr white right">
         <div class="project-header-desktop-small">
           <div class="title">
-            <div class="link">Foursquare Studio</div>
+            <div class="">Foursquare Studio</div>
             <div class="cont-icon mobile">
               <i class="material-icons gray">navigate_next</i>
             </div>
@@ -140,7 +140,7 @@
           </div>
 
           <div class="button contbtn goto desktop">
-            <i class="material-icons">arrow_outward</i>
+            <i class="material-icons arrow">arrow_outward</i>
             <div class="project-title"><span class="project-title-text">FSQ Design System</span></div>
           </div>
         </div>
@@ -160,16 +160,16 @@
         <div class="containerr right">
           <div class="project-header-desktop-small" onclick="location.href='lookout.html';">
            <div class="title">
-            <div class="link">Lookout</div>
+            <div class="">Lookout</div>
             <div class="cont-icon mobile">
               <i class="material-icons gray">navigate_next</i>
             </div>
           </div>
           <div class="description">Informing community-based health action on college campuses</div>
           <div class="pill-container">
-            <div class="pill">UI & UX Design</div>
-            <div class="pill">Front-End Development</div>
-            <div class="pill">Rapid Prototyping</div>
+            <div class="pill dark-mode">UI & UX Design</div>
+            <div class="pill dark-mode">Front-End Development</div>
+            <div class="pill dark-mode">Rapid Prototyping</div>
           </div>
         </div>
 
@@ -185,8 +185,8 @@
           </div>
         </div>
 
-        <div class="button contbtn goto desktop">
-          <i class="material-icons">arrow_outward</i>
+        <div class="button contbtn goto desktop dark-mode">
+          <i class="material-icons arrow">arrow_outward</i>
           <div class="project-title"><span class="project-title-text">Lookout</span></div>
         </div>
       </div>
@@ -814,9 +814,9 @@
     listToggle.classList.toggle("active");
     document.querySelector("body").classList.toggle("prevent-scroll");
     document.querySelector(".bottom-cont").classList.toggle("opacity")
-    let contys = document.querySelectorAll(".conty");
-    contys.forEach(function(conty,i){
-      conty.classList.toggle("opacity");
+        let projBlocks = document.querySelectorAll(".proj-block");
+    projBlocks.forEach(function(proj,i){
+      proj.classList.toggle("opacity");
     });
   }
   listToggle.addEventListener("click", function() {

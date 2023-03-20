@@ -68,11 +68,16 @@ cursor: pointer;
 /*	background-color: #f5f5f5;
 	background-color: #e6e6e6;*/
 	background-color: rgba(255, 255, 255, 0.75);
-	color: lightgray;
 	color: gray;
 	display: inline-block;
 	mix-blend-mode: hard-light;
 }
+
+.pill.dark-mode {
+	color: lightgray;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
 
 .video-styles {
 	border-radius: 8px;
@@ -112,6 +117,9 @@ cursor: pointer;
 	min-height: 100vh;
 }
 
+.full-height {
+	min-height: 100vh;
+}
 
 
 .padding-conty {
@@ -1196,6 +1204,28 @@ i.gray {
 	bottom: 0px;
 	trasition: 0.3s ease;
 }
+
+.contbtn.dark-mode {
+	background-color: rgba(255, 255, 255, 0.15);
+	box-shadow:0px 0px 0px 2px gray inset;
+}
+
+.contbtn.dark-mode > .material-icons {
+	color: lightgray;
+}
+
+.contbtn.dark-mode:hover > .material-icons {
+	color: white;
+}
+
+.contbtn.dark-mode > .project-title {
+	color: white;
+}
+
+.contbtn.dark-mode:hover{
+	box-shadow:0px 0px 0px 2px gray inset;
+}
+
 
 
 
