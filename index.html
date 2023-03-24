@@ -143,50 +143,50 @@
     </div>
   </div> -->
 
-<div class="conty proj-block dark-bg">
-  <div class="bg-img">
-    <img class="object-fit" src="images/dormsmap_300.png">
-  </div>
+  <div class="conty proj-block dark-bg">
+    <div class="bg-img">
+      <img class="object-fit" src="images/dormsmap_300.png">
+    </div>
 
-  <div class="padding-conty bottom-cont">
+    <div class="padding-conty bottom-cont">
 
 
-    <div class="project-section lookout">
-      <div class="containerr right">
-        <div class="project-header-desktop-small" onclick="location.href='lookout.html';">
-         <div class="title">
-          <div class="">Lookout</div>
-          <div class="cont-icon mobile">
-            <i class="material-icons gray">navigate_next</i>
+      <div class="project-section lookout">
+        <div class="containerr right">
+          <div class="project-header-desktop-small" onclick="location.href='lookout.html';">
+           <div class="title">
+            <div class="">Lookout</div>
+            <div class="cont-icon mobile">
+              <i class="material-icons gray">navigate_next</i>
+            </div>
+          </div>
+          <div class="description">Informing community-based health action on college campuses</div>
+          <div class="pill-container">
+            <div class="pill dark-mode">UI & UX Design</div>
+            <div class="pill dark-mode">Front-End Development</div>
+            <div class="pill dark-mode">Rapid Prototyping</div>
           </div>
         </div>
-        <div class="description">Informing community-based health action on college campuses</div>
-        <div class="pill-container">
-          <div class="pill dark-mode">UI & UX Design</div>
-          <div class="pill dark-mode">Front-End Development</div>
-          <div class="pill dark-mode">Rapid Prototyping</div>
-        </div>
-      </div>
 
-      <div class="boxy">
-        <div id="lookout-img-three">
-          <img src="images/casemapmock_150.png">
+        <div class="boxy">
+          <div id="lookout-img-three">
+            <img src="images/casemapmock_150.png">
+          </div>
+          <div id="lookout-img-two">
+            <img src="images/lookout_computer_150.png">
+          </div>
+          <div id="lookout-img-one">
+            <img src="images/dormsmap_300.png">
+          </div>
         </div>
-        <div id="lookout-img-two">
-          <img src="images/lookout_computer_150.png">
-        </div>
-        <div id="lookout-img-one">
-          <img src="images/dormsmap_300.png">
-        </div>
-      </div>
 
-      <div class="button contbtn goto desktop dark-mode">
-        <i class="material-icons arrow">arrow_outward</i>
-        <div class="project-title"><span class="project-title-text">View Project</span></div>
+        <div class="button contbtn goto desktop dark-mode">
+          <i class="material-icons arrow">arrow_outward</i>
+          <div class="project-title"><span class="project-title-text">View Project</span></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="conty" id="bio-cont">
@@ -401,7 +401,8 @@
 
 
 
-<div class="grouping">
+
+<div class="grouping mobile">
   <div class="toggle grid-list">
     <div class="button togglebtn active desktop" id="grid-btn">
       <i class="material-icons">grid_view</i>
@@ -413,24 +414,26 @@
       <i class="material-icons">reorder</i>
     </div>
   </div>
-
-
-
-
-
-  <div class="toggle main-nav">
-    <div class="button togglebtn textbtn active" id="work-btn">
-      <span>Work</span>
-    </div>
-    <div class="button togglebtn textbtn" id="about-btn">
-      <span>About</span>
-    </div>
-<!--     <div class="button togglebtn textbtn">
-      <span>Contact</span>
-    </div> -->
-  </div>
-
 </div>
+
+<div class='header-bg'>
+  
+</div>
+
+<div class="grouping">
+  <div class='header-button active' id="work-btn">
+  <div id="view-toggle">
+  <i class="material-icons header-icon active">grid_view</i>
+  <i class="material-icons header-icon">reorder</i>
+  </div>
+  <div class="header-text">Work</div>
+</div>
+  <div class='header-button' id="about-btn">
+  <div class="header-text">About</div>
+</div>
+</div>
+
+
 </div>
 </body>
 
@@ -448,6 +451,7 @@
   // let fixedTest = document.querySelector(".fixed-text")
   let aboutBtn = document.querySelector("#about-btn")
   let workBtn = document.querySelector("#work-btn")
+  let viewToggle = document.querySelector('#view-toggle');
   let marginWidth;
   let homepage = true;
   let playvid = false;
@@ -587,6 +591,7 @@
       document.querySelector(".grid-list").classList.remove("toggleShow")
       aboutBtn.classList.add("active");
       workBtn.classList.remove("active");
+      viewToggle.classList.add("close");
 
     }
     else {
@@ -595,6 +600,7 @@
       document.querySelector(".grid-list").classList.add("toggleShow")
       aboutBtn.classList.remove("active");
       workBtn.classList.add("active");
+        viewToggle.classList.remove("close");
     }
 
     if (wS + 0.5 * iH > lookoutHeight){
@@ -652,7 +658,7 @@
       document.querySelector(".header-desc").style.opacity = 0;
       document.querySelector(".header-desc").style.display = 'hidden';
       document.querySelector(".header").style.scale = 1;
-      document.querySelector(".main-nav").classList.add("toggleShow")
+      // document.querySelector(".main-nav").classList.add("toggleShow")
     }
     else {
       homepage = true;
@@ -663,9 +669,9 @@
       fill = 245 + fillval;
       document.querySelector(".header-desc").style.display = 'inline';
       document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
-      document.querySelector(".header").style.scale = 1 + 0.35*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
+      document.querySelector(".header").style.scale = 1 + 0.65*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
       document.querySelector(".grid-list").classList.remove("toggleShow")
-      document.querySelector(".main-nav").classList.remove("toggleShow")
+      // document.querySelector(".main-nav").classList.remove("toggleShow")
     }
   }
 
@@ -840,12 +846,14 @@ aboutBtn.addEventListener("click", function() {
   doScrolling(bioContY, 500);
   aboutBtn.classList.add("active");
   workBtn.classList.remove("active");
+  viewToggle.classList.add("close");
 });
 
 workBtn.addEventListener("click", function() {
   doScrolling(workContY, 500);
   workBtn.classList.add("active");
   aboutBtn.classList.remove("active");
+  viewToggle.classList.remove("close");
 });
 
 

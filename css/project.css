@@ -1164,11 +1164,13 @@ i.gray {
 	flex-direction: row;
 	align-tems: bottom;
 	position: fixed;
-	bottom: calc(100vh - 94px);
+	/*bottom: calc(100vh - 94px);*/
 	top: 40px;
 	transition: bottom 0.5s ease;
 	right: 60px;
 	z-index: 3;
+
+	top: 16px;
 }
 
 
@@ -1182,21 +1184,91 @@ i.gray {
 
 .grouping > *:not(:last-child)/*,
 .row-item > *:not(:last-child)*/ {
-	margin-right: 16px; 
+	margin-right: 8px; 
 } 
 
 .button {
 	/*height: 48px;*/
-	width: fit-content;
+/*	width: fit-content;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center;*/
 /*	font-size: 32px;*/
 /*	line-height: 32px;*/
 	color: gray;
-	border-radius: 24px;
+	background-color: white;
+	border-radius: 32px;
 	transition: 0.3s ease;
 	font-weight: 500;
+	box-shadow:0px 0px 0px 2px lightgray inset;
+}
+
+.header-button {
+	color: gray;
+	background-color: white;
+	border-radius: 32px;
+	font-weight: 500;
+	box-shadow:0px 0px 0px 2px lightgray inset;
+	padding: 8px 16px;
+	display: flex;
+	transition: 0.3s ease;
+	align-items: center;
+}
+
+.header-button:hover {
+	box-shadow: 0px 0px 8px -2px black;
+	cursor: pointer;
+}
+
+.header-button.active {
+	color: black;
+	background-color: #ececec;
+	box-shadow:0px 0px 0px 0px lightgray inset;
+}
+
+.header-icon {
+	font-size: 18px;
+	color:  gray;
+}
+
+.header-icon.active {
+	color: black;
+}
+
+
+.header-text {
+	line-height: 24px;
+	font-size: 16px;
+}
+
+#view-toggle {
+	display: flex;
+	align-items: center;
+	padding-right: 16px;
+	width:  auto;
+	transition:  0.3s ease;
+}
+
+#view-toggle.close {
+	width: 0px;
+	padding-right: 0px;
+	overflow: hidden;
+}
+
+#view-toggle > *:not(:last-child)/*,
+.row-item > *:not(:last-child)*/ {
+	margin-right: 4px; 
+} 
+
+.header-bg {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 1);
+	border-bottom: 1px solid lightgray;
+	height: 72px;
+	width: 100vw;
+	z-index: 1;
+/*	backdrop-filter: blur(32px);
+	-webkit-backdrop-filter: blur(32px);*/
 }
 
 .contbtn > .material-icons {
@@ -1560,13 +1632,13 @@ i.gray {
 .header{
 	font-family: Roboto;
 	font-weight: 300;
-	font-size: 32px;
-	line-height: 48px;
-	scale: 1.35;
+	font-size: 24px;
+	line-height: 40px;
+	scale: 1.65;
 	transform-origin: left;
 	opacity: 1;
-	width: 74%;
-	max-width: 700px;
+	width: 60%;
+	max-width: 550px;
 	z-index: 2;
 	position:  relative;
 	pointer-events: none;
@@ -1649,7 +1721,7 @@ font-style: normal;
 
 .header-placement {
 	scale: 1;
-	top: 32px;
+	top: 16px;
 	position: fixed;
 }
 
