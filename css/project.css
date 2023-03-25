@@ -222,7 +222,7 @@ cursor: pointer;
 }
 
 .opacity{
-	filter: blur(24px);
+	opacity: 0.25;
 }
 
 .conty.opacity {
@@ -335,10 +335,9 @@ background-color: #f9f6f2;
 }
 
 .dark-bg {
-	background-color: #171717;
 	background-color: #0f1b23;
 	color: white;
-	/*background-color: #f5f5f5;*/
+	transition: 0.5s ease;
 }
 
 .question {
@@ -1189,10 +1188,10 @@ i.gray {
 
 .button {
 	/*height: 48px;*/
-/*	width: fit-content;
+/*	width: fit-content;*/
 	display: flex;
 	align-items: center;
-	justify-content: center;*/
+	justify-content: center;
 /*	font-size: 32px;*/
 /*	line-height: 32px;*/
 	color: gray;
@@ -1408,8 +1407,8 @@ i.gray {
 }
 
 .rows{
-	border-top-left-radius: 36px;
-	border-top-right-radius: 36px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
 	position: fixed;
 	width: 100vw;
 	left: 0px;
@@ -1418,12 +1417,13 @@ i.gray {
 	height: auto;
 	transition: 0.5s ease;
 	box-shadow: 0px 0px 6px -1px lightgray;
-	background-color: rgba(255,255,255, 0.7);
-	-webkit-backdrop-filter: blur(24px);
+	background-color: rgba(255,255,255, 0);
+	-webkit-backdrop-filter: blur(36px);
 	backdrop-filter: blur(24px);
 	border: 1px solid #e5e5e5;
 	overflow-y: scroll;
 	z-index: 2;
+	mix-blend-mode: multiply;
 }
 
 .row-details {

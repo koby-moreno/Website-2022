@@ -404,10 +404,10 @@
 
 <div class="grouping mobile">
   <div class="toggle grid-list">
-    <div class="button togglebtn active desktop" id="grid-btn">
+    <div class="button togglebtn active desktop">
       <i class="material-icons">grid_view</i>
     </div>
-    <div class="button togglebtn desktop" id="list-btn">
+    <div class="button togglebtn desktop">
       <i class="material-icons">reorder</i>
     </div>
     <div class="mobile-flex button togglebtn" id="list-toggle">
@@ -423,8 +423,8 @@
 <div class="grouping">
   <div class='header-button active' id="work-btn">
   <div id="view-toggle">
-  <i class="material-icons header-icon active">grid_view</i>
-  <i class="material-icons header-icon">reorder</i>
+  <i class="material-icons header-icon active" id="grid-btn">grid_view</i>
+  <i class="material-icons header-icon" id="list-btn">reorder</i>
   </div>
   <div class="header-text">Work</div>
 </div>
@@ -751,8 +751,8 @@
   let grids = document.querySelectorAll(".project-section")
 
   gridBtn.addEventListener("click", function() {
-    let projBlocks = document.querySelectorAll(".proj-block");
-    projBlocks.forEach(function(proj,i){
+    let darkBlocks = document.querySelectorAll(".dark-bg");
+    darkBlocks.forEach(function(proj,i){
       proj.classList.remove("opacity");
     });
     document.querySelector("body").classList.remove("prevent-scroll-body");
@@ -768,8 +768,8 @@
     gridBtn.classList.remove("active");
     listBtn.classList.add("active");
     rows.classList.add("open");
-    let projBlocks = document.querySelectorAll(".proj-block");
-    projBlocks.forEach(function(proj,i){
+    let darkBlocks = document.querySelectorAll(".dark-bg");
+    darkBlocks.forEach(function(proj,i){
       proj.classList.add("opacity");
     });
   });
@@ -850,7 +850,7 @@ aboutBtn.addEventListener("click", function() {
 });
 
 workBtn.addEventListener("click", function() {
-  doScrolling(workContY, 500);
+  // doScrolling(workContY, 500);
   // workBtn.classList.add("active");
   // aboutBtn.classList.remove("active");
   // viewToggle.classList.remove("close");
