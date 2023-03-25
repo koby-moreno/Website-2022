@@ -1417,13 +1417,13 @@ i.gray {
 	height: auto;
 	transition: 0.5s ease;
 	box-shadow: 0px 0px 6px -1px lightgray;
-	background-color: rgba(255,255,255, 0);
+	background-color: rgba(255,255,255, 0.5);
 	-webkit-backdrop-filter: blur(36px);
 	backdrop-filter: blur(24px);
 	border: 1px solid #e5e5e5;
 	overflow-y: scroll;
 	z-index: 2;
-	mix-blend-mode: multiply;
+	/*mix-blend-mode: multiply;*/
 }
 
 .row-details {
