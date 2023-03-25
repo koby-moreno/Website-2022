@@ -647,7 +647,7 @@
       document.getElementById("video").pause()
     }
 
-    if (wS > 0.5 * iH - 0.5 * headerHeight - 32){
+    if (wS > 0.5 * iH - 0.5 * headerHeight - 16){
       if (wS + 0.5 * iH < bioHeight){
         document.querySelector(".grid-list").classList.add("toggleShow")
       }
@@ -665,11 +665,11 @@
       heading.style.left = `0px`;
       grouping.classList.remove("nav-placement");
       heading.classList.remove("header-placement")
-      fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 32))
+      fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 16))
       fill = 245 + fillval;
       document.querySelector(".header-desc").style.display = 'inline';
-      document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 32))) *100 )/100 ;
-      document.querySelector(".header").style.scale = 1 + 0.65*(1- wS / (0.5 * iH - 0.5 * headerHeight - 32));
+      document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 16))) *100 )/100 ;
+      document.querySelector(".header").style.scale = 1 + 0.65*(1- wS / (0.5 * iH - 0.5 * headerHeight - 16));
       document.querySelector(".grid-list").classList.remove("toggleShow")
       // document.querySelector(".main-nav").classList.remove("toggleShow")
     }
@@ -844,16 +844,16 @@ sayHelloBtn.onmouseleave = function(){
 
 aboutBtn.addEventListener("click", function() {
   doScrolling(bioContY, 500);
-  aboutBtn.classList.add("active");
-  workBtn.classList.remove("active");
-  viewToggle.classList.add("close");
+  // aboutBtn.classList.add("active");
+  // workBtn.classList.remove("active");
+  // viewToggle.classList.add("close");
 });
 
 workBtn.addEventListener("click", function() {
   doScrolling(workContY, 500);
-  workBtn.classList.add("active");
-  aboutBtn.classList.remove("active");
-  viewToggle.classList.remove("close");
+  // workBtn.classList.add("active");
+  // aboutBtn.classList.remove("active");
+  // viewToggle.classList.remove("close");
 });
 
 
