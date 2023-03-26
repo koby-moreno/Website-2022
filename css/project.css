@@ -337,7 +337,7 @@ background-color: #f9f6f2;
 .dark-bg {
 	background-color: #0f1b23;
 	color: white;
-	transition: 0.5s ease;
+	transition: opacity 0.5s ease;
 }
 
 .question {
@@ -1265,7 +1265,7 @@ i.gray {
 	border-bottom: 1px solid lightgray;
 	height: 72px;
 	width: 100vw;
-	z-index: 1;
+	z-index: 2;
 /*	backdrop-filter: blur(32px);
 	-webkit-backdrop-filter: blur(32px);*/
 }

@@ -15,8 +15,13 @@ function calculatePaddings(){
 	windowWidth = $(window).innerWidth();
 	var p = document.querySelector(".padding-conty");
 	var pStyle = p.currentStyle || window.getComputedStyle(p);
-	let marginStyle = parseFloat(pStyle["padding-left"], 10);
-	marginWidth = (windowWidth - contentWidth) / 2 + marginStyle;
+	let marginStyle = parseFloat(pStyle["padding-left"], 0);
+	if (contentWidth <= 1440){
+		marginWidth = (windowWidth - contentWidth) / 2 + marginStyle;
+	}
+	else{
+	marginWidth = (windowWidth - 1440 + 120) / 2;
+}
 }
 
 function resizePaddings() {
@@ -39,19 +44,6 @@ function resizeFullHeight() {
 
 function calculateHeights() {
 	windowHeight = $(window).height();
-	setTimeout(function(){
-		document.querySelectorAll(".bgone").forEach(function(section,i){
-			bgOneHeight[i] = section.offsetHeight;
-			bgOneWidth[i] = section.offsetWidth;
-			document.querySelectorAll(".bgoneimg")[i].style.height = `${bgOneHeight[i]}px`;
-document.querySelectorAll(".bgoneimg")[i].style.width = `${bgOneWidth[i]}px`;
-		})
-	// 		bgOneHeight = document.querySelector("#bgone").offsetHeight;
-	// console.log(bgOneHeight)
-	// bgOneWidth = document.querySelector("#bgone").offsetWidth;
-	// document.querySelector("#bgoneimg").style.height = `${bgOneHeight}px`;
-	// document.querySelector("#bgoneimg").style.width = `${bgOneWidth}px`;
-	}, 1);
 
 
 
@@ -72,16 +64,14 @@ window.addEventListener('resize', function () {
   let wS = $(this).scrollTop();
 
   function scrollanimations(){
-  	console.log(wS);
-  	document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
+  	 //document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
   }
 
-    scrollanimations();
+
 
   $(window).scroll(function() {
     wS = $(this).scrollTop();
     scrollanimations();
-    console.log(wS)
   });
 
 

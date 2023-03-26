@@ -421,8 +421,8 @@
 </div>
 
 <div class="grouping">
-  <div class='header-button active' id="work-btn">
-  <div id="view-toggle">
+  <div class='header-button' id="work-btn">
+  <div class="close" id="view-toggle">
   <i class="material-icons header-icon active" id="grid-btn">grid_view</i>
   <i class="material-icons header-icon" id="list-btn">reorder</i>
   </div>
@@ -675,7 +675,9 @@
     }
   }
 
-  scrollanimations();
+  setTimeout( function() {
+scrollanimations();
+  }, 50);
 
   $(window).scroll(function() {
     wS = $(this).scrollTop();
