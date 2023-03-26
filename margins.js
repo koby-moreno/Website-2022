@@ -64,7 +64,9 @@ window.addEventListener('resize', function () {
   let wS = $(this).scrollTop();
 
   function scrollanimations(){
-  	 //document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
+  	if (wS < 200){
+  	 document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
+  	}
   }
 
 

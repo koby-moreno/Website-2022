@@ -200,7 +200,7 @@ body {
 }
 
 .side-panel {
-	/*background-color: white;*/
+	background-color: white;
 	position: fixed;
 	left: 0px;
 	height: 100vh;
@@ -214,7 +214,6 @@ body {
 	left: 60px;
 	z-index: 2;
 	top: 100px;
-	  will-change: opacity;
 }
 
 .tracker {
@@ -222,7 +221,7 @@ body {
 	color: #b0b0b0;
 	font-size: 20px;
 	line-height: 36px;
-	transition: color 0.3s ease
+	transition: color 0.3s ease;
 }
 
 .tracker:hover {
