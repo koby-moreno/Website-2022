@@ -218,7 +218,7 @@ cursor: pointer;
 
 .proj-block {
 	transition: filter 0.5s ease;
-	border-bottom: 1px solid lightgray;
+	/*border-bottom: 1px solid lightgray;*/
 }
 
 .opacity{
@@ -1317,7 +1317,6 @@ i.gray {
 
 
 
-
 .togglebtn{
 	height: 40px;
 	width: 40px;
@@ -1325,7 +1324,7 @@ i.gray {
 	font-size: 32px;
 }
 
-#say-hello {
+.button-placement {
 	left: 60px;
 	bottom: 60px;
 }
@@ -1639,7 +1638,7 @@ i.gray {
 	opacity: 1;
 	width: 60%;
 	max-width: 550px;
-	z-index: 2;
+	z-index: 3;
 	position:  relative;
 	pointer-events: none;
 }
@@ -1876,6 +1875,11 @@ width: inherit;
 
 .padding-conty {
 	padding: 40px 40px 40px 40px;
+}
+
+.button-placement {
+	left: 40px;
+	bottom: 40px;
 }
 
 .row-padding {
