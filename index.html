@@ -406,7 +406,7 @@
 
 
 
-<div class="grouping mobile">
+<div class="mobile">
   <div class="toggle grid-list">
     <div class="button togglebtn active desktop">
       <i class="material-icons">grid_view</i>
@@ -451,7 +451,9 @@
   let windowHeight;
 
   let heading = document.querySelector(".header")
+  let headerBar = document.querySelector(".header-bg");
   let grouping = document.querySelector(".grouping")
+  console.log(grouping)
   // let fixedTest = document.querySelector(".fixed-text")
   let aboutBtn = document.querySelector("#about-btn")
   let workBtn = document.querySelector("#work-btn")
@@ -480,6 +482,7 @@
     }
     else {
       marginWidth = (windowWidth - 1440 + 120) / 2 ;
+      console.log(marginWidth);
     }
   }
 
@@ -657,7 +660,8 @@
       }
       homepage = false;
       heading.style.left = `${marginWidth}px`;
-      heading.classList.add("header-placement")
+      heading.classList.add("header-placement");
+      headerBar.classList.add("placement");
       grouping.classList.add("nav-placement");
       document.querySelector(".header-desc").style.opacity = 0;
       document.querySelector(".header-desc").style.display = 'hidden';
@@ -667,6 +671,7 @@
     else {
       homepage = true;
       heading.style.left = `0px`;
+      headerBar.classList.remove("placement");
       grouping.classList.remove("nav-placement");
       heading.classList.remove("header-placement")
       fillval = 10 * (wS / (0.5 * iH - 0.5 * headerHeight - 16))
