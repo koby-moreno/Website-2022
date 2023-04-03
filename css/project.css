@@ -1031,8 +1031,6 @@ html::-webkit-scrollbar {
 
 
 .boxy {
-/*	width: 100%;
-	max-width: 800px;*/
 	height: 100%;
 	flex-grow: 1;
 	/*background-color: gray;*/
@@ -1042,7 +1040,7 @@ html::-webkit-scrollbar {
 	justify-content: center;
 	align-items: center;
 	flex-shrink: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #lookout-img-one{
@@ -1508,7 +1506,7 @@ width: 100%;
 
 	.open{
 		bottom: 0px;
-		top: 114px;
+		top: 73px;
 		height: auto;
 	}
 
@@ -2014,6 +2012,7 @@ width: inherit;
 
 .boxy {
 	height: auto;
+		width: 100%;
 }
 
 .cupcake-box{
