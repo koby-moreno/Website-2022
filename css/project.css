@@ -11,6 +11,9 @@ body{
 	color: #1a1a1a;
 }
 
+.desktop {
+	display:block;
+}
 
 .prevent-scroll-body {
 	/*padding-right: 10px;*/
@@ -38,6 +41,7 @@ body{
 	font-weight: 300;
 /*	left: 16px;*/
 	margin-right: 24px;
+	margin-bottom: 64px;
 }
 
 .project-header-desktop-small:hover {
@@ -150,11 +154,26 @@ cursor: pointer;
 	align-items: center;
 }
 
+.big-icon {
+	background-color: none;
+	padding: 8px 0px;
+}
 
 .big-icon > span {
+		height:  64px;
+	width: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	    background-color: rgba(255, 255, 255, 0.75);
 		font-size: 40px;
 	line-height: 56px;
-/*	padding: 8px 0px;*/
+	border-radius: 32px;
+}
+
+.big-icon > .dark-mode {
+	color: white;
+	background-color: rgba(255, 255, 255, 0.15);
 }
 
 #bio-cont{
@@ -767,11 +786,6 @@ width: auto;
 }
 
 
-
-
-.desktop {
-	display:block;
-}
 
 .break-large {
 	margin: 60px 0px;
@@ -1431,6 +1445,10 @@ width: 100%;
     line-height: 32px;
 }
 
+.nudge {
+	margin-left: 16px;
+}
+
 
 .floating-one, .floating-two, .floating-three {
 	position: absolute;
@@ -1822,6 +1840,7 @@ font-style: normal;
 	left:  0px;
 	z-index: 1;
 	font-weight: 300;
+	margin-bottom: 0px;
 	
 }
 
@@ -1829,8 +1848,29 @@ font-style: normal;
   margin-left: 16px;
 }
 
-.big-icon > span {
+.big-icon {
 	padding: 8px 0px;
+}
+
+.big-icon {
+	padding: 8px 0px;
+}
+
+.big-icon > span {
+		height:  auto;
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	    background-color: rgba(0,0,0,0);
+		font-size: 40px;
+	line-height: 56px;
+	border-radius: 0px;
+}
+
+.big-icon > .dark-mode {
+	color: white;
+	background-color: rgba(0,0,0,0);
 }
 
 .project-header-desktop-small > .title{
@@ -2051,6 +2091,32 @@ width: inherit;
 .margin-left {
 	margin-left: 0px;
 }
+
+.header-button {
+	color: gray;
+	background-color: white;
+	border-radius: 0px;
+	font-weight: 500;
+	box-shadow:0px 0px 0px 0px lightgray inset;
+	border-bottom: solid 1px white;
+	padding: 4px 4px;
+	display: flex;
+	transition: 0.3s ease;
+	align-items: center;
+}
+
+.header-button:hover {
+	box-shadow: 0px 0px 0px 0px black;
+	cursor: pointer;
+}
+
+.header-button.active {
+	color: black;
+	background-color: white;
+	box-shadow:0px 0px 0px 0px lightgray inset;
+	border-bottom: solid 1px black;
+}
+
 
 
 .project-header-text > div {
