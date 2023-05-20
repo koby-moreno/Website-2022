@@ -28,7 +28,7 @@ body{
 
 .project-header-desktop-small {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position:  relative;
 	width: 33%;
 	/*top: 32px;*/
@@ -36,6 +36,7 @@ body{
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: 300;
+	left: 16px;
 	margin-right: 24px;
 }
 
@@ -46,14 +47,10 @@ cursor: pointer;
 
 
 .project-header-text {
-margin-left: 16px;
+margin-left: 0px;
 }
 
 .project-header-text > div {
-	padding: 8px 0px;
-}
-
-.project-header-desktop-small > .description {
 	padding: 8px 0px;
 }
 
@@ -157,7 +154,7 @@ margin-left: 16px;
 .big-icon > span {
 		font-size: 40px;
 	line-height: 56px;
-	padding: 8px 0px;
+/*	padding: 8px 0px;*/
 }
 
 #bio-cont{
@@ -189,7 +186,7 @@ margin-left: 16px;
 .bio-photo-cont {
 	position: relative;
 	background-color: #f5f5f5;
-	min-width: 500px;
+	min-width: 450px;
 	height: 500px;
 	overflow: hidden;
 	border-radius: 0px;
@@ -202,17 +199,18 @@ margin-left: 16px;
 	font-size: 20px;
 	line-height: 32px;
 	font-weight: 300;
+	display:  flex;
+	flex-direction: column;
 }
 
-.bio-text-cont > div {
-	margin-bottom: 16px;
+.bio-text-cont > div > div {
+	padding: 8px 0px;
 }
 
-.text-title{
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: 500;
+.margin-left{
+  margin-left: 16px;
 }
+
 
 
 
@@ -1399,10 +1397,22 @@ width: 100%;
 	font-weight: 400;
 }
 
-.h2-title {
-	font-size: ;
-	line-height: ;
-	font-weight: ;
+.h3-title {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+}
+
+.h4-title {
+		font-size: 20px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+.body-text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
 }
 
 .title {
@@ -1642,7 +1652,23 @@ width: 100%;
 }
 
 .social {
-	padding-top: 24px;
+	padding-top: 16px;
+}
+
+.social-links {
+	padding: 16px 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+.social-links > div {
+	margin-right: 16px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.social-links > div > i {
+	font-size: 16px;
 }
 
 .link {
@@ -1841,9 +1867,10 @@ line-height: 36px;
 		font-weight: 300;
 	}
 
-	.bio-text-cont > div {
-		margin-bottom: 12px;
+	.bio-text-cont > div > div {
+		padding: 8px 0px;
 	}
+
 
 	.text-title{
 		font-size: 18px;
@@ -1887,7 +1914,7 @@ width: 800px;
 		font-weight: 300;
 	}
 
-	.bio-text-cont > div {
+	.bio-text-cont > div > div {
 		margin-bottom: 10px;
 	}
 
@@ -1957,7 +1984,7 @@ width: inherit;
 
 	.bio-photo-cont {
 		height: 300px;
-		width: 300px;
+		width: 250px;
 	}
 
 	.bio-text-cont {
@@ -2003,18 +2030,8 @@ width: inherit;
 	width: calc(100% - 0px);
 }
 
-.project-header-desktop-small > .title {
-	font-size: 24px;
-	line-height: 32px;
-	display:  flex;
-	align-items: center;
-	justify-content: space-between;
-}
 
-.project-header-desktop-small > .description {
-	font-size: 16px;
-	line-height: 24px;
-}
+
 
 .pill {
 	margin: 4px 0px;
