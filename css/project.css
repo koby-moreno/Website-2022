@@ -120,7 +120,10 @@ cursor: pointer;
 
 .one {
 	border-bottom: solid 1px lightgray;
-	min-height: 100vh;
+	height: 95vh;
+	min-height: 90vh;
+	overflow: hidden;
+	background-color: darkgray;
 }
 
 .full-height {
