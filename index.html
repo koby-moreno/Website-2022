@@ -420,7 +420,7 @@
 
 
 
-<div class="mobile">
+<!-- <div class="mobile">
   <div class="toggle grid-list">
     <div class="button togglebtn active desktop">
       <i class="material-icons">grid_view</i>
@@ -432,7 +432,7 @@
       <i class="material-icons">reorder</i>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class='header-bg'>
 
@@ -440,7 +440,7 @@
 
 <div class="grouping">
   <div class='header-button' id="work-btn">
-    <div class="close" id="view-toggle">
+    <div class="close desktop" id="view-toggle">
       <i class="material-icons header-icon active" id="grid-btn">grid_view</i>
       <i class="material-icons header-icon" id="list-btn">reorder</i>
     </div>
@@ -502,9 +502,10 @@
 
   function resizePaddings() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      let windowWidth = $(window).innerWidth();
-      let groupingRight = windowWidth/2 - 168/2;
-      grouping.style.right = `${groupingRight}px`;
+      // let windowWidth = $(window).innerWidth();
+      // let groupingRight = windowWidth/2 - 168/2;
+      // grouping.style.right = `${groupingRight}px`;
+      grouping.style.right = `${marginWidth}px`;
     }
     else {
       grouping.style.right = `${marginWidth}px`;
@@ -609,7 +610,7 @@
       console.log(bioHeight)
       // document.querySelector(".floating-three").classList.remove("show");
       // document.querySelector(".floating-three").classList.add("hide-top");
-      document.querySelector(".grid-list").classList.remove("toggleShow")
+      // document.querySelector(".grid-list").classList.remove("toggleShow")
       aboutBtn.classList.add("active");
       workBtn.classList.remove("active");
       viewToggle.classList.add("close");
@@ -618,7 +619,7 @@
     else {
       // document.querySelector(".floating-three").classList.add("show");
       // document.querySelector(".floating-three").classList.remove("hide-top");
-      document.querySelector(".grid-list").classList.add("toggleShow")
+      // document.querySelector(".grid-list").classList.add("toggleShow")
       aboutBtn.classList.remove("active");
       workBtn.classList.add("active");
       viewToggle.classList.remove("close");
@@ -670,7 +671,7 @@
 
     if (wS > 0.5 * iH - 0.5 * headerHeight - 16){
       if (wS + 0.5 * iH < bioHeight){
-        document.querySelector(".grid-list").classList.add("toggleShow")
+        // document.querySelector(".grid-list").classList.add("toggleShow")
       }
       homepage = false;
       heading.style.left = `${marginWidth}px`;
@@ -693,7 +694,7 @@
       document.querySelector(".header-desc").style.display = 'inline';
       document.querySelector(".header-desc").style.opacity = Math.round((1 -(wS / (0.5 * iH - 0.5 * headerHeight - 16))) *100 )/100 ;
       document.querySelector(".header").style.scale = 1 + 0.65*(1- wS / (0.5 * iH - 0.5 * headerHeight - 16));
-      document.querySelector(".grid-list").classList.remove("toggleShow")
+      // document.querySelector(".grid-list").classList.remove("toggleShow")
       // document.querySelector(".main-nav").classList.remove("toggleShow")
     }
   }
@@ -821,50 +822,32 @@
 // });
 
 
-let listToggle = document.getElementById("list-toggle");
-function toggleClick() {
+// let listToggle = document.getElementById("list-toggle");
+// function toggleClick() {
 
-  if (opened === false){
-    opened = true;
-    disableScroll();
-  }
-  if (opened === true){
-    opened = false;
-    enableScroll();
-  }
-  rows.classList.toggle("open");
-  listToggle.classList.toggle("active");
-  document.querySelector("body").classList.toggle("prevent-scroll");
-  document.querySelector(".bottom-cont").classList.toggle("opacity")
-  let projBlocks = document.querySelectorAll(".proj-block");
-  projBlocks.forEach(function(proj,i){
-    proj.classList.toggle("opacity");
-  });
-}
-listToggle.addEventListener("click", function() {
-  toggleClick();
-});
+//   if (opened === false){
+//     opened = true;
+//     disableScroll();
+//   }
+//   if (opened === true){
+//     opened = false;
+//     enableScroll();
+//   }
+//   rows.classList.toggle("open");
+//   listToggle.classList.toggle("active");
+//   document.querySelector("body").classList.toggle("prevent-scroll");
+//   document.querySelector(".bottom-cont").classList.toggle("opacity")
+//   let projBlocks = document.querySelectorAll(".proj-block");
+//   projBlocks.forEach(function(proj,i){
+//     proj.classList.toggle("opacity");
+//   });
+// }
+// listToggle.addEventListener("click", function() {
+//   toggleClick();
+// });
 
 
 
-let sayHelloBtn =document.querySelector("#say-hello");
-let social = document.querySelectorAll(".social");
-let projectTitless = sayHelloBtn.querySelector(".project-title");
-
-let socialTextOne = social[0].innerHTML;
-let socialTextTwo = social[1].innerHTML;
-
-sayHelloBtn.onmouseenter = function(){
-
-  let titleWidthOne = displayTextWidth(`${socialTextOne}`, "16px Roboto");
-  let titleWidthTwo = displayTextWidth(`${socialTextTwo}`, "16px Roboto");
-  projectTitless.style.width = `${titleWidthOne + titleWidthTwo + 36}px`;
-  projectTitless.style["padding-left"] = "0px"
-}
-sayHelloBtn.onmouseleave = function(){
-  projectTitless.style.width = "0px";
-  projectTitless.style["padding-left"] = "0px"
-}
 
 
 aboutBtn.addEventListener("click", function() {
