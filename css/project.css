@@ -1445,8 +1445,18 @@ width: 100%;
     line-height: 32px;
 }
 
+.small-text {
+	    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .nudge {
 	margin-left: 16px;
+}
+
+.row-bar {
+	padding: 0px 24px;
 }
 
 
@@ -1892,8 +1902,8 @@ line-height: 36px;
 }
 
 .boxy {
-	bottom: -65px;
-	scale: 95%;
+	bottom: -100px;
+	scale: 85%;
 }
 
 
@@ -1903,7 +1913,7 @@ line-height: 36px;
 		height: 450px;
 		min-width: 250px;
 		flex-shrink: 0;
-		overflow: hidden;
+		/*overflow: hidden;*/
 	}
 
 	.desktop-small {
@@ -1914,8 +1924,16 @@ line-height: 36px;
 		align-self: center;
 	}
 
+.box {
+	right: -300px;
+	bottom: -250px;
+}
+
+
 	.box.revert {
-		bottom: -75px;
+		width: 75%;
+		max-width: 750px;
+		bottom: -100px;
 	}
 
 	.bio-text-cont {
@@ -1986,7 +2004,7 @@ width: inherit;
 
 .box,
 .cupcake-box {
-	width: 85%;
+	width: 75%;
 }
 
 .img-scroll{
