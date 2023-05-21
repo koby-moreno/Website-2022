@@ -2155,6 +2155,7 @@ width: inherit;
 }
 
 .box.revert{
+	width: 85%;
 	bottom: -100px;
 }
 
@@ -2208,6 +2209,7 @@ width: inherit;
 	bottom:  -95px;
 	height: auto;
 		width: 100%;
+		scale: 1;
 }
 
 .cupcake-box{
