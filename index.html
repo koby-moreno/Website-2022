@@ -486,6 +486,7 @@
   let homepage = true;
   let playvid = false;
   let play = true;
+  let workActive = false;
 
   let fullHeight = document.querySelectorAll(".full-height");
 
@@ -624,6 +625,7 @@
       aboutBtn.classList.add("active");
       workBtn.classList.remove("active");
       viewToggle.classList.add("close");
+      workActive = false;
 
     }
     else {
@@ -633,6 +635,7 @@
       aboutBtn.classList.remove("active");
       workBtn.classList.add("active");
       viewToggle.classList.remove("close");
+      workActive = true;
     }
 
     if (wS + 0.5 * iH > lookoutHeight){
@@ -862,16 +865,28 @@
 
 aboutBtn.addEventListener("click", function() {
   doScrolling(bioContY, 500);
+      let darkBlocks = document.querySelectorAll(".dark-bg");
+    darkBlocks.forEach(function(proj,i){
+      proj.classList.remove("opacity");
+    });
+    document.querySelector("body").classList.remove("prevent-scroll-body");
+    listBtn.classList.remove("active");
+    gridBtn.classList.add("active");
+    rows.classList.remove("open");
+    document.querySelector(".grouping").style.right = `${marginWidth}px`;
   // aboutBtn.classList.add("active");
   // workBtn.classList.remove("active");
   // viewToggle.classList.add("close");
 });
 
 workBtn.addEventListener("click", function() {
-  // doScrolling(workContY, 500);
-  // workBtn.classList.add("active");
-  // aboutBtn.classList.remove("active");
-  // viewToggle.classList.remove("close");
+  if (workActive){
+  }
+  else {
+  doScrolling(workContY, 500);
+  workBtn.classList.add("active");
+  aboutBtn.classList.remove("active");
+}
 });
 
 
