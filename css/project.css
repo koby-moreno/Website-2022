@@ -20,6 +20,10 @@ body{
 	overflow: hidden;
 }
 
+a {
+	text-decoration: none;
+	color: #1a1a1a;
+}
 
 
 .padded-content {
