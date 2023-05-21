@@ -1832,6 +1832,10 @@ font-style: normal;
 
 @media (max-width:1250px) {
 
+	.nudge {
+	margin-left: 0px;
+}
+
 .project-header-desktop-small {
 	position:  absolute;
 	flex-direction: row;
@@ -2128,6 +2132,17 @@ width: inherit;
 }
 
 
+.box {
+	bottom: -150px;
+	right: -150px;
+}
+
+.box.revert{
+	bottom: -100px;
+}
+
+
+
 
 
 
@@ -2173,6 +2188,7 @@ width: inherit;
 }
 
 .boxy {
+	bottom:  -95px;
 	height: auto;
 		width: 100%;
 }
