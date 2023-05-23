@@ -401,12 +401,7 @@ background-color: #f9f6f2;
 	/*white-space: nowrap;*/
 }
 
-.text-block {
-	max-width: 600px;
-	padding: 12px 0px;
-	padding-left: 12px;
-	padding-bottom: 32px;
-}
+
 
 .flex {
 	display: flex;
@@ -1450,10 +1445,31 @@ width: 100%;
 }
 
 .small-text {
-	    font-weight: 300;
+	font-weight: 300;
     font-size: 16px;
     line-height: 24px;
 }
+
+.small-header {
+	font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.x-small-header {
+		font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.text-block {
+	max-width: 600px;
+}
+
+.small-spacers > div {
+	padding: 8px 0px;
+}
+
 
 .nudge {
 	margin-left: 16px;
