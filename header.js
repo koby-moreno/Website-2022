@@ -1,0 +1,100 @@
+
+wS = $(this).scrollTop();
+// let iH;
+
+
+// function calculateHeights() {
+//  document.querySelector(".top-cont").clientHeight;
+// }
+
+// function scrollanimations(){
+
+// };
+
+
+
+
+let trackers = document.querySelectorAll(".tracker");
+let trackerTexts = document.querySelectorAll(".tracker-text");
+let counter = 0;
+let countCheck = true;
+let stepCheck = true;
+let countCheckMin = false;
+let stepCheckMin = false;
+
+trackers.forEach(function(tracker,i){
+	tracker.addEventListener("click", function() {
+
+        // document.querySelector(`#tracker-${i}`).scrollIntoView({
+        //     behavior: 'smooth'
+        // });
+
+        const id = `tracker-${i}`;
+        const yOffset = -100; 
+        const element = document.getElementById(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
+
+		// window.location = `#tracker-${i}`;
+	})
+})
+
+$(window).scroll(function() {
+	wS = $(this).scrollTop();
+	console.log(wS);
+	console.log(counter);
+
+	trackerTexts.forEach(function(trackerText, i){
+		let counterHeight = trackerText.getBoundingClientRect().top;
+
+		if (i == counter){
+			if (wS > counterHeight){
+				console.log("meep")
+				trackers.forEach(function(tracker, j){
+					tracker.classList.remove("active");
+				})
+				if (stepCheck){
+					countCheck = true;
+				}
+				if (countCheck){
+					counter = counter + 1;
+					if (counter > trackers.length - 1) {
+						counter = trackers.length - 1;
+					}
+					countCheck = false;
+				}
+				if (stepCheckMin == false){
+					stepCheckMin = true;
+				}
+				trackers[counter].classList.add("active");
+			}
+			if (wS < counterHeight){
+				trackers.forEach(function(tracker, j){
+					tracker.classList.remove("active");
+				})
+				if (stepCheckMin){
+					countCheckMin = true;
+				}
+				if (countCheckMin){
+					counter = counter - 1;
+					if (counter < 0){
+						counter = 0;
+					}
+					countCheckMin = false;
+				}
+				if (stepCheck == false){
+					stepCheck = true;
+				}
+				trackers[counter].classList.add("active");
+			}
+		}
+
+
+	})
+
+
+});
+
+
+

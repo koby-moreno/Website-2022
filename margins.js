@@ -1,5 +1,6 @@
 
 let grouping = document.querySelector(".grouping");
+let header = document.querySelector(".header");
 let marginWidth;
 let aboutBtn = document.querySelector("#about-btn")
 let workBtn = document.querySelector("#work-btn")
@@ -32,9 +33,11 @@ function resizePaddings() {
 		console.log(toggleWidth);
 		let groupingRight = windowWidth/2 - toggleWidth/2;
 		grouping.style.right = `${groupingRight}px`;
+		header.style.left = `${marginWidth}px`;
 	}
 	else {
 		grouping.style.right = `${marginWidth}px`;
+		header.style.left = `${marginWidth}px`;
 	}
 }
 
@@ -61,11 +64,13 @@ window.addEventListener('resize', function () {
 	resizeFullHeight();
 });
 
+
+
   let wS = $(this).scrollTop();
 
   function scrollanimations(){
   	if (wS < 200){
-  	 document.querySelector(".dos").style.filter = `blur(${wS/50}px)`
+  	 document.querySelector(".dos").style.filter = `blur(${wS/50}px)`;
   	}
   }
 
