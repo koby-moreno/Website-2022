@@ -1,5 +1,6 @@
 
-wS = $(this).scrollTop();
+let scrollHeight = $(this).scrollTop();
+
 // let iH;
 
 
@@ -41,15 +42,15 @@ trackers.forEach(function(tracker,i){
 })
 
 $(window).scroll(function() {
-	wS = $(this).scrollTop();
+	scrollHeight = $(this).scrollTop();
 	console.log(wS);
 	console.log(counter);
 
 	trackerTexts.forEach(function(trackerText, i){
-		let counterHeight = trackerText.getBoundingClientRect().top;
+		let counterHeight = $(trackerText).offset().top - 100;
 
 		if (i == counter){
-			if (wS > counterHeight){
+			if (scrollHeight > counterHeight){
 				console.log("meep")
 				trackers.forEach(function(tracker, j){
 					tracker.classList.remove("active");
