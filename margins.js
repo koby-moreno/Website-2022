@@ -10,9 +10,15 @@ let windowWidth = $(window).innerWidth();
 let bgOneHeight = [];
 let bgOneWidth = [];
 
+let open = false;
 
+var body = document.body,
+    html = document.documentElement;
 
-let height = document.body.scrollHeight - (window.innerHeight/2);
+var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+                   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+var height = limit - (window.innerHeight/2);
+
 
 
 function calculatePaddings(){
@@ -76,10 +82,16 @@ window.addEventListener('resize', function () {
   	console.log(height)
   	console.log(wS)
   	if (wS > height - 200){
+  		if (open == false){
   	 document.querySelector(".next-proj").classList.add("open")
+  	 open = true;
+  	}
   	}
   	else {
+  		if (open){
   		document.querySelector(".next-proj").classList.remove("open")
+  		open = false;
+  	}
   	}
   }
 
