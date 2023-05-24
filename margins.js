@@ -11,6 +11,10 @@ let bgOneHeight = [];
 let bgOneWidth = [];
 
 
+
+let height = document.body.scrollHeight - (window.innerHeight/2);
+
+
 function calculatePaddings(){
 	let contentWidth = document.querySelector(".conty").clientWidth;
 	windowWidth = $(window).innerWidth();
@@ -69,9 +73,14 @@ window.addEventListener('resize', function () {
   let wS = $(this).scrollTop();
 
   function scrollanimations(){
-  	// if (wS < 200){
-  	//  document.querySelector(".dos").style.filter = `blur(${wS/50}px)`;
-  	// }
+  	console.log(height)
+  	console.log(wS)
+  	if (wS > height - 200){
+  	 document.querySelector(".next-proj").classList.add("open")
+  	}
+  	else {
+  		document.querySelector(".next-proj").classList.remove("open")
+  	}
   }
 
 

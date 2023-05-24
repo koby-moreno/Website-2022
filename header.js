@@ -43,15 +43,14 @@ trackers.forEach(function(tracker,i){
 
 $(window).scroll(function() {
 	scrollHeight = $(this).scrollTop();
-	console.log(wS);
-	console.log(counter);
+
 
 	trackerTexts.forEach(function(trackerText, i){
-		let counterHeight = $(trackerText).offset().top - 100;
+		let counterHeight = Math.floor($(trackerText).offset().top - 100);
 
 		if (i == counter){
 			if (scrollHeight > counterHeight){
-				console.log("meep")
+				
 				trackers.forEach(function(tracker, j){
 					tracker.classList.remove("active");
 				})
