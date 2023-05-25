@@ -1475,6 +1475,10 @@ width: 100%;
 	padding: 8px 0px;
 }
 
+.x-small-spacers > div {
+	padding: 4px 0px;
+}
+
 
 .nudge {
 	margin-left: 16px;
