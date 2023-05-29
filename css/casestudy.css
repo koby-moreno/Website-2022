@@ -311,41 +311,29 @@ body {
 }
 
 
-
-@media (max-width:1000px) {
-
-.project-cont {
-	width: calc(100% - 80px);
-}
-}
-
-@media (max-width:1000px) {
-/*	.reverse {
-		flex-direction: column;
-	}
-
-	.column-reverse {
-		flex-direction: row;
-	}
-
-	.metadata-cont-cont{
-		padding: 16px 0px;
-	}
-
-	.metadata-cont {
-		flex-grow: 1;
-	}*/
-		.desktop-hide {
-		display:  none;
-	}
-
-}
-
 @media (max-width:1400px) {
 	.padding-side {
 	margin-left: 220px;
 }
 	}
+
+
+@media (max-width:1000px) {
+
+
+	.project-cont {
+	width: calc(100% - 80px);
+}
+		.desktop-hide {
+		display:  none;
+	}
+
+		.padding-side {
+	margin-left: 0px;
+}
+
+}
+
 
 @media only screen and (max-device-width: 600px)  {
 
