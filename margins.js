@@ -17,7 +17,7 @@ var body = document.body,
 
 var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
                    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-var height = limit - (window.innerHeight/2);
+var height = limit - (windowHeight/2);
 
 
 
