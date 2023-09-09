@@ -417,8 +417,9 @@ background-color: #f9f6f2;
 }
 
 .center {
-	align-tems: center;
+	align-items: center;
 }
+
 
 .space-between {
 	justify-content: space-between;
