@@ -232,6 +232,10 @@ body {
 	z-index: 1;
 }
 
+.full-width{
+	width: calc(100% - 220px);
+}
+
 /*.side-panel {
 	background-color: white;
 	position: fixed;
@@ -369,6 +373,10 @@ body {
 
 		.padding-side {
 	margin-left: 0px;
+}
+
+.full-width{
+	width: 100%;
 }
 
 }
