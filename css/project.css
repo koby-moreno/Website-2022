@@ -1617,8 +1617,17 @@ width: 100%;
 	align-items: center;
 }
 
+.big-CTA-button:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 8px -2px black;
+}
+
 .big-CTA-button > div {
 	margin: 0px 8px;
+}
+
+.big-CTA-button > i {
+	width: 24px;
 }
 
 .toggle.grid {

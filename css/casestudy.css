@@ -116,13 +116,16 @@ body {
 }
 
 .padding-side {
-	margin-left: 200px;
+	padding-left: 240px;
 }
 
 
 .project-cont {
+	/*width: 100%;*/
+	position: relative;
 	width: calc(100% - 120px);
-	max-width: 1000px;
+	left: 0px;
+	max-width: calc(1440px - 240px - 120px);
 }
 
 .case-section {
@@ -233,7 +236,7 @@ body {
 }
 
 .full-width{
-	width: calc(100% - 220px);
+	width: calc(100% - 240px);
 }
 
 /*.side-panel {
@@ -354,9 +357,10 @@ body {
 }
 
 
+
 @media (max-width:1400px) {
 	.padding-side {
-	margin-left: 220px;
+	padding-left: 230px;
 }
 	}
 
@@ -372,7 +376,7 @@ body {
 	}
 
 		.padding-side {
-	margin-left: 0px;
+	padding-left: 0px;
 }
 
 .full-width{
