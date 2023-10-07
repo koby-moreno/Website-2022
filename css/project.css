@@ -1647,6 +1647,13 @@ width: 100%;
 	max-width: calc(1440px - 120px);
 }
 
+.divider-casestudy {
+	height: 1px;
+	background-color: lightgray;
+	width: 100%;
+}
+
+
 .footer {
 	display: flex;
 	flex-direction: row;
