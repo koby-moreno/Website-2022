@@ -1204,6 +1204,10 @@ i.gray {
 	color: gray;
 }
 
+i.lightgray {
+	color: lightgray;
+}
+
 .containerr:hover #rotateOne,
 .containerr:hover #rotateTwo
 {
@@ -1390,6 +1394,10 @@ width: 100%;
 }
 
 
+.no-vert {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
 
 .togglebtn{
 	height: 40px;
@@ -1447,7 +1455,8 @@ width: 100%;
 }
 
 .h2-title {
-		font-size: 32px;
+	font-family: HankenGrotesk;
+	font-size: 32px;
 	line-height: 40px;
 	font-weight: 400;
 }
@@ -1598,6 +1607,19 @@ width: 100%;
 	border: 1px solid #e5e5e5;
 }
 
+.big-CTA-button {
+	padding: 16px 20px;
+	border-radius: 32px;
+	box-shadow: 0px 0px 0px 2px lightgray inset;
+	display: inline-block;
+	color: gray;
+	display: inline-flex;
+	align-items: center;
+}
+
+.big-CTA-button > div {
+	margin: 0px 8px;
+}
 
 .toggle.grid {
 	margin-bottom: 200px;
@@ -1638,7 +1660,11 @@ width: 100%;
 }
 
 .social-cont > div {
-	padding-right: 16px;
+	padding-right: 24px;
+}
+
+.social-links > .body-text{
+	line-height: 28px;
 }
 
 	.small-icon {
