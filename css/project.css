@@ -38,7 +38,7 @@ a {
 }
 
 a.dark-mode {
-	color: white;
+	color: #f0f0f0;
 }
 
 
@@ -193,7 +193,7 @@ cursor: pointer;
 }
 
 .big-icon > .dark-mode {
-	color: white;
+	color: #f0f0f0;
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -383,7 +383,7 @@ background-color: #f9f6f2;
 
 .dark-bg {
 	background-color: #0f1b23;
-	color: white;
+	color: #f0f0f0;
 	transition: opacity 0.5s ease;
 }
 
@@ -1960,6 +1960,15 @@ font-style: normal;
 	margin-left: 0px;
 }
 
+.desktop-large {
+	display: none;
+}
+
+.project-section {
+	padding: 0px 0px;
+}
+
+
 .project-header-desktop-small {
 	position:  absolute;
 	flex-direction: row;
@@ -1973,7 +1982,7 @@ font-style: normal;
 }
 
 .margin-left{
-  margin-left: 16px;
+  margin-left: 0px;
 }
 
 .big-icon {
@@ -1997,7 +2006,7 @@ font-style: normal;
 }
 
 .big-icon > .dark-mode {
-	color: white;
+	color: #f0f0f0;
 	background-color: rgba(0,0,0,0);
 }
 

@@ -2,13 +2,14 @@
 let grouping = document.querySelector(".grouping");
 let header = document.querySelector(".header");
 let marginWidth;
-let aboutBtn = document.querySelector("#about-btn")
-let workBtn = document.querySelector("#work-btn")
+let aboutBtn = document.querySelector("#about-btn");
+let workBtn = document.querySelector("#work-btn");
 let projectCont = document.querySelector(".dos");
 let windowHeight;
 let windowWidth = $(window).innerWidth();
 let bgOneHeight = [];
 let bgOneWidth = [];
+let floatingNav = document.querySelector(".tracker-cont");
 
 let open = false;
 
@@ -48,6 +49,7 @@ function resizePaddings() {
 	else {
 		grouping.style.right = `${marginWidth}px`;
 		header.style.left = `${marginWidth}px`;
+		floatingNav.style.left = `${marginWidth - 24}px`;
 	}
 }
 
