@@ -1263,8 +1263,8 @@ width: 100%;
 
 .computer-video {
 	position: absolute;
-	width: 79.7%;
-	padding-bottom: 6.35%;
+	width: 79.9%;
+	padding-bottom: 6.21%;
 }
 
 .computer-video > video {
@@ -1690,7 +1690,7 @@ width: 100%;
 
 	.open{
 		bottom: 0px;
-		top: 73px;
+		top: 56px;
 		height: auto;
 	}
 

@@ -85,7 +85,7 @@
         <div class="box">
           <div class="computer-video">
            <video loop muted playsinline class="" id="video">
-            <source src="images/video.mov">
+            <source src="images/christmas.mov">
             </video>
           </div>
           <div class="computer-frame">
@@ -100,6 +100,58 @@
         </div>
       </div>
     </div>
+
+
+ <div class="conty proj-block purple insight" id="work-cont">
+
+    <div class="bg-img" id="bgoneimg">
+      <img class="object-fit" src="images/Insights_BG.png">
+    </div>
+
+    <div class="padding-conty bottom-cont" id="bottom-cont">
+      <div class="project-section projects">
+        <div class="containerr">
+          <div class="project-header-desktop-small">
+           <div class="big-icon desktop-large">          <span class="material-symbols-outlined">
+            bar_chart_4_bars
+          </span></div>
+          <div class="project-header-text margin-left">
+            <div class="flex row center space-between">
+            <div class="h1-title nudge"><span class="">Insights Builder</span></div>
+            <div class="cont-icon mobile">
+              <i class="material-icons gray">navigate_next</i>
+            </div>
+          </div>
+            <div class="body-text nudge">Self-serve dashboarding to drive spatial decision-making</div>
+            <div class="pill-container">
+              <div class="pill">User Research</div>
+              <div class="pill">UI & UX Design</div>
+              <div class="pill">Requirements Sourcing</div>
+              <div class="pill">System Architecture</div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="computer-video">
+<!--            <video loop muted playsinline class="" id="video">
+            <source src="images/ib_image.png">
+
+            </video> -->
+            <img class="object-fit" src="images/ib_image.png">
+          </div>
+          <div class="computer-frame">
+            <img src="images/frame.png">
+          </div>
+        </div>
+<!--             <div class="button contbtn goto desktop">
+              <i class="material-icons arrow">arrow_outward</i>
+              <div class="project-title"><span class="project-title-text">View Project</span></div>
+            </div>  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 <!--   <div class="conty proj-block purple">
     <div class="bg-img" id="bgoneimg">
@@ -322,7 +374,7 @@
         </div>
       </div>
 
-      <div class="row-item">
+      <a class="row-item">
         <div class="row-icon">
           <span class="material-symbols-outlined">
             folder_open
@@ -332,7 +384,7 @@
         <div class="row-details">
           <div class="row-title">Projects Portal</div>
           <div class="row-org">Foursquare</div>
-          <div class="row-client"></div>
+          <div class="row-client">Joby, Hexvarium</div>
           <div class="row-scope">User Research, Design</div>
           <div class="row-duration">6 mo</div>
           <div class="row-year">2022/23</div>
@@ -342,7 +394,31 @@
             navigate_next
           </span>
         </div>
+      </a>
+
+            <div class="row-item">
+        <div class="row-icon">
+          <span class="material-symbols-outlined">
+            bar_chart_4_bars
+          </span>
+          <i class="material-icons">arrow_outward</i>
+        </div>
+        <div class="row-details">
+          <div class="row-title">Insights Builder</div>
+          <div class="row-org">Foursquare</div>
+          <div class="row-client">IADB</div>
+          <div class="row-scope">User Research, Design</div>
+          <div class="row-duration">4 mo</div>
+          <div class="row-year">2023</div>
+        </div>
+        <div class="row-icon mobile">
+          <span class="material-symbols-outlined gray">
+            navigate_next
+          </span>
+        </div>
       </div>
+
+
 
       <a class="row-item" href="https://fathom.info/lookout/" target="_blank">
         <div class="row-icon">
@@ -586,7 +662,7 @@
 
   setTimeout( function() {
     grouping.style.transition = "top 0.5s ease"
-    document.querySelector(".box").style.transition = "0.7s ease"
+    document.querySelectorAll(".box").forEach((box) => box.style.transition = "0.7s ease" );
   }, 500);
 
 
@@ -623,6 +699,7 @@
   let fill = 255;
   let fillval = 0;
   let lookout = document.querySelector(".lookout");
+  let insightHeight = $('.insight').offset().top;
   let lookoutHeight = $('.lookout').offset().top;
   let projects = document.querySelector(".lookout");
   let projectsHeight = $('.projects').offset().top;
@@ -671,6 +748,13 @@
       // document.querySelector(".floating-three").classList.remove("show");
     }
 
+        if (wS + 0.5 * iH > insightHeight){
+          document.querySelectorAll(".box")[1].classList.add("revert");
+    }
+    else {
+      document.querySelectorAll(".box")[1].classList.remove("revert");
+    }
+
     // if (wS + 0.5 * iH > cupcakeHeight){
     //   document.querySelector(".cupcake-box").classList.add("showw");
     //   if (playvid === false){
@@ -687,14 +771,14 @@
 
 
     if (wS + 0.5 * iH > projectsHeight){
-      document.querySelector(".box").classList.add("revert");
+      document.querySelectorAll(".box")[0].classList.add("revert");
       // document.querySelector(".floating-one").classList.add("show");
       if (play === true){
         document.getElementById("video").play()
       }
     }
     else {
-      document.querySelector(".box").classList.remove("revert");
+      document.querySelectorAll(".box")[0].classList.remove("revert");
       // document.querySelector(".floating-one").classList.remove("show");
       document.getElementById("video").pause()
     }
