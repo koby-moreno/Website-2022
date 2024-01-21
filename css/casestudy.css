@@ -256,27 +256,33 @@ body {
 	z-index: 2;
 	top: 100px;
 	padding: 8px;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 1);
 	border-radius: 28px;
-	/*border: 1px solid lightgray;*/
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.15);
+	backdrop-filter: blur(16px);
 }
 
 .tracker {
 	font-weight: 500;
-	color: #b0b0b0;
+	color: #b5b5b5;
 	font-size: 16px;
 	line-height: 24px;
 	padding: 8px 16px;
 	border-radius: 20px;
-	background-color: white;
+	/*background-color: white;*/
 	/*transition: all 0.3s ease;*/
+}
+
+.tracker-cont.dark-mode {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 
 .tracker:hover {
 	color: gray;
+	color: #636363;
 	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .tracker.active {
