@@ -529,7 +529,7 @@
     </div>
 
       <div class="close-list-cont">
-        <div class="icon-button">
+        <div class="icon-button" id="collapse-list">
             <span class="material-symbols-outlined">
     expand_more
   </span> 
@@ -924,6 +924,7 @@
   let gridBtn = document.getElementById("grid-btn");
   let listBtn = document.getElementById("list-btn");
   let grids = document.querySelectorAll(".project-section")
+  let collapseList = document.getElementById("collapse-list")
 
   gridBtn.addEventListener("click", function() {
     let darkBlocks = document.querySelectorAll(".dark-bg");
@@ -949,6 +950,17 @@
     });
   });
 
+  collapseList.addEventListener("click", function() {
+    let darkBlocks = document.querySelectorAll(".dark-bg");
+    darkBlocks.forEach(function(proj,i){
+      proj.classList.remove("opacity");
+    });
+    document.querySelector("body").classList.remove("prevent-scroll-body");
+    listBtn.classList.remove("active");
+    gridBtn.classList.add("active");
+    rows.classList.remove("open");
+    document.querySelector(".grouping").style.right = `${marginWidth}px`;
+  });
 
 
 
