@@ -2040,11 +2040,8 @@ font-style: normal;
 	padding: 8px 0px;
 }
 
-.big-icon {
-	padding: 8px 0px;
-}
 
-.big-icon > span {
+/*.big-icon > span {
 		height:  auto;
 	width: auto;
 	display: flex;
@@ -2054,12 +2051,12 @@ font-style: normal;
 		font-size: 40px;
 	line-height: 56px;
 	border-radius: 0px;
-}
+}*/
 
-.big-icon > .dark-mode {
+/*.big-icon > .dark-mode {
 	color: #f0f0f0;
 	background-color: rgba(0,0,0,0);
-}
+}*/
 
 .project-header-desktop-small > .title{
 font-size: 28px;
