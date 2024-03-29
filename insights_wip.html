@@ -103,7 +103,7 @@
         <div class="small-spacers">
           <div class="x-small-spacers">
             <div class="small-header">Creating a Minimal Viable Product</div>
-            <div class="small-text text-block">Insights Builder was originally created as an internal engineering proof-of-concept, which engineers used to build custom dashboards to sell to existing customers. Potential customers expressed interest in this as a self-serve tool, IADB (Inter-American Development Bank) agreeing to work with us to test this concept's product potential. </div>
+            <div class="small-text text-block">Insights Builder was originally created as an internal engineering proof-of-concept, which they used to build custom dashboards to sell to existing customers. Potential customers expressed interest in this as a self-serve tool, IADB (Inter-American Development Bank) agreeing to work with us to test this concept's product potential. </div>
           </div>
  <div class="img-container flex column center">
                           <video loop muted playsinline autoplay class="" id="video">
@@ -116,7 +116,7 @@
 
       <div class="case-section">
         <div class="small-spacers">
-          <div class="h2-title tracker-text" id="tracker-2">Defining Scope</div>
+          <div class="h2-title tracker-text" id="tracker-1">Defining Scope</div>
           <div class="x-small-spacers">
             <div class="small-header">Synthesizing Existing Customer Conversations</div>
             <div class="small-text text-block">By the time I had joined this project, our sales team had numerous conversations with IADB and other potential customers.  I asked for meeting recordings to source overlapping themes and discover which topics required clarification from the customer or internal aligment with engineering or marketing.</div>
@@ -133,7 +133,7 @@
         </div>
         <div div class="small-spacers">
           <div class="x-small-spacers">
-            <div class="small-header">Setting Design Principles</div>
+            <div class="small-header">Setting Design Guidelines</div>
             <div class="small-text text-block">I met with my director to establish workflow priorities that ensured this work would also contribute to design unification and cross-product efforts within Foursquare at large.</div>
             <div class="takeaway-cont">
           <div>
@@ -164,10 +164,10 @@
 
       <div class="case-section">
         <div class="small-spacers">
-          <div class="h2-title tracker-text" id="tracker-2">Establishing Core Design Logics</div>
+          <div class="h2-title tracker-text" id="tracker-2">Layout</div>
           <div class="x-small-spacers">
-            <div class="small-header">Grid System and Chart Sizing</div>
-            <div class="small-text text-block">Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control.  With this knowledge, we decided to explore a spatial visualization at this smaller scale.</div>
+            <div class="small-header">Competitive Analysis</div>
+            <div class="small-text text-block">For specific tasks, like layout, we established design principles that reinforce user needs and see how other products’ design strategies align or depart from them.  This helped inform where design effort should be spent on these tasks for the highest level of impact.</div>
             <div class="img-container flex column">
               <img class="img" src="images/layoutanalysis.png">
             </div>
@@ -176,7 +176,7 @@
         <div class="small-spacers">
           <div class="x-small-spacers">
             <div class="small-header">Grid System and Chart Sizing</div>
-            <div class="small-text text-block">Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control.  With this knowledge, we decided to explore a spatial visualization at this smaller scale.</div>
+            <div class="small-text text-block">Guidelines around responsive behavior, chart placement and sizing prevented chart UIs from breaking, reduced customization effort without compromising flexibilty, and minimized the number of edge-cases necessary to design for.  I learned from my engineers about what libraries they use, such as the React grid and Nivo charts, to align on what parameters could be set. For our charts I audited all the data-visualization offerings we provide and assigned them to appropriate size restraints by grid unit, informing the simplest grid-system to use. </div>
           <div class="img-container flex column">
             <img class="img" src="images/screensizing.png">
           </div>
@@ -187,30 +187,48 @@
       </div>
       <div div class="small-spacers">
         <div class="x-small-spacers">
-          <div class="small-header">Interaction Optimization</div>
-          <div class="small-text text-block">At CMU, students are grouped into one or more "mavilies," which include living clusters, in-person classes, sports teams, and performing arts groups. Administrators find the mavilies most useful as they often point to sources of localized outbreaks and can be used to measure students' levels of probable interaction. These views allow admin to see if there are positive case trends within dorm floors and living mavilies, and investigate whether or not these patterns are related to other non-living mavilies.</div>
+          <div class="small-header">Chart Design & Specs</div>
+          <div class="small-text text-block">To ensure consistency amongst the chart designs, I ran a workshop with other product designers to align on the chart's sub-elements' placements and styles. This enabled us to create a datavis component as an adaptive figma asset to ease future design efforts.</div>
+          <div class="img-section img-duo">
                     <div class="img-container flex column">
-            <img class="img" src="images/editpaneloptimization.png">
-          </div>
-          <div class="img-container flex column">
-            <img class="img" src="images/editflows.png">
-          </div>
-        </div>
-      </div>
-      <div div class="small-spacers">
-        <div class="x-small-spacers">
-          <div class="small-header">Information Disclosure</div>
-          <div class="small-text text-block">Plane pilot panel, taking information and setting it back in the user experience</div>
-          <div class="img-container flex column">
             <img class="img" src="images/placeholder.jpg">
           </div>
+                              <div class="img-container flex column">
+            <img class="img" src="images/placeholder.jpg">
+          </div>
+        </div>
         </div>
       </div>
     </div>
 
     <div class="case-section">
+        <div class="small-spacers">
+          <div class="h2-title tracker-text" id="tracker-3">Task Simplification</div>
+          <div class="x-small-spacers">
+            <div class="small-header">Editing a Chart</div>
+            <div class="small-text text-block">Core user flows, such as editing or adding charts to the dashboard, were reworked to eliminate any redundant interactions or unecessary feature capabilities. Features that remained were reprioritized and partitioned into basic and advanced experiences in order to accomodate two distinctly different user preferences from our initial customer research. </div>
+                                  <div class="img-container flex column">
+            <img class="img" src="images/editflows.png">
+          </div>
+            <div class="img-container flex column">
+              <img class="img" src="images/editpaneloptimization.png">
+            </div>
+          </div>
+        </div>
+         <div class="small-spacers">
+          <div class="x-small-spacers">
+            <div class="small-header">Automating Processes</div>
+            <div class="small-text text-block">When possible, I sought to automate processes by using underlying assets or metadata (datasets, data columns, filters, color palettes, and names) used in the source map. The goal was to provide users with a 'best-guess' while making it as convenient as possible to edit the result to their liking. </div>
+                                  <div class="img-container flex column">
+            <img class="img" src="images/ib_autopopulate.png">
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="case-section">
       <div class="small-spacers">
-        <div class="h2-title tracker-text" id="tracker-2">Highlighting Design System Gaps</div>
+        <div class="h2-title tracker-text" id="tracker-4">Highlighting Design System Gaps</div>
         <div class="x-small-spacers">
           <div class="small-header">Changes to the Studio Mapping UI</div>
           <div class="small-text text-block">Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control.  With this knowledge, we decided to explore a spatial visualization at this smaller scale.</div>
@@ -243,39 +261,72 @@
           </div>
         </div>
 
+              <div class="case-section">
+        <div class="small-spacers">
+          <div class="h2-title tracker-text" id="tracker-5">Handoff</div>
+          <div class="x-small-spacers">
+            <div class="small-header">Competitive Analysis</div>
+            <div class="small-text text-block">For specific tasks, like layout, we established design principles that reinforce user needs and see how other products’ design strategies align or depart from them.  This helped inform where design effort should be spent on these tasks for the highest level of impact.</div>
+          </div>
+        </div>
+                <div class="small-spacers">
+          <div class="x-small-spacers">
+            <div class="small-header">Presentation Deck</div>
+            <div class="small-text text-block">For specific tasks, like layout, we established design principles that reinforce user needs and see how other products’ design strategies align or depart from them.  This helped inform where design effort should be spent on these tasks for the highest level of impact.</div>
+          <div class="img-container img-med-large flex column">
+            <img class="img" src="images/ib_deck.png">
+          </div>
+          </div>
+        </div>
+    </div>
 
-        <div class="case-section">
-          <div class="img-container flex column center tracker-text" id="tracker-1">
+    </div>
+  </div>
+</div>
+
+<div class="conty no-min bgone" id="bgone">
+  <div class="flex column align-center padding-side full-width">
+    <div class="project-cont padding-conty flex column">
+       <div class="case-section">
+          <div class="img-container flex column center tracker-text" id="tracker-6">
            <video muted playsinline autoplay loop class="img img-med-large img-styles" ><source src="images/End_to_End_UX.mov">
             Your browser does not support the video tag.
           </video>
           <div class="img-desc">End-to-end dashboard creation and share flow</div>
         </div>
-        <div class="x-small-spacers">
-          <div class="small-header">Full Case-Study Coming Soon</div>
-          <div class="small-text text-block">Have any immediate questions or interest in this project? <a class="link" href="mailto:kobymoreno@gmail.com">Email</a> me for more information.</div>
-<!--           <div class="img-container flex column center">
-            <img class="img" src="images/placeholder.jpg">
-          </div> -->
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="conty white-bg">
+  <div class="flex column align-center white-bg padding-side full-width">
+    <div class="project-cont padding-conty flex column">
+
+       <div class="case-section">
+        <div class="small-spacers">
+          <div class="h2-title tracker-text" id="tracker-7">Impact</div>
+          <div class="x-small-spacers">
+            <div class="small-header">Advancing our Cupcake Design System</div>
+            <div class="small-text text-block">Studio Projects advanced current and future design system efforts for the Foursquare organization at large.  This feature helped us implement components and validate the system's visual impact. As a data platform, this feature also informed smaller variant sizes and net new components.</div>
+<!--             <div class="img-container flex column center">
+              <img class="img" src="images/placeholder.jpg">
+            </div> -->
+          </div>
         </div>
-      </div>
-      <div class="case-section">
-        <div class="img-container flex column center tracker-text" id="tracker-1">
-         <video muted playsinline autoplay loop class="img img-med-large img-styles" ><source src="images/End_to_End_UX.mov">
-          Your browser does not support the video tag.
-        </video>
-        <div class="img-desc">End-to-end dashboard creation and share flow</div>
-      </div>
-      <div class="x-small-spacers">
-        <div class="small-header">Full Case-Study Coming Soon</div>
-        <div class="small-text text-block">Have any immediate questions or interest in this project? <a class="link" href="mailto:kobymoreno@gmail.com">Email</a> me for more information.</div>
+        <div class="x-small-spacers">
+          <div class="small-header">Informing a Unified Platform</div>
+          <div class="small-text text-block">The idea of projects and corresponding permissions research helped inspire upcoming product unification efforts.  Aligning on permissions with other Foursquare products early-on in the research process mitigated future friction and design debt.</div>
 <!--           <div class="img-container flex column center">
             <img class="img" src="images/placeholder.jpg">
           </div> -->
         </div>
       </div>
 
-      <div class="flex space-between">
+
+
+            <div class="flex space-between">
         <a class="big-CTA-button" href="projects.html">
           <i class="material-icons">arrow_backward</i>
           <div class="small-header">Projects Portal</div>
@@ -286,6 +337,7 @@
           <i class="material-icons">arrow_forward</i>
         </a>
       </div>
+
     </div>
   </div>
 </div>
@@ -339,11 +391,23 @@
     content_paste_search
   </span><span>Defining Scope</span></div>
   <div class="tracker flex center"><span class="material-symbols-outlined">
-    lightbulb
-  </span><span>Core Design Logics</span></div>
+    fullscreen
+  </span><span>Layout</span></div>
+    <div class="tracker flex center"><span class="material-symbols-outlined">
+    task_alt
+  </span><span>Task Simplification</span></div>
   <div class="tracker active flex center"><span class="material-symbols-outlined">
     palette
   </span><span>Design System</span></div>
+    <div class="tracker flex center"><span class="material-symbols-outlined">
+    handshake
+  </span><span>Handoff</span></div>
+  <div class="tracker flex center"><span class="material-symbols-outlined">
+    magic_button
+  </span><span>Final Design</span></div>
+  <div class="tracker flex center"><span class="material-symbols-outlined">
+    signal_cellular_alt
+  </span><span>Impact</span></div>
 </div>
 
 
