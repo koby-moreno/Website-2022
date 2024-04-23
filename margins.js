@@ -1,7 +1,7 @@
 
 let grouping = document.querySelector(".grouping");
 let header = document.querySelector(".header");
-let marginWidth;
+let marginWidth = 0;
 let aboutBtn = document.querySelector("#about-btn");
 let workBtn = document.querySelector("#work-btn");
 let projectCont = document.querySelector(".dos");

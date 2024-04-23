@@ -606,6 +606,7 @@
   let playvid = false;
   let play = true;
   let workActive = false;
+  let rowPadding = document.querySelector(".row-padding");
 
   let headerOpen = false;
 
@@ -638,9 +639,11 @@
       // let groupingRight = windowWidth/2 - 168/2;
       // grouping.style.right = `${groupingRight}px`;
       grouping.style.right = `${marginWidth}px`;
+      rowPadding.style.padding = `32px ${marginWidth}px`;
     }
     else {
       grouping.style.right = `${marginWidth}px`;
+      rowPadding.style.padding = `32px ${marginWidth}px`;
     }
     
     // fixedTest.style.left = `${marginWidth}px`;
