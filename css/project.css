@@ -1162,7 +1162,7 @@ html::-webkit-scrollbar {
 }
 
 .inset-video {
-	padding: 40px;
+	padding: 40x;
 	width: calc(100% - 80px);
 	background-color: #e7e7e7;
 }
