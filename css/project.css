@@ -1164,7 +1164,7 @@ html::-webkit-scrollbar {
 .inset-video {
 	padding: 40px;
 	width: calc(100% - 80px);
-	background-color: #eae9ea;
+	background-color: #e7e7e7;
 }
 
 /*.scroll-container{
