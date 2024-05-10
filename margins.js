@@ -78,31 +78,29 @@ window.addEventListener('resize', function () {
 
 
 
-  let wS = $(this).scrollTop();
+  // let wS = $(this).scrollTop();
 
-  function scrollanimations(){
-  	console.log(height)
-  	console.log(wS)
-  	if (wS > height - 200){
-  		if (open == false){
-  	 document.querySelector(".next-proj").classList.add("open")
-  	 open = true;
-  	}
-  	}
-  	else {
-  		if (open){
-  		document.querySelector(".next-proj").classList.remove("open")
-  		open = false;
-  	}
-  	}
-  }
+  // function scrollanimations(){
+  // 	if (wS > height - 200){
+  // 		if (open == false){
+  // 	 document.querySelector(".next-proj").classList.add("open")
+  // 	 open = true;
+  // 	}
+  // 	}
+  // 	else {
+  // 		if (open){
+  // 		document.querySelector(".next-proj").classList.remove("open")
+  // 		open = false;
+  // 	}
+  // 	}
+  // }
 
 
 
-  $(window).scroll(function() {
-    wS = $(this).scrollTop();
-    scrollanimations();
-  });
+  // $(window).scroll(function() {
+  //   wS = $(this).scrollTop();
+  //   scrollanimations();
+  // });
 
 
 aboutBtn.addEventListener("click", function() {
