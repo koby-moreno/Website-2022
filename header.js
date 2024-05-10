@@ -1,6 +1,5 @@
 
 let scrollHeight = $(this).scrollTop();
-let wS = $(this).scrollTop();
 
 // let iH;
 
@@ -70,7 +69,7 @@ $(window).scroll(function() {
 				}
 				trackers[counter].classList.add("active");
 			}
-			if (wS < counterHeight){
+			if (scrollHeight < counterHeight){
 				trackers.forEach(function(tracker, j){
 					tracker.classList.remove("active");
 				})
