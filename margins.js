@@ -78,7 +78,7 @@ window.addEventListener('resize', function () {
 
 
 
-  // let wS = $(this).scrollTop();
+  let wS = $(this).scrollTop();
 
   // function scrollanimations(){
   // 	if (wS > height - 200){

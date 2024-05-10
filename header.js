@@ -1,5 +1,6 @@
 
 let scrollHeight = $(this).scrollTop();
+let wS = $(this).scrollTop();
 
 // let iH;
 
