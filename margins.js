@@ -20,6 +20,10 @@ var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight,
                    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 var height = limit - (windowHeight/2);
 
+window.addEventListener('load', function () {
+	console.log("load");
+});
+
 
 
 function calculatePaddings(){
@@ -78,7 +82,7 @@ window.addEventListener('resize', function () {
 
 
 
-  let wS = $(this).scrollTop();
+  // let wS = $(this).scrollTop();
 
   // function scrollanimations(){
   // 	if (wS > height - 200){
